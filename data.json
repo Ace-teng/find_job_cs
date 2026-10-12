@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "updated": "2026-10-12",
   "roles": [
     {
@@ -678,6 +678,30 @@
       "verified": "2026-10-12",
       "kind": "官方文档",
       "version": "2026-07-28"
+    },
+    "guide-redis": {
+      "name": "JavaGuide · Redis 面试题（话题参考）",
+      "url": "https://interview.javaguide.cn/database/redis.html",
+      "kind": "面试知识整理",
+      "verified": "2026-10-12"
+    },
+    "xiaolin-http": {
+      "name": "小林 coding · HTTP 面试题（话题参考）",
+      "url": "https://www.xiaolincoding.com/network/2_http/http_interview.html",
+      "kind": "面试知识整理",
+      "verified": "2026-10-12"
+    },
+    "d-http-semantics": {
+      "name": "RFC 9110 · HTTP Semantics",
+      "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+      "kind": "协议标准",
+      "verified": "2026-10-12"
+    },
+    "d-tcp": {
+      "name": "RFC 9293 · TCP",
+      "url": "https://www.rfc-editor.org/rfc/rfc9293.html",
+      "kind": "协议标准",
+      "verified": "2026-10-12"
     }
   },
   "nodes": [
@@ -21242,5 +21266,3098 @@
     "from": "2024-10-12",
     "through": "2026-10-12",
     "policy": "公开面经仅纳入明确落在最近两年的日期；帖子日期与面试日期分开标记。"
-  }
+  },
+  "chains": [
+    {
+      "id": "http",
+      "title": "HTTP：一次请求怎样继续追问",
+      "group": "网络与接口",
+      "roles": [
+        "frontend",
+        "fullstack",
+        "java",
+        "go",
+        "python",
+        "ai",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "steps": [
+        {
+          "title": "浏览器请求一个接口，请求报文和响应报文各包含什么？",
+          "why": "",
+          "focus": "从方法、路径、状态码、头部与消息体组织回答。",
+          "id": "http-step-1",
+          "stage": "起问"
+        },
+        {
+          "title": "GET、POST、PUT 的语义有什么区别？哪些操作适合重试？",
+          "why": "先描述报文，再判断一次操作的含义。",
+          "focus": "区分安全性和幂等性；业务重试还需考虑服务端实现。",
+          "id": "http-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "title": "下单返回超时，客户端能直接再发一次 POST 吗？",
+          "why": "协议语义落到一次可能已经成功的业务请求。",
+          "focus": "先确认请求是否已执行，设计业务幂等键与结果查询。",
+          "id": "http-step-3",
+          "stage": "追问 2"
+        },
+        {
+          "id": "q18",
+          "questionId": "q18",
+          "why": "解决重复提交后，继续讨论数据在传输中是否安全。",
+          "stage": "追问 3"
+        },
+        {
+          "title": "HTTP/2 的多路复用解决了什么？为什么 HTTP/3 还要换用 QUIC？",
+          "why": "在安全连接之上，追问并发请求的效率。",
+          "focus": "区分 HTTP 层的并发流与 TCP 丢包造成的等待；说明协议版本前提。",
+          "id": "http-step-5",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "d-http-semantics",
+        "xiaolin-http",
+        "web"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "http-cache",
+        "tcp",
+        "auth",
+        "stream",
+        "api"
+      ]
+    },
+    {
+      "id": "http-cache",
+      "title": "HTTP 缓存：命中之后还会请求吗",
+      "group": "网络与接口",
+      "roles": [
+        "frontend",
+        "fullstack",
+        "java",
+        "go",
+        "python",
+        "test"
+      ],
+      "steps": [
+        {
+          "id": "q7",
+          "questionId": "q7",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "资源仍然新鲜时，浏览器需要向服务器确认吗？",
+          "why": "先区分直接复用与向服务器验证。",
+          "focus": "结合 Cache-Control、新鲜度和请求指令判断。",
+          "id": "http-cache-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-cache-no-cache",
+          "questionId": "drill-cache-no-cache",
+          "why": "用容易混淆的指令检验你是否理解复用条件。",
+          "stage": "追问 2"
+        },
+        {
+          "title": "ETag 验证成功后返回 304，响应体从哪里来？",
+          "why": "既然需要验证，就追问验证结果如何与本地副本配合。",
+          "focus": "服务器验证资源表示；客户端复用已存储的消息体。",
+          "id": "http-cache-step-4",
+          "stage": "追问 3"
+        },
+        {
+          "title": "发布新版本后，HTML 与带哈希的 JS 应分别怎样设置缓存？",
+          "why": "最后将缓存语义落实到一次真实发布。",
+          "focus": "HTML 及时验证；哈希资源可长期缓存，并保留旧版本资源处理更新期间的引用。",
+          "id": "http-cache-step-5",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "d-cache",
+        "xiaolin-http"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "http",
+        "tcp",
+        "auth"
+      ]
+    },
+    {
+      "id": "tcp",
+      "title": "TCP：连接、丢包与断开",
+      "group": "网络与接口",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops",
+        "cpp",
+        "test"
+      ],
+      "steps": [
+        {
+          "id": "q19",
+          "questionId": "q19",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "建立连接为什么要确认双方的序列号？两次握手缺少什么？",
+          "why": "从可靠传输转向连接建立的状态确认。",
+          "focus": "画出 SYN、SYN-ACK、ACK 及双方状态。",
+          "id": "tcp-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "title": "一个报文丢了，发送端怎样判断重传？",
+          "why": "连接建立后，追问数据丢失如何被发现。",
+          "focus": "区分超时重传、重复确认与选择性确认等机制。",
+          "id": "tcp-step-3",
+          "stage": "追问 2"
+        },
+        {
+          "title": "接收方来不及处理与网络拥塞，是同一个问题吗？",
+          "why": "重传以外，还需要控制发送速度。",
+          "focus": "分别讨论接收窗口与拥塞控制。",
+          "id": "tcp-step-4",
+          "stage": "追问 3"
+        },
+        {
+          "title": "关闭连接后为什么还可能有 TIME_WAIT？服务端连接过多怎样定位？",
+          "why": "把连接状态知识用于实际故障排查。",
+          "focus": "先确认主动关闭方和连接状态分布，再讨论连接复用、超时与容量。",
+          "id": "tcp-step-5",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "d-tcp"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "http",
+        "http-cache",
+        "auth"
+      ]
+    },
+    {
+      "id": "auth",
+      "title": "登录鉴权：Cookie → Token → 安全",
+      "group": "网络与接口",
+      "roles": [
+        "frontend",
+        "fullstack",
+        "java",
+        "go",
+        "python",
+        "ai",
+        "test"
+      ],
+      "steps": [
+        {
+          "id": "q21",
+          "questionId": "q21",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "用户退出登录后，已签发 JWT 怎样提前失效？",
+          "why": "从登录成功追问凭证完整生命周期。",
+          "focus": "比较短有效期、刷新凭证轮换、撤销记录；说明成本。",
+          "id": "auth-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "id": "q8",
+          "questionId": "q8",
+          "why": "凭证正确但浏览器仍失败，就要检查跨域边界。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-cors-credentials",
+          "questionId": "drill-cors-credentials",
+          "why": "进一步把跨域约束落实到携带 Cookie 的配置。",
+          "stage": "追问 3"
+        },
+        {
+          "id": "q22",
+          "questionId": "q22",
+          "why": "能调用接口之后，继续检查脚本注入、伪造请求和数据库边界。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "web",
+        "d-cors"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "http",
+        "http-cache",
+        "tcp"
+      ]
+    },
+    {
+      "id": "stream",
+      "title": "流式响应：SSE、重连与取消",
+      "group": "网络与接口",
+      "roles": [
+        "frontend",
+        "fullstack",
+        "ai"
+      ],
+      "steps": [
+        {
+          "title": "AI 对话为什么要使用流式输出？SSE 与 WebSocket 怎样选？",
+          "why": "",
+          "focus": "比较通信方向、消息格式、代理支持与客户端需求。",
+          "id": "stream-step-1",
+          "stage": "起问"
+        },
+        {
+          "title": "服务端持续写入，但浏览器最后才一次性显示，先查哪里？",
+          "why": "协议选好后，追问为什么没有得到预期体验。",
+          "focus": "排查服务端 flush、代理缓冲、压缩及客户端读取方式。",
+          "id": "stream-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-sse-resume",
+          "questionId": "drill-sse-resume",
+          "why": "能流式显示之后，讨论断网恢复。",
+          "stage": "追问 2"
+        },
+        {
+          "title": "用户点击停止后，怎样让模型调用和下游工具也停止？",
+          "why": "恢复之外，还需要处理主动中止和资源释放。",
+          "focus": "沿请求链传播取消，检查不可撤销工具的执行状态。",
+          "id": "stream-step-4",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "d-sse",
+        "d-abort"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "http",
+        "http-cache",
+        "tcp"
+      ]
+    },
+    {
+      "id": "js-async",
+      "title": "JS 异步：事件循环 → 竞态",
+      "group": "前端开发",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "steps": [
+        {
+          "id": "q2",
+          "questionId": "q2",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-js-order",
+          "questionId": "drill-js-order",
+          "why": "先用输出顺序验证任务队列的理解。",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-promise-fail",
+          "questionId": "drill-promise-fail",
+          "why": "从执行顺序转向多个任务中的失败处理。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-stale-search",
+          "questionId": "drill-stale-search",
+          "why": "请求不自动取消时，进一步处理返回顺序与界面状态。",
+          "stage": "追问 3"
+        },
+        {
+          "title": "用户快速输入时，加防抖就一定不会显示旧结果吗？",
+          "why": "比较减少请求数量与保证结果正确性这两个目标。",
+          "focus": "防抖限制触发；取消请求或请求序号保护最新结果。",
+          "id": "js-async-step-5",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "web",
+        "d-event",
+        "d-promise",
+        "d-abort"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "js-closure",
+        "react",
+        "vue"
+      ]
+    },
+    {
+      "id": "js-closure",
+      "title": "闭包：变量捕获 → 状态隔离",
+      "group": "前端开发",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "steps": [
+        {
+          "id": "q1",
+          "questionId": "q1",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-closure-counter",
+          "questionId": "drill-closure-counter",
+          "why": "先让闭包服务于独立实例的状态。",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-loop-binding",
+          "questionId": "drill-loop-binding",
+          "why": "实例隔离之后，追问循环中捕获的究竟是哪一个变量。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "q3",
+          "questionId": "q3",
+          "why": "回调还涉及 this；区分词法变量捕获和调用方式。",
+          "stage": "追问 3"
+        },
+        {
+          "title": "把方法直接传给事件处理器后 this 变了，怎样改写？",
+          "why": "用具体回调检验绑定规则。",
+          "focus": "比较 bind、包装函数与箭头函数；说明清理事件监听时的函数引用。",
+          "id": "js-closure-step-5",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "web",
+        "d-closure",
+        "d-for"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "js-async",
+        "react",
+        "vue"
+      ]
+    },
+    {
+      "id": "react",
+      "title": "React：状态更新 → Effect 竞态",
+      "group": "前端开发",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "steps": [
+        {
+          "id": "q11",
+          "questionId": "q11",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-react-three",
+          "questionId": "drill-react-three",
+          "why": "从不可变更新继续追问同一次事件中的更新队列。",
+          "stage": "追问 1"
+        },
+        {
+          "id": "q12",
+          "questionId": "q12",
+          "why": "状态变化之后，区分渲染计算与同步外部系统。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-react-effect",
+          "questionId": "drill-react-effect",
+          "why": "副作用需要生命周期与清理。",
+          "stage": "追问 3"
+        },
+        {
+          "id": "drill-react-fetch",
+          "questionId": "drill-react-fetch",
+          "why": "有清理函数还要检查请求竞态。",
+          "stage": "追问 4"
+        },
+        {
+          "id": "q13",
+          "questionId": "q13",
+          "why": "最后把组件状态与列表身份联系起来。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "react",
+        "d-batch",
+        "d-state",
+        "d-effect",
+        "d-abort"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "js-async",
+        "render"
+      ]
+    },
+    {
+      "id": "vue",
+      "title": "Vue：响应式 → 组件与副作用",
+      "group": "前端开发",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "steps": [
+        {
+          "id": "q14",
+          "questionId": "q14",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-vue-destructure",
+          "questionId": "drill-vue-destructure",
+          "why": "从响应式定义转向解构后失去联系的场景。",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-component-state",
+          "questionId": "drill-component-state",
+          "why": "单组件状态正确后，讨论状态由谁拥有。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-vue-watch-cleanup",
+          "questionId": "drill-vue-watch-cleanup",
+          "why": "跨组件或路由变化会触发请求，追问如何清理旧请求。",
+          "stage": "追问 3"
+        },
+        {
+          "id": "drill-route-lazy",
+          "questionId": "drill-route-lazy",
+          "why": "再把路由组织与实际加载时机连接起来。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "web",
+        "d-vue",
+        "d-watch",
+        "d-route"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "js-async",
+        "js-closure",
+        "react"
+      ]
+    },
+    {
+      "id": "render",
+      "title": "页面性能：首屏 → 卡顿 → 长列表",
+      "group": "前端开发",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "steps": [
+        {
+          "id": "q6",
+          "questionId": "q6",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "q15",
+          "questionId": "q15",
+          "why": "完整链路里哪一段限制了首屏，需要先测量。",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-route-lazy",
+          "questionId": "drill-route-lazy",
+          "why": "确认脚本开销后，检查按路由拆分是否有效。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "q9",
+          "questionId": "q9",
+          "why": "加载快并不保证交互流畅，继续追问运行时。",
+          "stage": "追问 3"
+        },
+        {
+          "id": "drill-virtual-list",
+          "questionId": "drill-virtual-list",
+          "why": "把过多 DOM 导致的开销转成具体实现题。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "web",
+        "d-route",
+        "d-vperf"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "js-async",
+        "js-closure",
+        "react"
+      ]
+    },
+    {
+      "id": "css",
+      "title": "CSS：布局 → 溢出 → 响应式",
+      "group": "前端开发",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "steps": [
+        {
+          "id": "q10",
+          "questionId": "q10",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "左侧固定宽度、右侧自适应，右侧长文本为何撑破布局？",
+          "why": "从选布局方式转向真实内容的尺寸约束。",
+          "focus": "检查 flex 子项最小尺寸、溢出和可换行条件。",
+          "id": "css-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "title": "弹窗设置了很大的 z-index，为什么还被别的区域挡住？",
+          "why": "布局尺寸正确后，继续排查绘制层级。",
+          "focus": "检查层叠上下文及其创建条件。",
+          "id": "css-step-3",
+          "stage": "追问 2"
+        },
+        {
+          "title": "桌面正常但手机横向溢出，你怎样找到撑宽页面的元素？",
+          "why": "把布局知识落实为跨屏幕排查流程。",
+          "focus": "检查固定宽度、长文本、表格、代码块及实际视口。",
+          "id": "css-step-4",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "web"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "js-async",
+        "js-closure",
+        "react"
+      ]
+    },
+    {
+      "id": "ts-build",
+      "title": "TypeScript 与构建：编译通过就安全吗",
+      "group": "前端开发",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "steps": [
+        {
+          "id": "q16",
+          "questionId": "q16",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "接口返回结构与声明不同，as 断言会替你做校验吗？",
+          "why": "从静态检查进入外部数据边界。",
+          "focus": "运行时解析与类型收窄，断言本身不做运行时校验。",
+          "id": "ts-build-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "id": "q17",
+          "questionId": "q17",
+          "why": "数据安全之外，追问构建和质量检查如何组织。",
+          "stage": "追问 2"
+        },
+        {
+          "title": "开发环境正常，构建后部署到子路径却白屏，怎么查？",
+          "why": "将工程配置放到实际部署环境检验。",
+          "focus": "先看资源 URL、base 路径、路由回退和控制台错误。",
+          "id": "ts-build-step-4",
+          "stage": "追问 3"
+        },
+        {
+          "id": "q73",
+          "questionId": "q73",
+          "why": "部署成功后继续追问如何避免下一次回归。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "web",
+        "ops"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "js-async",
+        "js-closure",
+        "react"
+      ]
+    },
+    {
+      "id": "index",
+      "title": "MySQL 索引：查找 → 联合索引 → 回表",
+      "group": "SQL 与存储",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test",
+        "ops",
+        "ai"
+      ],
+      "steps": [
+        {
+          "id": "q36",
+          "questionId": "q36",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "为什么 InnoDB 二级索引叶子里还需要保存主键？",
+          "why": "先解释两类索引如何连接，才能理解回表成本。",
+          "focus": "说明聚簇索引和二级索引的访问路径。",
+          "id": "index-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-index-range",
+          "questionId": "drill-index-range",
+          "why": "单列访问路径清楚后，追问联合索引的扫描边界。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-cover-index",
+          "questionId": "drill-cover-index",
+          "why": "扫描范围相近时，继续比较是否需要访问整行。",
+          "stage": "追问 3"
+        },
+        {
+          "id": "drill-mysql-slow-evidence",
+          "questionId": "drill-mysql-slow-evidence",
+          "why": "最后用执行证据验证索引方案是否真的更好。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "d-index",
+        "d-explain"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "sql-slow",
+        "mvcc",
+        "sql-write"
+      ]
+    },
+    {
+      "id": "mvcc",
+      "title": "事务与 MVCC：隔离 → 快照 → 锁",
+      "group": "SQL 与存储",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "steps": [
+        {
+          "id": "q37",
+          "questionId": "q37",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-rr-snapshot",
+          "questionId": "drill-rr-snapshot",
+          "why": "隔离级别需要通过两次查询的具体时间点来解释。",
+          "stage": "追问 1"
+        },
+        {
+          "title": "普通 SELECT 与 SELECT FOR UPDATE，读取规则一样吗？",
+          "why": "快照读解释完后，区分需要修改数据前的读取。",
+          "focus": "在明确隔离级别和存储引擎的前提下，比较一致性读与锁定读。",
+          "id": "mvcc-step-3",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-gap-lock",
+          "questionId": "drill-gap-lock",
+          "why": "锁定读进一步落到范围内没有记录的情况。",
+          "stage": "追问 3"
+        },
+        {
+          "id": "q39",
+          "questionId": "q39",
+          "why": "加锁范围扩大后，追问多个事务怎样互相等待。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "db",
+        "d-mvcc",
+        "d-lock"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "index",
+        "sql-write",
+        "sql-slow"
+      ]
+    },
+    {
+      "id": "sql-write",
+      "title": "SQL 实战：最新记录 → 分页 → 库存",
+      "group": "SQL 与存储",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "steps": [
+        {
+          "title": "查询每个用户的最新订单，GROUP BY 加 MAX(time) 就能拿到正确整行吗？",
+          "why": "",
+          "focus": "检查聚合结果与其他列是否对应；处理同时间的多行。",
+          "id": "sql-write-step-1",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-sql-latest",
+          "questionId": "drill-sql-latest",
+          "why": "明确歧义后，写出有确定排序规则的查询。",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-sql-page",
+          "questionId": "drill-sql-page",
+          "why": "有序结果增多后，继续讨论深分页成本。",
+          "stage": "追问 2"
+        },
+        {
+          "title": "游标分页过程中插入新记录，会重复或漏数据吗？",
+          "why": "性能优化还需要定义并发更新时的一致性体验。",
+          "focus": "使用稳定的组合排序键；明确快照、实时列表与历史翻页的产品语义。",
+          "id": "sql-write-step-4",
+          "stage": "追问 3"
+        },
+        {
+          "id": "drill-sql-oversell",
+          "questionId": "drill-sql-oversell",
+          "why": "读取的一致性之后，再处理竞争写入的正确性。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "d-window",
+        "d-explain",
+        "d-index",
+        "d-lock"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "index",
+        "mvcc",
+        "sql-slow"
+      ]
+    },
+    {
+      "id": "sql-slow",
+      "title": "慢 SQL：定位 → 计划 → 验证",
+      "group": "SQL 与存储",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test",
+        "ops"
+      ],
+      "steps": [
+        {
+          "id": "q38",
+          "questionId": "q38",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "一条查询慢，是扫描多、等待锁，还是返回数据太大？",
+          "why": "先按可观测证据拆分耗时来源。",
+          "focus": "结合慢日志、执行计划、锁等待和扫描/返回行数。",
+          "id": "sql-slow-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-mysql-slow-evidence",
+          "questionId": "drill-mysql-slow-evidence",
+          "why": "锁定原因后，设计可比较的优化实验。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-test-sql-plan",
+          "questionId": "drill-test-sql-plan",
+          "why": "性能提升之后，还要把正确性和计划变化纳入回归。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "db",
+        "d-explain"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "index",
+        "mvcc",
+        "sql-write"
+      ]
+    },
+    {
+      "id": "redis-cache",
+      "title": "Redis 缓存：未命中 → 重建 → 一致性",
+      "group": "Redis 与服务",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "steps": [
+        {
+          "title": "接口已经查 MySQL，为什么还要加入 Redis？什么数据不适合缓存？",
+          "why": "",
+          "focus": "按读写比例、延迟、一致性和失效成本说明取舍。",
+          "id": "redis-cache-step-1",
+          "stage": "起问"
+        },
+        {
+          "id": "q40",
+          "questionId": "q40",
+          "why": "加入缓存后，先讨论请求没有命中时数据库会承受什么。",
+          "stage": "追问 1"
+        },
+        {
+          "title": "热点 key 失效，一千个请求同时回源，怎样只让少量请求重建？",
+          "why": "把击穿具体化，追问互斥、等待与降级。",
+          "focus": "说明重建锁、过期时间、失败释放和兜底返回。",
+          "id": "redis-cache-step-3",
+          "stage": "追问 2"
+        },
+        {
+          "id": "q41",
+          "questionId": "q41",
+          "why": "能安全重建后，还需要面对数据库更新。",
+          "stage": "追问 3"
+        },
+        {
+          "title": "删缓存失败或旧读晚回填，你怎样发现并修复不一致？",
+          "why": "从正常更新顺序继续追问并发窗口和失败重试。",
+          "focus": "画出交错时序，明确最终一致性窗口、补偿和监控。",
+          "id": "redis-cache-step-5",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "redis",
+        "guide-redis"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "redis-persist",
+        "redis-lock",
+        "redis-data"
+      ]
+    },
+    {
+      "id": "redis-persist",
+      "title": "Redis 持久化：恢复 → 丢失窗口",
+      "group": "Redis 与服务",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops"
+      ],
+      "steps": [
+        {
+          "title": "Redis 进程重启后怎样恢复数据？RDB 与 AOF 各记录什么？",
+          "why": "",
+          "focus": "区分快照与写操作日志；结合恢复速度和数据丢失窗口。",
+          "id": "redis-persist-step-1",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-redis-durability",
+          "questionId": "drill-redis-durability",
+          "why": "有持久化并不等于每条写入都已经落盘。",
+          "stage": "追问 1"
+        },
+        {
+          "title": "AOF 重写与日常追加分别解决什么问题？",
+          "why": "日志能恢复之后，还要控制日志体积。",
+          "focus": "区分追加、刷盘和重写三个过程。",
+          "id": "redis-persist-step-3",
+          "stage": "追问 2"
+        },
+        {
+          "title": "主节点确认写入后立刻故障，切换到副本一定不丢吗？",
+          "why": "将单机落盘问题继续推进到复制和故障切换。",
+          "focus": "区分主机持久化与复制确认；根据配置和失败时机讨论。",
+          "id": "redis-persist-step-4",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "d-rpersist",
+        "guide-redis"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "redis-cache",
+        "redis-lock",
+        "redis-data"
+      ]
+    },
+    {
+      "id": "redis-lock",
+      "title": "分布式锁：获取 → 过期 → 陈旧持有者",
+      "group": "Redis 与服务",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack"
+      ],
+      "steps": [
+        {
+          "id": "q42",
+          "questionId": "q42",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "锁的 value 为什么要有唯一标识？解锁时直接 DEL 行不行？",
+          "why": "先保证释放的是自己获取的锁。",
+          "focus": "校验所有者与删除需要原子完成。",
+          "id": "redis-lock-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "title": "业务耗时超过租约，自动续期就能保证绝对安全吗？",
+          "why": "所有者检查之外，还要面对暂停和网络延迟。",
+          "focus": "考虑续期失败、长暂停和锁已转移的时序。",
+          "id": "redis-lock-step-3",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-redis-stale-lock",
+          "questionId": "drill-redis-stale-lock",
+          "why": "通过旧请求继续写入的场景检验租约边界。",
+          "stage": "追问 3"
+        },
+        {
+          "id": "drill-sql-oversell",
+          "questionId": "drill-sql-oversell",
+          "why": "回到库存业务，用数据库条件与幂等一起守住正确性。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "redis",
+        "d-rlock",
+        "d-lock"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "redis-cache",
+        "redis-persist",
+        "redis-data"
+      ]
+    },
+    {
+      "id": "redis-data",
+      "title": "Redis 数据结构：排行榜与淘汰",
+      "group": "Redis 与服务",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack"
+      ],
+      "steps": [
+        {
+          "title": "排行榜、去重用户和对象字段分别适合哪种 Redis 类型？",
+          "why": "",
+          "focus": "从操作需求选择 ZSET、Set、Hash，并考虑容量与热点。",
+          "id": "redis-data-step-1",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-zset-ranking",
+          "questionId": "drill-zset-ranking",
+          "why": "排行榜不仅有分数，还要定义相同分数时的顺序。",
+          "stage": "追问 1"
+        },
+        {
+          "title": "key 过期与内存不足时淘汰，是同一套机制吗？",
+          "why": "结构选型之外，追问内存如何被回收。",
+          "focus": "区分 TTL 到期删除与 maxmemory 淘汰策略。",
+          "id": "redis-data-step-3",
+          "stage": "追问 2"
+        },
+        {
+          "title": "一个特别大的集合拖慢请求，怎样发现并拆分？",
+          "why": "将内存管理进一步落到 big key 的性能问题。",
+          "focus": "观察对象规模和慢操作，避免一次性遍历或删除大对象。",
+          "id": "redis-data-step-4",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "d-zset",
+        "redis",
+        "guide-redis"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "redis-cache",
+        "redis-persist",
+        "redis-lock"
+      ]
+    },
+    {
+      "id": "java-collection",
+      "title": "Java 集合：相等 → 哈希 → 并发",
+      "group": "Java 后端",
+      "roles": [
+        "java"
+      ],
+      "steps": [
+        {
+          "id": "q23",
+          "questionId": "q23",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "对象放进 HashMap 后修改参与 hashCode 的字段，会发生什么？",
+          "why": "用可变 key 检验哈希与相等的契约。",
+          "focus": "说明查找定位与比较，避免把可变业务对象直接作为键。",
+          "id": "java-collection-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "id": "q24",
+          "questionId": "q24",
+          "why": "哈希表之外，按访问模式比较数组和链表。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-hashmap-write",
+          "questionId": "drill-hashmap-write",
+          "why": "单线程选型之后，检查复合操作的并发原子性。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "java",
+        "d-hashmap"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "java-thread",
+        "jvm",
+        "spring"
+      ]
+    },
+    {
+      "id": "java-thread",
+      "title": "Java 并发：可见性 → 线程池 → 上下文",
+      "group": "Java 后端",
+      "roles": [
+        "java"
+      ],
+      "steps": [
+        {
+          "id": "q25",
+          "questionId": "q25",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "volatile int 的 i++ 为什么仍可能丢更新？",
+          "why": "区分读写可见性与复合操作原子性。",
+          "focus": "拆解读取、计算、写入；比较锁与原子类。",
+          "id": "java-thread-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "id": "q26",
+          "questionId": "q26",
+          "why": "线程间正确通信之后，继续讨论如何管理任务。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-pool-order",
+          "questionId": "drill-pool-order",
+          "why": "把线程池参数落实到明确的任务到达序列。",
+          "stage": "追问 3"
+        },
+        {
+          "id": "drill-pool-reject",
+          "questionId": "drill-pool-reject",
+          "why": "队列满后追问拒绝策略给调用方带来的影响。",
+          "stage": "追问 4"
+        },
+        {
+          "id": "drill-threadlocal-clean",
+          "questionId": "drill-threadlocal-clean",
+          "why": "工作线程复用后，还需要清理每个任务的上下文。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "java",
+        "d-pool",
+        "d-threadlocal"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "java-collection",
+        "jvm",
+        "spring"
+      ]
+    },
+    {
+      "id": "jvm",
+      "title": "JVM 排障：内存增长 → GC → 证据",
+      "group": "Java 后端",
+      "roles": [
+        "java"
+      ],
+      "steps": [
+        {
+          "id": "q27",
+          "questionId": "q27",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "内存持续上涨，你怎样区分正常缓存增长和对象泄漏？",
+          "why": "从概念进入可重复的观测。",
+          "focus": "比较负载、GC 后存活量、对象数量和引用链。",
+          "id": "jvm-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "title": "CPU 很高时，怎样找到对应 Java 线程在执行什么？",
+          "why": "内存之外，继续讨论线程与 CPU 的关联证据。",
+          "focus": "关联系统线程与线程栈，多次采样避免单点误判。",
+          "id": "jvm-step-3",
+          "stage": "追问 2"
+        },
+        {
+          "title": "改大堆或换 GC 之前，你会怎样验证瓶颈和收益？",
+          "why": "避免仅通过调参掩盖业务问题。",
+          "focus": "先建立基线，比较吞吐、暂停与尾延迟；保留回滚方案。",
+          "id": "jvm-step-4",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "java"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "java-collection",
+        "java-thread",
+        "spring"
+      ]
+    },
+    {
+      "id": "spring",
+      "title": "Spring：注入 → 代理 → 事务失效",
+      "group": "Java 后端",
+      "roles": [
+        "java"
+      ],
+      "steps": [
+        {
+          "id": "q28",
+          "questionId": "q28",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "一个 Bean 的方法被代理后，调用是怎样经过拦截器的？",
+          "why": "理解 AOP 的调用路径，才能分析事务边界。",
+          "focus": "画出调用方、代理对象与目标对象。",
+          "id": "spring-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "id": "q29",
+          "questionId": "q29",
+          "why": "把代理机制用于事务注解。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-transaction-self",
+          "questionId": "drill-transaction-self",
+          "why": "通过同类内部调用检验代理边界。",
+          "stage": "追问 3"
+        },
+        {
+          "id": "drill-transaction-catch",
+          "questionId": "drill-transaction-catch",
+          "why": "即使经过代理，还要检查异常是否触发回滚规则。",
+          "stage": "追问 4"
+        },
+        {
+          "id": "drill-redo-undo",
+          "questionId": "drill-redo-undo",
+          "why": "最后把框架事务落到数据库提交和恢复机制。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "java",
+        "db",
+        "d-spring",
+        "d-redo",
+        "d-undo"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "mvcc",
+        "java-thread"
+      ]
+    },
+    {
+      "id": "maven",
+      "title": "依赖治理：版本冲突 → 可复现构建",
+      "group": "Java 后端",
+      "roles": [
+        "java"
+      ],
+      "steps": [
+        {
+          "title": "本地正常、线上报 NoSuchMethodError，你先查什么？",
+          "why": "",
+          "focus": "比较编译与运行时实际依赖版本和类路径。",
+          "id": "maven-step-1",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-maven-conflict",
+          "questionId": "drill-maven-conflict",
+          "why": "发现重复版本后，解释 Maven 如何选择。",
+          "stage": "追问 1"
+        },
+        {
+          "title": "修复冲突后，怎样防止下次升级又引入旧版本？",
+          "why": "单次修复继续推进到团队的版本管理。",
+          "focus": "统一依赖管理、检查依赖树并运行兼容性验证。",
+          "id": "maven-step-3",
+          "stage": "追问 2"
+        },
+        {
+          "id": "q73",
+          "questionId": "q73",
+          "why": "用发布流水线确保构建产物和验证结果一致。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "d-maven"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "java-collection",
+        "java-thread",
+        "jvm"
+      ]
+    },
+    {
+      "id": "go-runtime",
+      "title": "Go：goroutine → channel → 取消",
+      "group": "Go 后端",
+      "roles": [
+        "go"
+      ],
+      "steps": [
+        {
+          "id": "q30",
+          "questionId": "q30",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "q31",
+          "questionId": "q31",
+          "why": "调度之外，追问任务如何通信和结束。",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-go-channel",
+          "questionId": "drill-go-channel",
+          "why": "先枚举 channel 不同状态下的行为。",
+          "stage": "追问 2"
+        },
+        {
+          "title": "请求已经超时，启动的 goroutine 为什么还活着？",
+          "why": "通信正确不代表生命周期正确。",
+          "focus": "检查 context 传播、阻塞发送接收和资源关闭。",
+          "id": "go-runtime-step-4",
+          "stage": "追问 3"
+        },
+        {
+          "id": "drill-go-recover",
+          "questionId": "drill-go-recover",
+          "why": "任务结束之外，再讨论子任务异常的处理边界。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "go",
+        "d-go"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "go-data",
+        "service-debug"
+      ]
+    },
+    {
+      "id": "go-data",
+      "title": "Go：slice、interface 与并发访问",
+      "group": "Go 后端",
+      "roles": [
+        "go"
+      ],
+      "steps": [
+        {
+          "id": "q32",
+          "questionId": "q32",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-go-nil",
+          "questionId": "drill-go-nil",
+          "why": "先用 interface 的动态类型和值验证判空理解。",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-go-append",
+          "questionId": "drill-go-append",
+          "why": "再从值与引用关系分析 slice 的共享底层数组。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-go-loop-version",
+          "questionId": "drill-go-loop-version",
+          "why": "闭包捕获同样依赖变量身份，并且要区分语言版本。",
+          "stage": "追问 3"
+        },
+        {
+          "id": "drill-go-race",
+          "questionId": "drill-go-race",
+          "why": "最后把共享状态放进并发环境检验。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "go",
+        "d-gofaq",
+        "d-go",
+        "d-go122",
+        "d-race"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "go-runtime"
+      ]
+    },
+    {
+      "id": "python-objects",
+      "title": "Python：默认参数 → 对象与函数",
+      "group": "Python 后端",
+      "roles": [
+        "python",
+        "ai",
+        "test"
+      ],
+      "steps": [
+        {
+          "id": "q33",
+          "questionId": "q33",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-python-default",
+          "questionId": "drill-python-default",
+          "why": "先用重复调用检验对象创建与共享。",
+          "stage": "追问 1"
+        },
+        {
+          "title": "函数内修改列表与把变量重新赋值，外部观察到的结果为何不同？",
+          "why": "默认参数问题继续追问名称绑定与对象修改。",
+          "focus": "画出名称到对象的引用；区分原地修改和重新绑定。",
+          "id": "python-objects-step-3",
+          "stage": "追问 2"
+        },
+        {
+          "title": "装饰器需要保存被包装函数的元数据时怎么做？生成器何时执行函数体？",
+          "why": "从参数行为扩展到常用函数封装与惰性执行。",
+          "focus": "分别说明 wraps 与迭代驱动执行；结合实际代码。",
+          "id": "python-objects-step-4",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "d-pyfunc",
+        "python"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "python-async"
+      ]
+    },
+    {
+      "id": "python-async",
+      "title": "Python 异步：阻塞 → 取消 → 并行",
+      "group": "Python 后端",
+      "roles": [
+        "python",
+        "ai",
+        "test"
+      ],
+      "steps": [
+        {
+          "id": "q34",
+          "questionId": "q34",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-python-block",
+          "questionId": "drill-python-block",
+          "why": "先识别 async 函数中的同步阻塞。",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-python-gather",
+          "questionId": "drill-python-gather",
+          "why": "并发启动后，追问一个任务失败的影响。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-python-cancel",
+          "questionId": "drill-python-cancel",
+          "why": "处理异常之外，还需正确传播取消并清理资源。",
+          "stage": "追问 3"
+        },
+        {
+          "id": "drill-python-gil-version",
+          "questionId": "drill-python-gil-version",
+          "why": "最后区分协程并发与不同构建下的线程并行。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "python",
+        "d-async",
+        "d-free"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "api",
+        "service-debug"
+      ]
+    },
+    {
+      "id": "api",
+      "title": "API 服务：校验 → 幂等 → 超时",
+      "group": "服务工程",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "steps": [
+        {
+          "id": "q20",
+          "questionId": "q20",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "q35",
+          "questionId": "q35",
+          "why": "接口契约需要落实到参数解析与并发模型。",
+          "stage": "追问 1",
+          "title": "API 服务如何校验参数、控制并发并处理非法请求？"
+        },
+        {
+          "title": "客户端重试三次，服务端怎样只创建一个订单？",
+          "why": "从输入合法性继续追问重复执行。",
+          "focus": "选择业务唯一键，原子记录处理结果，并定义重复请求返回值。",
+          "id": "api-step-3",
+          "stage": "追问 2"
+        },
+        {
+          "id": "q45",
+          "questionId": "q45",
+          "why": "正确性之外，流量升高时要保护依赖。",
+          "stage": "追问 3"
+        },
+        {
+          "title": "A 调 B，B 调 C，每一层都各重试三次会怎样？",
+          "why": "将保护机制放到多层调用链。",
+          "focus": "计算重试放大，统一时间预算、退避和可重试错误范围。",
+          "id": "api-step-5",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "web",
+        "python",
+        "ops"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "mq",
+        "service-debug"
+      ]
+    },
+    {
+      "id": "mq",
+      "title": "消息队列：投递 → ACK → 幂等",
+      "group": "服务工程",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops"
+      ],
+      "steps": [
+        {
+          "id": "q46",
+          "questionId": "q46",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "数据库提交成功但消息没发出去，你怎样补偿？",
+          "why": "先处理生产端业务状态与消息之间的失败窗口。",
+          "focus": "比较事务消息或 outbox，并设计可重试投递。",
+          "id": "mq-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-mq-after-commit",
+          "questionId": "drill-mq-after-commit",
+          "why": "生产端可靠后，再看消费端已执行但确认失败。",
+          "stage": "追问 2"
+        },
+        {
+          "title": "重试多次仍失败的消息怎么办？有序消费会受什么影响？",
+          "why": "幂等之外，还要处理无法自动恢复的失败。",
+          "focus": "定义重试上限、死信处理、告警与人工修复；说明顺序约束。",
+          "id": "mq-step-4",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "ops",
+        "d-ack"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "api",
+        "service-debug"
+      ]
+    },
+    {
+      "id": "service-debug",
+      "title": "服务排障：慢请求 → 资源 → 分布式",
+      "group": "服务工程",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops",
+        "ai",
+        "cpp"
+      ],
+      "steps": [
+        {
+          "id": "q44",
+          "questionId": "q44",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "平均耗时正常但 P99 升高，下一步看哪些证据？",
+          "why": "整体均值可能掩盖少量请求的异常。",
+          "focus": "按链路、依赖、实例和请求类型分组，检查排队与超时。",
+          "id": "service-debug-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "id": "q43",
+          "questionId": "q43",
+          "why": "资源异常进一步追问线程共享、阻塞和锁等待。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "q47",
+          "questionId": "q47",
+          "why": "从单进程扩大到多个实例后，检查协调与部分失败。",
+          "stage": "追问 3"
+        },
+        {
+          "title": "修复后怎样证明故障没有仅仅转移到下游？",
+          "why": "最后用系统范围的观测收束。",
+          "focus": "复现负载并比较端到端延迟、错误率、队列和依赖资源。",
+          "id": "service-debug-step-5",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "ops"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "api",
+        "mq"
+      ]
+    },
+    {
+      "id": "rag-flow",
+      "title": "RAG：知识入库 → 切分 → 更新",
+      "group": "RAG 与 Agent",
+      "roles": [
+        "ai"
+      ],
+      "steps": [
+        {
+          "id": "q50",
+          "questionId": "q50",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-rag-chunk",
+          "questionId": "drill-rag-chunk",
+          "why": "先检查入库阶段是否保留了回答所需上下文。",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-rag-long-context",
+          "questionId": "drill-rag-long-context",
+          "why": "既然切分有代价，进一步比较整篇输入。",
+          "stage": "追问 2"
+        },
+        {
+          "title": "文档修改或删除了，怎样避免继续检索到旧版本？",
+          "why": "能检索之后，追问知识库的持续更新。",
+          "focus": "维护文档版本、分块来源、增量索引和删除传播。",
+          "id": "rag-flow-step-4",
+          "stage": "追问 3"
+        },
+        {
+          "title": "不同用户权限不同，权限过滤应放在哪一步？",
+          "why": "更新正确之外，还要保证取到的是当前用户可见内容。",
+          "focus": "检索和引用都绑定身份与权限；不能只依靠模型自觉忽略。",
+          "id": "rag-flow-step-5",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "d-rag"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "rag-search",
+        "rag-eval",
+        "agent-loop"
+      ]
+    },
+    {
+      "id": "rag-search",
+      "title": "RAG 检索：召回 → 混合 → 重排",
+      "group": "RAG 与 Agent",
+      "roles": [
+        "ai"
+      ],
+      "steps": [
+        {
+          "id": "q51",
+          "questionId": "q51",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-rag-hybrid",
+          "questionId": "drill-rag-hybrid",
+          "why": "用错误码等精确词项检验语义检索的边界。",
+          "stage": "追问 1"
+        },
+        {
+          "title": "BM25 和向量结果分数不同，怎样合并后再重排？",
+          "why": "两路结果拿到后，追问融合与候选排序。",
+          "focus": "讨论候选去重、融合策略、重排成本和验证集。",
+          "id": "rag-search-step-3",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-rag-recall",
+          "questionId": "drill-rag-recall",
+          "why": "召回成功之后，继续检查最终答案是否忠于证据。",
+          "stage": "追问 3"
+        },
+        {
+          "id": "q52",
+          "questionId": "q52",
+          "why": "把单个错误归因到检索、上下文或生成阶段。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "rag",
+        "d-rag",
+        "d-eval"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "rag-flow",
+        "rag-eval",
+        "agent-loop"
+      ]
+    },
+    {
+      "id": "rag-eval",
+      "title": "RAG 评测：坏例 → 回归 → 选型",
+      "group": "RAG 与 Agent",
+      "roles": [
+        "ai"
+      ],
+      "steps": [
+        {
+          "title": "你的知识库问答“效果很好”，你用什么数据证明？",
+          "why": "",
+          "focus": "准备固定查询集、标注来源、召回与答案质量指标。",
+          "id": "rag-eval-step-1",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-rag-recall",
+          "questionId": "drill-rag-recall",
+          "why": "先区分检索指标与最终业务成功。",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-agent-regression",
+          "questionId": "drill-agent-regression",
+          "why": "修好错误之后，检验其他任务是否退化。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "q53",
+          "questionId": "q53",
+          "why": "有了评测证据，再讨论改检索还是训练模型。",
+          "stage": "追问 3"
+        },
+        {
+          "title": "上线后用户问题变了，评测集怎样持续更新？",
+          "why": "离线结果需要跟随线上需求变化。",
+          "focus": "沉淀匿名化失败案例、版本化数据并保留稳定回归集。",
+          "id": "rag-eval-step-5",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "d-eval",
+        "d-rag"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "rag-flow",
+        "rag-search",
+        "agent-loop"
+      ]
+    },
+    {
+      "id": "agent-loop",
+      "title": "Agent：工作流 → 循环 → 选型",
+      "group": "RAG 与 Agent",
+      "roles": [
+        "ai"
+      ],
+      "steps": [
+        {
+          "id": "q54",
+          "questionId": "q54",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "请画出模型选择工具、执行工具、回传结果的完整循环。",
+          "why": "定义之后需要说清每轮状态如何推进。",
+          "focus": "标出模型输出、校验、执行、结果与下一轮输入。",
+          "id": "agent-loop-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-agent-loop-stop",
+          "questionId": "drill-agent-loop-stop",
+          "why": "循环正常后，追问重复调用与无法收敛。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-agent-build-buy",
+          "questionId": "drill-agent-build-buy",
+          "why": "明确状态和约束后，再解释框架选型。",
+          "stage": "追问 3"
+        },
+        {
+          "id": "q59",
+          "questionId": "q59",
+          "why": "单 Agent 的边界明确后，讨论拆分多个 Agent 的收益与协调成本。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "ai",
+        "d-agent",
+        "graph"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "agent-tools",
+        "agent-memory",
+        "mcp",
+        "ai-security"
+      ]
+    },
+    {
+      "id": "agent-tools",
+      "title": "工具调用：参数 → 副作用 → 重试",
+      "group": "RAG 与 Agent",
+      "roles": [
+        "ai"
+      ],
+      "steps": [
+        {
+          "id": "q55",
+          "questionId": "q55",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-tool-schema",
+          "questionId": "drill-tool-schema",
+          "why": "从调用成功率继续检查参数的语法、语义和权限。",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-agent-tool-retry",
+          "questionId": "drill-agent-tool-retry",
+          "why": "合法调用还可能在执行后超时。",
+          "stage": "追问 2"
+        },
+        {
+          "title": "需要人工确认的操作，确认之后参数被改了怎么办？",
+          "why": "副作用不能重复，还必须确保执行的是被确认的操作。",
+          "focus": "绑定用户、参数摘要和有效期；变更后重新确认。",
+          "id": "agent-tools-step-4",
+          "stage": "追问 3"
+        },
+        {
+          "id": "drill-agent-trajectory",
+          "questionId": "drill-agent-trajectory",
+          "why": "最后不仅看最终文字，还评估整个工具轨迹。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "ai",
+        "d-agent",
+        "d-ack",
+        "d-eval"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "rag-flow",
+        "rag-search",
+        "rag-eval"
+      ]
+    },
+    {
+      "id": "agent-memory",
+      "title": "Agent 记忆：上下文 → 检查点 → 恢复",
+      "group": "RAG 与 Agent",
+      "roles": [
+        "ai"
+      ],
+      "steps": [
+        {
+          "id": "q56",
+          "questionId": "q56",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-memory-checkpointer",
+          "questionId": "drill-memory-checkpointer",
+          "why": "先区分一次会话的执行状态和跨会话知识。",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-memory-compress",
+          "questionId": "drill-memory-compress",
+          "why": "状态不断增长之后，讨论摘要与原始证据。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-interrupt-replay",
+          "questionId": "drill-interrupt-replay",
+          "why": "持久化还涉及中断恢复时重新执行代码。",
+          "stage": "追问 3"
+        },
+        {
+          "id": "drill-interrupt-multi",
+          "questionId": "drill-interrupt-multi",
+          "why": "多个确认点进一步检验恢复与重放顺序。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "graph",
+        "d-memory",
+        "d-context",
+        "d-interrupt"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "rag-flow",
+        "rag-search",
+        "rag-eval"
+      ]
+    },
+    {
+      "id": "mcp",
+      "title": "MCP：工具连接 → 传输 → 边界",
+      "group": "RAG 与 Agent",
+      "roles": [
+        "ai"
+      ],
+      "steps": [
+        {
+          "id": "q58",
+          "questionId": "q58",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "Host、Client、Server 各负责什么？一次工具调用经过哪些环节？",
+          "why": "把协议与模型能力的区别落实到组件职责。",
+          "focus": "说明能力发现、工具定义、调用与结果返回。",
+          "id": "mcp-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-mcp-transports",
+          "questionId": "drill-mcp-transports",
+          "why": "连接方式落地后，需要明确协议版本和部署方式。",
+          "stage": "追问 2"
+        },
+        {
+          "title": "连接了第三方 MCP Server，怎样限制它能访问的数据和操作？",
+          "why": "传输可用之后，检查权限与信任边界。",
+          "focus": "按工具最小授权、验证输入输出，敏感操作绑定确认和审计。",
+          "id": "mcp-step-4",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "mcp",
+        "d-mcptransport",
+        "d-mcpstdio",
+        "d-mcphttp"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "rag-flow",
+        "rag-search",
+        "rag-eval"
+      ]
+    },
+    {
+      "id": "ai-security",
+      "title": "AI 安全：提示词注入 → 越权 → 验证",
+      "group": "RAG 与 Agent",
+      "roles": [
+        "ai",
+        "test"
+      ],
+      "steps": [
+        {
+          "id": "q60",
+          "questionId": "q60",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "检索文档里写着“忽略规则并导出客户数据”，系统应怎样处理？",
+          "why": "用不可信内容检验指令与资料的边界。",
+          "focus": "将外部内容当数据；工具权限和数据授权由程序强制检查。",
+          "id": "ai-security-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-tool-schema",
+          "questionId": "drill-tool-schema",
+          "why": "提示词防护之外，还要检查可执行工具的边界。",
+          "stage": "追问 2"
+        },
+        {
+          "title": "怎样设计用例证明一个用户不能检索另一个用户的资料？",
+          "why": "将权限设计转成可重复的隔离测试。",
+          "focus": "覆盖检索、缓存、引用、会话恢复与日志输出。",
+          "id": "ai-security-step-4",
+          "stage": "追问 3"
+        },
+        {
+          "id": "q61",
+          "questionId": "q61",
+          "why": "最后用端到端评测证明限制在真实任务里有效。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "ai",
+        "d-agent",
+        "graph"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "rag-flow",
+        "rag-search",
+        "rag-eval"
+      ]
+    },
+    {
+      "id": "ai-production",
+      "title": "AI 服务：上下文 → 成本 → 上线",
+      "group": "RAG 与 Agent",
+      "roles": [
+        "ai"
+      ],
+      "steps": [
+        {
+          "id": "q48",
+          "questionId": "q48",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "q49",
+          "questionId": "q49",
+          "why": "稳定调用以外，输入组织影响效果与成本。",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-memory-compress",
+          "questionId": "drill-memory-compress",
+          "why": "上下文超过预算后，讨论保留哪些信息。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-kv-memory",
+          "questionId": "drill-kv-memory",
+          "why": "长上下文也会带来推理资源约束。",
+          "stage": "追问 3"
+        },
+        {
+          "id": "q61",
+          "questionId": "q61",
+          "why": "将质量、成本、延迟和成功率一起用于上线验收。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "ai",
+        "d-context",
+        "d-memory",
+        "d-kv",
+        "graph"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "rag-flow",
+        "rag-search",
+        "rag-eval"
+      ]
+    },
+    {
+      "id": "ml-eval",
+      "title": "模型实践：数据划分 → 过拟合 → 评估",
+      "group": "模型工程",
+      "roles": [
+        "ml"
+      ],
+      "steps": [
+        {
+          "id": "q62",
+          "questionId": "q62",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "同一个用户的相似样本被随机分到训练和测试集，有什么风险？",
+          "why": "从比例划分追问样本之间的信息泄漏。",
+          "focus": "按用户、时间或业务实体划分，并匹配上线分布。",
+          "id": "ml-eval-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "id": "q63",
+          "questionId": "q63",
+          "why": "排除泄漏后，再分析训练和验证表现的差距。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "q64",
+          "questionId": "q64",
+          "why": "模型优劣还需要与业务错误代价对应。",
+          "stage": "追问 3"
+        },
+        {
+          "id": "drill-torch-eval",
+          "questionId": "drill-torch-eval",
+          "why": "最后检查评估时模型模式与梯度设置。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "ml",
+        "d-torch",
+        "d-grad"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "ml-train",
+        "inference"
+      ]
+    },
+    {
+      "id": "ml-train",
+      "title": "微调实践：选型 → 显存 → 梯度",
+      "group": "模型工程",
+      "roles": [
+        "ml"
+      ],
+      "steps": [
+        {
+          "id": "q65",
+          "questionId": "q65",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-lora-budget",
+          "questionId": "drill-lora-budget",
+          "why": "将微调方式落实到可训练参数和资源限制。",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-grad-accumulate",
+          "questionId": "drill-grad-accumulate",
+          "why": "显存有限时，继续追问有效批量与优化器更新。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-torch-eval",
+          "questionId": "drill-torch-eval",
+          "why": "训练完成后，切换到正确的验证流程。",
+          "stage": "追问 3"
+        },
+        {
+          "title": "微调后旧能力退化，怎样判断是数据、超参数还是评测变化？",
+          "why": "最终用稳定对照检查收益和回归。",
+          "focus": "固定评测集和基线，记录数据与训练配置，做有控制的对比。",
+          "id": "ml-train-step-5",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "ml",
+        "d-lora",
+        "d-grad",
+        "d-torch"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "ml-eval",
+        "inference"
+      ]
+    },
+    {
+      "id": "inference",
+      "title": "推理优化：延迟 → KV Cache → 验证",
+      "group": "模型工程",
+      "roles": [
+        "ml",
+        "ai"
+      ],
+      "steps": [
+        {
+          "id": "q66",
+          "questionId": "q66",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-kv-memory",
+          "questionId": "drill-kv-memory",
+          "why": "长上下文和并发是具体资源压力来源。",
+          "stage": "追问 1"
+        },
+        {
+          "title": "首 token 延迟高与每秒生成 token 少，需要优化同一阶段吗？",
+          "why": "将一次请求拆成输入处理和自回归生成。",
+          "focus": "分别观察 prefill、decode、排队和通信开销。",
+          "id": "inference-step-3",
+          "stage": "追问 2"
+        },
+        {
+          "title": "量化或批处理提高吞吐后，怎样确认质量和尾延迟可以接受？",
+          "why": "优化需要同时满足业务约束。",
+          "focus": "固定负载和质量集，比较 TTFT、吞吐、P99、显存和任务成功率。",
+          "id": "inference-step-4",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "ml",
+        "d-kv"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "ml-eval",
+        "ml-train"
+      ]
+    },
+    {
+      "id": "test-cases",
+      "title": "接口测试：边界 → 状态 → 数据正确性",
+      "group": "测试开发",
+      "roles": [
+        "test"
+      ],
+      "steps": [
+        {
+          "id": "q67",
+          "questionId": "q67",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "一个下单接口，除了成功与失败，还要覆盖哪些状态变化？",
+          "why": "把字段输入扩展为完整业务流程。",
+          "focus": "覆盖库存不足、重复提交、超时后查询、权限、回滚和并发。",
+          "id": "test-cases-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-sql-oversell",
+          "questionId": "drill-sql-oversell",
+          "why": "用竞争写入检验并发用例的价值。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-test-sql-plan",
+          "questionId": "drill-test-sql-plan",
+          "why": "结果正确之后，还需验证性能修改没有造成回归。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "qa",
+        "d-lock",
+        "d-explain"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "test-auto",
+        "test-load"
+      ]
+    },
+    {
+      "id": "test-auto",
+      "title": "自动化：定位 → 等待 → 隔离",
+      "group": "测试开发",
+      "roles": [
+        "test",
+        "frontend",
+        "fullstack"
+      ],
+      "steps": [
+        {
+          "id": "q68",
+          "questionId": "q68",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-test-locator",
+          "questionId": "drill-test-locator",
+          "why": "先排除 UI 表现变更导致的脆弱定位。",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-test-wait",
+          "questionId": "drill-test-wait",
+          "why": "定位到了元素，还需判断业务何时可交互。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-test-isolation",
+          "questionId": "drill-test-isolation",
+          "why": "单条稳定后，检查并行执行与共享数据。",
+          "stage": "追问 3"
+        },
+        {
+          "title": "失败重试后通过，怎样判断是否真的修好了？",
+          "why": "避免重试隐藏偶发失败。",
+          "focus": "保留首次失败证据，复现时序并跟踪失败率，区分环境与产品缺陷。",
+          "id": "test-auto-step-5",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "qa",
+        "d-playwright"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "test-cases",
+        "test-load"
+      ]
+    },
+    {
+      "id": "test-load",
+      "title": "压测：负载模型 → 瓶颈 → 容量",
+      "group": "测试开发",
+      "roles": [
+        "test",
+        "ops"
+      ],
+      "steps": [
+        {
+          "id": "q69",
+          "questionId": "q69",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "压测的并发数、到达率和用户思考时间分别怎样设置？",
+          "why": "先明确模拟的业务流量，才谈结果。",
+          "focus": "依据真实流量与操作链路设计，区分闭环与到达率模型。",
+          "id": "test-load-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-test-pressure",
+          "questionId": "drill-test-pressure",
+          "why": "流量模型明确后，检查统计指标是否足够。",
+          "stage": "追问 2"
+        },
+        {
+          "title": "接口变慢时 CPU 不高，就能说明系统还有容量吗？",
+          "why": "延迟升高可能来自锁、排队或外部依赖。",
+          "focus": "关联连接池、队列、锁等待、IO 与下游延迟。",
+          "id": "test-load-step-4",
+          "stage": "追问 3"
+        },
+        {
+          "title": "怎样从压测结果定容量和扩容阈值？",
+          "why": "把测试结果转换成运维可执行的结论。",
+          "focus": "定义可接受错误率和尾延迟，保留余量并验证扩容后的瓶颈。",
+          "id": "test-load-step-5",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "qa",
+        "d-k6"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "test-cases",
+        "test-auto"
+      ]
+    },
+    {
+      "id": "docker",
+      "title": "Docker：镜像 → 启动失败 → 体积",
+      "group": "部署与运维",
+      "roles": [
+        "ops",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai"
+      ],
+      "steps": [
+        {
+          "id": "q70",
+          "questionId": "q70",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-docker-build",
+          "questionId": "drill-docker-build",
+          "why": "隔离环境会暴露开发机未显式声明的依赖。",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-docker-multistage",
+          "questionId": "drill-docker-multistage",
+          "why": "运行正确之后，再区分构建依赖与运行依赖。",
+          "stage": "追问 2"
+        },
+        {
+          "title": "容器删掉后数据丢了，哪些数据应该写入持久卷？",
+          "why": "镜像之外还要管理可变运行数据。",
+          "focus": "区分镜像层、容器可写层和外部持久存储。",
+          "id": "docker-step-4",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "ops",
+        "d-docker"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "k8s",
+        "linux"
+      ]
+    },
+    {
+      "id": "k8s",
+      "title": "Kubernetes：发布 → 探针 → 重启",
+      "group": "部署与运维",
+      "roles": [
+        "ops"
+      ],
+      "steps": [
+        {
+          "id": "q71",
+          "questionId": "q71",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-probe-types",
+          "questionId": "drill-probe-types",
+          "why": "发布过程依赖对就绪、存活与启动的正确判断。",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-pod-oom",
+          "questionId": "drill-pod-oom",
+          "why": "出现重启之后，需要根据退出原因定位。",
+          "stage": "追问 2"
+        },
+        {
+          "title": "滚动发布过程中还有旧请求未结束，怎样平滑退出？",
+          "why": "实例恢复之外，继续确保主动替换不影响请求。",
+          "focus": "处理就绪状态、停止接收新请求、终止信号与宽限期。",
+          "id": "k8s-step-4",
+          "stage": "追问 3"
+        },
+        {
+          "title": "新版本错误率上升，回滚镜像就足够吗？",
+          "why": "将发布回滚扩展到配置、数据和兼容性。",
+          "focus": "检查数据库变更、消息格式和旧版本能否继续读取新数据。",
+          "id": "k8s-step-5",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "ops",
+        "d-probe",
+        "d-pod"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "docker",
+        "linux"
+      ]
+    },
+    {
+      "id": "linux",
+      "title": "Linux：服务不可用 → 证据链",
+      "group": "部署与运维",
+      "roles": [
+        "ops",
+        "java",
+        "go",
+        "python",
+        "ai",
+        "fullstack",
+        "cpp"
+      ],
+      "steps": [
+        {
+          "id": "q72",
+          "questionId": "q72",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "进程还在但接口不通，你先查监听端口还是重启服务？",
+          "why": "先收集证据，区分未监听、网络失败与应用超时。",
+          "focus": "结合端口、日志、连接测试和请求链路缩小范围。",
+          "id": "linux-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "title": "磁盘还有空间但写入失败，还可能是什么原因？",
+          "why": "资源排查不能只看一个容量指标。",
+          "focus": "检查 inode、权限、只读挂载、配额与 IO 错误。",
+          "id": "linux-step-3",
+          "stage": "追问 2"
+        },
+        {
+          "id": "q44",
+          "questionId": "q44",
+          "why": "基础资源检查之后，继续沿应用依赖定位。",
+          "stage": "追问 3"
+        },
+        {
+          "title": "修复后需要补哪些监控才能更早发现同类故障？",
+          "why": "从处理一次故障沉淀可复用的检测。",
+          "focus": "围绕故障信号设置可行动告警，并记录恢复步骤。",
+          "id": "linux-step-5",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "ops"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "docker",
+        "k8s"
+      ]
+    },
+    {
+      "id": "cpp-ownership",
+      "title": "C++：所有权 → 智能指针 → 并发",
+      "group": "C++ / 客户端",
+      "roles": [
+        "cpp"
+      ],
+      "steps": [
+        {
+          "id": "q74",
+          "questionId": "q74",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-unique-move",
+          "questionId": "drill-unique-move",
+          "why": "先明确独占所有权如何转移。",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-shared-cycle",
+          "questionId": "drill-shared-cycle",
+          "why": "共享所有权之后，检查生命周期环。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-shared-ptr-thread",
+          "questionId": "drill-shared-ptr-thread",
+          "why": "引用计数正确还不代表业务对象访问安全。",
+          "stage": "追问 3"
+        },
+        {
+          "id": "drill-shared-write",
+          "questionId": "drill-shared-write",
+          "why": "最后手写关键行为检验所有权规则。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "cpp",
+        "d-cppsmart",
+        "d-cppmove",
+        "d-cppsafe"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "cpp-lifetime"
+      ]
+    },
+    {
+      "id": "cpp-lifetime",
+      "title": "C++：拷贝 → 容器失效 → 析构",
+      "group": "C++ / 客户端",
+      "roles": [
+        "cpp"
+      ],
+      "steps": [
+        {
+          "id": "q75",
+          "questionId": "q75",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-cpp-copy",
+          "questionId": "drill-cpp-copy",
+          "why": "通过拥有原始资源的对象检验默认拷贝风险。",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-vector-invalidate",
+          "questionId": "drill-vector-invalidate",
+          "why": "对象生命周期之外，容器扩容还会改变地址。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-virtual-destruct",
+          "questionId": "drill-virtual-destruct",
+          "why": "通过基类释放资源时，再检查析构链路。",
+          "stage": "追问 3"
+        },
+        {
+          "title": "设计一个资源管理类，异常发生时怎样确保不泄漏？",
+          "why": "将上述生命周期规则落实到 RAII。",
+          "focus": "把资源绑定对象生命周期，定义拷贝/移动语义并保证析构安全。",
+          "id": "cpp-lifetime-step-5",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "cpp",
+        "d-cppsmart",
+        "d-cppvector",
+        "d-cppdestruct"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "cpp-ownership"
+      ]
+    },
+    {
+      "id": "algo-list",
+      "title": "手写链表：倒数节点 → 边界 → 验证",
+      "group": "手写与项目",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "cpp",
+        "test"
+      ],
+      "steps": [
+        {
+          "title": "单链表只能向后走，怎样一次遍历找到倒数第 N 个节点？",
+          "why": "",
+          "focus": "让两个指针保持固定间隔。",
+          "id": "algo-list-step-1",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-algo-remove-n",
+          "questionId": "drill-algo-remove-n",
+          "why": "找到节点之后，还要统一删除操作。",
+          "stage": "追问 1"
+        },
+        {
+          "title": "链表只有一个节点、N 等于长度或 N 非法时怎么处理？",
+          "why": "主流程正确后，逐项验证边界。",
+          "focus": "明确输入约束，使用哑节点统一头节点处理。",
+          "id": "algo-list-step-3",
+          "stage": "追问 2"
+        },
+        {
+          "title": "你如何解释算法的时间和额外空间成本？",
+          "why": "最后检查实现是否满足题目资源约束。",
+          "focus": "按遍历次数和额外结构计数；说明是否修改原链表。",
+          "id": "algo-list-step-4",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "d-lc19"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "algo-search",
+        "algo-tree",
+        "fe-handwrite"
+      ]
+    },
+    {
+      "id": "algo-search",
+      "title": "手写数组：有序合并 → 边界 → 开销",
+      "group": "手写与项目",
+      "roles": [
+        "ai",
+        "go",
+        "python",
+        "java",
+        "cpp"
+      ],
+      "steps": [
+        {
+          "id": "drill-algo-merge",
+          "questionId": "drill-algo-merge",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "合并时一个数组先耗尽，还需要什么收尾处理？",
+          "why": "先检查双指针实现的边界。",
+          "focus": "处理剩余元素，并覆盖空数组与重复值。",
+          "id": "algo-search-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "id": "merge-duplicates",
+          "title": "输入有重复元素或负数时，你的比较与移动规则还成立吗？",
+          "why": "再用非理想输入检查排序不变量。",
+          "focus": "覆盖相等元素、负数、单元素和长度相差很大的数组。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "merge-space",
+          "title": "结果必须降序输出，你能从数组尾部开始合并吗？额外空间是多少？",
+          "why": "正确性确定后，检查是否能利用已有顺序减少工作。",
+          "focus": "用双指针从较大元素开始处理，区分输出空间与辅助空间。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "web"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "algo-trie-chain",
+        "algo-list"
+      ]
+    },
+    {
+      "id": "algo-tree",
+      "title": "手写树遍历：队列 → 分层 → 迭代",
+      "group": "手写与项目",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "cpp",
+        "test"
+      ],
+      "steps": [
+        {
+          "id": "drill-algo-bfs",
+          "questionId": "drill-algo-bfs",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "一边入队孩子，一边判断本层结束，层大小应在什么时候记录？",
+          "why": "用队列变化检查层序遍历的实现。",
+          "focus": "每层开始时固定当前队列长度。",
+          "id": "algo-tree-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "title": "递归遍历深链状树时有什么风险？怎样改成显式栈？",
+          "why": "从宽度遍历继续比较深度遍历的资源特点。",
+          "focus": "讨论调用栈深度及迭代版本的访问顺序。",
+          "id": "algo-tree-step-3",
+          "stage": "追问 2"
+        },
+        {
+          "id": "tree-tests",
+          "title": "空树、单节点和完全偏向一侧的树，分别怎样验证？",
+          "why": "最后检查输出格式与极端结构。",
+          "focus": "验证层边界、遍历顺序与空输入，确认节点只访问一次。",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "d-lc102",
+        "d-lc300"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "algo-list",
+        "algo-lis-chain"
+      ]
+    },
+    {
+      "id": "fe-handwrite",
+      "title": "前端手写：防抖 → 取消 → LRU",
+      "group": "手写与项目",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "steps": [
+        {
+          "id": "q5",
+          "questionId": "q5",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "title": "手写防抖函数，怎样保留参数、this 并支持取消？",
+          "why": "从使用场景追问可复用实现。",
+          "focus": "保存定时器，明确首次/末次调用语义及 cancel 行为。",
+          "id": "fe-handwrite-step-2",
+          "stage": "追问 1"
+        },
+        {
+          "id": "drill-lru-ttl",
+          "questionId": "drill-lru-ttl",
+          "why": "从定时状态管理扩展到有容量和过期约束的缓存。",
+          "stage": "追问 2"
+        },
+        {
+          "title": "读取到过期条目与容量满时淘汰，应该按什么顺序处理？",
+          "why": "单一策略实现后，检查组合策略的边界。",
+          "focus": "先定义逻辑过期与访问更新规则，再验证容量不变量。",
+          "id": "fe-handwrite-step-4",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "web",
+        "d-map"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "algo-list",
+        "algo-search",
+        "algo-tree"
+      ]
+    },
+    {
+      "id": "project",
+      "title": "项目追问：职责 → 取舍 → 证据",
+      "group": "手写与项目",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "steps": [
+        {
+          "id": "q78",
+          "questionId": "q78",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "drill-project-tradeoff",
+          "questionId": "drill-project-tradeoff",
+          "why": "先确认难点和约束，再解释选型。",
+          "stage": "追问 1"
+        },
+        {
+          "title": "这个模块你具体写了哪部分？一次请求经过哪些组件？",
+          "why": "选型理由需要落实到个人实现。",
+          "focus": "沿真实请求画出边界、数据流、错误与恢复路径。",
+          "id": "project-step-3",
+          "stage": "追问 2"
+        },
+        {
+          "id": "drill-project-proof",
+          "questionId": "drill-project-proof",
+          "why": "实现之外，追问结果是否有可复查的证据。",
+          "stage": "追问 3"
+        },
+        {
+          "title": "重做一次你会改哪里？改动的收益怎样验证？",
+          "why": "最后检查是否能从问题中形成下一步行动。",
+          "focus": "选择实际瓶颈，说明实验、成本和风险。",
+          "id": "project-step-5",
+          "stage": "收束 / 实战"
+        }
+      ],
+      "references": [
+        "ops",
+        "d-eval",
+        "d-k6"
+      ],
+      "reviewed": "2026-10-12",
+      "related": [
+        "algo-list",
+        "algo-search",
+        "algo-tree"
+      ]
+    },
+    {
+      "id": "algo-trie-chain",
+      "title": "手写 Trie：前缀查询 → 终止标记 → 删除",
+      "group": "手写与项目",
+      "roles": [
+        "ai",
+        "go",
+        "python",
+        "java",
+        "cpp"
+      ],
+      "reviewed": "2026-10-12",
+      "references": [
+        "d-lc208"
+      ],
+      "related": [
+        "algo-search"
+      ],
+      "steps": [
+        {
+          "id": "drill-algo-trie",
+          "questionId": "drill-algo-trie",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "trie-end",
+          "title": "插入 apple 后，查询 app 和前缀 app 应分别得到什么？",
+          "why": "先区分完整词与前缀两种语义。",
+          "focus": "路径存在与结束标记要分开判断。",
+          "stage": "追问 1"
+        },
+        {
+          "id": "trie-delete",
+          "title": "删除 app 时，怎样保证 apple 仍然可以查询？",
+          "why": "有了终止标记后，再处理共享路径的修改。",
+          "focus": "清除终止状态，仅回收不被其他词使用的节点；按需求处理重复插入计数。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "trie-memory",
+          "title": "字符集很大时，每个节点固定分配字符数组有什么代价？",
+          "why": "实现正确后，按字符集和稀疏程度调整存储。",
+          "focus": "比较数组和映射的时间、空间与字符编码处理。",
+          "stage": "收束 / 实战"
+        }
+      ]
+    },
+    {
+      "id": "algo-lis-chain",
+      "title": "手写 LIS：子序列 → 状态 → 优化",
+      "group": "手写与项目",
+      "roles": [
+        "test",
+        "java",
+        "go",
+        "python",
+        "cpp"
+      ],
+      "reviewed": "2026-10-12",
+      "references": [
+        "d-lc300"
+      ],
+      "related": [
+        "algo-search"
+      ],
+      "steps": [
+        {
+          "id": "drill-algo-lis",
+          "questionId": "drill-algo-lis",
+          "why": "",
+          "stage": "起问"
+        },
+        {
+          "id": "lis-state",
+          "title": "dp[i] 表示什么？为什么转移只看满足大小关系的前驱？",
+          "why": "先把状态定义与转移条件讲完整。",
+          "focus": "使用以第 i 个元素结尾的最长严格递增子序列长度，并初始化为 1。",
+          "stage": "追问 1"
+        },
+        {
+          "id": "lis-equal",
+          "title": "全相等、严格递减与空数组时，答案分别是多少？",
+          "why": "用边界输入验证严格递增的含义。",
+          "focus": "重复值不延长严格递增序列；按题目约束处理空输入。",
+          "stage": "追问 2"
+        },
+        {
+          "id": "lis-opt",
+          "title": "O(n²) 不够时怎样用二分优化？维护的数组本身一定是答案序列吗？",
+          "why": "正确性明确后，再讨论更低时间复杂度。",
+          "focus": "解释最小结尾值数组的不变量；恢复具体序列还需记录前驱。",
+          "stage": "收束 / 实战"
+        }
+      ]
+    }
+  ]
 }

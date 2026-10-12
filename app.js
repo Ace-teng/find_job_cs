@@ -1,53 +1,147 @@
 'use strict';
-const $=id=>document.getElementById(id), esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const KEY='internship-atlas-v1';let D,N,role='frontend',filter='all',detail=null,view='list',query='',module='',priority='',origin='specific',company='',kind='',saved={questions:{},theme:'light'};
-function toast(msg){$('toast').textContent=msg;$('toast').style.display='block';clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').style.display='none',2600)}
-try{const value=JSON.parse(localStorage.getItem(KEY)||'null');if(value&&typeof value.questions==='object'&&value.questions!==null)saved=value}catch{ /* defaults also work with disabled storage */ }
-function persist(){try{localStorage.setItem(KEY,JSON.stringify(saved))}catch{toast('浏览器无法保存进度，请用导出备份')}}
-function state(id){return saved.questions[id]||{status:'todo',star:false}}
-function update(id,key,val){saved.questions[id]={...state(id),[key]:val};persist();render();if(detail?.kind==='question'&&detail.id===id)renderActions()}
-function setTheme(){document.body.classList.toggle('dark',saved.theme==='dark');$('theme').textContent=saved.theme==='dark'?'切换浅色':'切换深色'}setTheme();
-function roleQuestions(){return D.questions.filter(q=>q.roles.includes(role))}
-function selectRole(id,reset=true){if(!D.roles.some(r=>r.id===id))return;role=id;if(reset){query='';module='';priority='';filter='all';origin='specific';company='';kind='';$('search').value='';$('priority').value='';$('origin').value='specific';$('kind').value=''}const r=D.roles.find(r=>r.id===role);$('crumb').textContent=r.name;$('role-title').textContent=r.name;$('role-desc').textContent=r.description;$('roles').innerHTML=D.roles.map(r=>`<button class="role-button ${r.id===role?'active':''}" data-role="${r.id}" ${r.id===role?'aria-current="page"':''}><span class="num">${r.number}</span>${esc(r.name)}</button>`).join('');$('module').innerHTML='<option value="">全部模块</option>'+[...new Set(roleQuestions().map(q=>q.module))].map(m=>`<option ${m===module?'selected':''}>${esc(m)}</option>`).join('');$('company').innerHTML='<option value="">全部公司</option>'+[...new Set(roleQuestions().filter(q=>q.report).map(q=>D.sources[q.report].company))].map(c=>`<option ${c===company?'selected':''}>${esc(c)}</option>`).join('');render()}
-const primaryModules={frontend:['JavaScript','浏览器与页面','React / Vue','前端工程'],java:['Java 基础','Java 并发','JVM / Spring','数据库','缓存'],go:['Go 基础','数据库','缓存'],python:['Python 基础','Python 并发','Python 服务','数据库'],fullstack:['前端工程','网络与接口','安全与认证','数据库','系统设计'],ai:['AI 应用基础','RAG','Agent','AI 工程'],ml:['机器学习'],test:['测试开发'],ops:['部署与运维','并发与服务','系统设计'],cpp:['C++ / 客户端','并发与服务']};
-function rank(q){const i=primaryModules[role].indexOf(q.module);return i<0?99:i}
-function contentMatch(q){return (!origin||(origin==='specific'?q.origin!=='总览':q.origin===origin))&&(!company||(q.report&&D.sources[q.report].company===company))&&(!kind||q.kind===kind)&&(!module||q.module===module)&&(!priority||q.priority===priority)}
-function matches(q){const term=query.trim().toLowerCase();return contentMatch(q)&&(!term||[q.title,q.module,q.scenario||'',...(q.followups||[]),...q.nodes.map(id=>N[id].name),q.report?D.sources[q.report].company:''].join(' ').toLowerCase().includes(term))}
-function originBadge(q){if(q.report){const r=D.sources[q.report];return `<span class="report-badge">${esc(r.company)} · ${r.date.slice(0,4)} · 面经改编</span>`}return `<span class="origin-badge">${esc(q.origin==='总览'?'概念总览':'文档练习')}</span>`}
-function statusSelect(id){return `<select class="status-select" aria-label="掌握程度" data-status="${id}">${[['todo','待复习'],['weak','不熟'],['done','已掌握']].map(([v,t])=>`<option value="${v}" ${state(id).status===v?'selected':''}>${t}</option>`).join('')}</select>`}
-function starButton(id){return `<button class="star ${state(id).star?'saved':''}" data-star="${id}" aria-label="${state(id).star?'取消收藏':'收藏'}" aria-pressed="${!!state(id).star}">${state(id).star?'★':'☆'}</button>`}
-function render(){const qs=roleQuestions(),done=qs.filter(q=>state(q.id).status==='done').length;$('count').textContent=qs.length;$('mastered').textContent=done;$('weak').textContent=qs.filter(q=>state(q.id).status==='weak').length;const pct=Math.round(done/qs.length*100)||0;$('progress').style.width=pct+'%';$('progress-label').textContent='准备进度 · '+pct+'%';document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('active',b.dataset.filter===filter));
-if(filter==='concept'){const term=query.trim().toLowerCase();const relevant=new Set(qs.filter(contentMatch).flatMap(q=>q.nodes));const ns=D.nodes.filter(n=>relevant.has(n.id)&&(!term||n.name.toLowerCase().includes(term)));$('results-count').textContent=ns.length+' 个概念';$('results').innerHTML=ns.map(n=>`<article class="card concept-card"><div><h3><button data-node="${n.id}">${esc(n.name)}</button></h3><small>${esc(n.modules.join(' / '))}</small></div><button class="open-link" data-node="${n.id}">查看关系 ↗</button></article>`).join('')||empty();return}
-const list=qs.filter(matches).filter(q=>filter==='all'||(filter==='star'?state(q.id).star:state(q.id).status===filter)).sort((a,b)=>Number(a.origin==='总览')-Number(b.origin==='总览')||rank(a)-rank(b)||(a.priority==='先准备'?0:1)-(b.priority==='先准备'?0:1));$('results-count').textContent=list.length+' 个面试问题';$('results').innerHTML=list.map(q=>`<article class="card"><div class="card-top"><span class="tag">${esc(q.module)}</span><span class="priority">${esc(q.kind)} · ${q.priority}</span></div><div class="card-provenance">${originBadge(q)}</div><h3><button data-question="${q.id}">${esc(q.title)}</button></h3><div class="chain-preview">${q.nodes.slice(0,3).map((n,i)=>`${i?'→':''}<span>${esc(N[n].name)}</span>`).join('')}<small>+${Math.max(0,q.nodes.length-3)}</small></div><div class="card-bottom"><div>${statusSelect(q.id)} ${starButton(q.id)}</div><button class="open-link" data-question="${q.id}">看追问链 ↗</button></div></article>`).join('')||empty()}
-function empty(){return '<div class="empty">这里还没有匹配的内容。试试清空搜索或切换筛选。</div>'}
-function navigate(kind,id){const v=kind==='question'?D.questions.find(q=>q.id===id):N[id];if(!v)return;detail={kind,id};view='list';$('answer').open=false;renderDetail();if(!$('detail').open)$('detail').showModal();history.replaceState(null,'',`#${role}/${kind}/${id}`)}
-function renderActions(){const q=D.questions.find(q=>q.id===detail.id);$('detail-actions').innerHTML=detail.kind==='question'?statusSelect(q.id)+starButton(q.id):''}
-function detailEdges(){if(detail.kind==='question'){const q=D.questions.find(q=>q.id===detail.id);const set=new Set(q.nodes);return D.edges.filter(e=>set.has(e.from)&&set.has(e.to)&&(e.type!=='追问'||q.nodes.indexOf(e.to)===q.nodes.indexOf(e.from)+1))}return D.edges.filter(e=>e.from===detail.id||e.to===detail.id)}
-function reportDate(s){return s.date+(s.endDate?' — '+s.endDate:'')}
-function renderSource(id){const s=D.sources[id];return `<div class="source-item"><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)} ↗</a><span>${esc(s.kind||'参考入口')} · ${s.verified?'核验 '+s.verified:'未逐条核验'}${s.version?' · '+esc(s.version):''}</span></div>`}
-function renderDetail(){
- const isQ=detail.kind==='question',q=isQ?D.questions.find(q=>q.id===detail.id):null,n=!isQ?N[detail.id]:null;
- $('detail-label').textContent=isQ?q.module+' / '+q.kind:'概念 / '+n.modules.join(' · ');
- $('detail-title').textContent=isQ?q.title:n.name;renderActions();
- $('answer').hidden=!isQ;
- if(q?.points){$('cue').innerHTML='<ol>'+q.points.map(p=>`<li>${esc(p)}</li>`).join('')+`</ol><div class="pitfall"><b>容易答错</b><p>${esc(q.pitfall)}</p></div>`}else $('cue').textContent=q?.cue||'';
- const r=q?.report?D.sources[q.report]:null;
- $('question-context').innerHTML=isQ?`<div class="detail-badges">${originBadge(q)}</div>${r?`<p class="provenance-note">${esc(r.dateType)} ${reportDate(r)} · ${esc(r.job)}<br>原帖报告相关主题；以下场景与追问经编辑扩展，非逐字真题。</p>`:''}${q.scenario?`<div class="scenario"><b>面试场景</b><p>${esc(q.scenario)}</p>${q.code?`<pre><code>${esc(q.code)}</code></pre>`:''}</div>`:''}`:'';
- $('followups').innerHTML=q?.followups?'<div class="followup-block"><h3>面试官继续追问 <span>编辑扩展</span></h3><ol>'+q.followups.map(x=>`<li>${esc(x)}</li>`).join('')+'</ol></div>':'';
- const srcIds=isQ?(q.references||[q.source]):n.sources;
- $('source').innerHTML=(r?`<div class="report-source"><b>公开面经出处</b><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.name)} ↗</a><p>${esc(r.dateType)}：${reportDate(r)} · 核验：${r.verified}<br>${esc(r.notice)}</p></div>`:'')+'<b>技术参考 / 题目出处</b>'+srcIds.map(renderSource).join('')+'<p>回答要点为编辑整理；官方文档支持技术语义，面经支持出现过的主题，不代表公司官方题库或频率统计。</p>';
- const related=D.questions.filter(x=>x.roles.includes(role)&&x.id!==q?.id&&(isQ?x.nodes.some(id=>q.nodes.includes(id)):x.nodes.includes(detail.id))).sort((a,b)=>Number(a.origin==='总览')-Number(b.origin==='总览')).slice(0,6);
- $('related-questions').innerHTML=related.length?'<h3>继续准备这些问题</h3>'+related.map(q=>`<button data-question="${q.id}">${esc(q.title)} →</button>`).join(''):'';renderRelations();
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const KEY = 'internship-atlas-v1';
+let D, Q, N, role = 'frontend', topic = '', query = '', company = '', filter = 'all', practice = false, revealed = 1;
+let saved = { questions: {}, theme: 'light' };
+try {
+  const v = JSON.parse(localStorage.getItem(KEY));
+  if (v && v.questions && typeof v.questions === 'object' && !Array.isArray(v.questions)) saved = { questions: v.questions, theme: v.theme === 'dark' ? 'dark' : 'light' };
+} catch { /* Storage is optional; export remains available. */ }
+function state(id) { const s = saved.questions[id]; return { status: ['todo','weak','done'].includes(s?.status) ? s.status : 'todo', star: s?.star === true }; }
+function toast(message) { $('toast').textContent = message; $('toast').classList.add('visible'); clearTimeout(toast.timer); toast.timer = setTimeout(() => $('toast').classList.remove('visible'), 2800); }
+function persist() { try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch { toast('浏览器无法保存，请导出进度备份'); } }
+function theme() { document.body.classList.toggle('dark', saved.theme === 'dark'); $('theme').textContent = saved.theme === 'dark' ? '浅色' : '深色'; }
+theme();
+function steps(c) { return c.steps.map(s => ({ ...s, title: s.title || Q[s.questionId]?.title, q: Q[s.questionId] })); }
+function roleChains() { return D.chains.filter(c => c.roles.includes(role)); }
+function textFor(s) { return [s.title, s.q?.scenario, ...(s.q?.nodes || []).map(n => N[n].name)].join(' ').toLowerCase(); }
+function searched(s) { return !!query.trim() && textFor(s).includes(query.trim().toLowerCase()); }
+function matches(c) {
+  const ss = steps(c), term = query.trim().toLowerCase();
+  return (!term || [c.title,c.group].join(' ').toLowerCase().includes(term) || ss.some(searched))
+    && (!company || ss.some(s => s.q?.report && D.sources[s.q.report].company === company))
+    && (filter === 'all' || (filter === 'done' ? ss.every(s => state(s.id).status === 'done') : ss.some(s => filter === 'star' ? state(s.id).star : state(s.id).status === filter)));
 }
-function renderRelations(){const es=detailEdges();$('list-view').classList.toggle('active',view==='list');$('graph-view').classList.toggle('active',view==='graph');if(view==='list'){$('relations').innerHTML=es.map(e=>`<div class="relation-row"><button class="node-button" data-node="${e.from}">${esc(N[e.from].name)}</button><span class="edge-label">${esc(e.type)} →</span><button class="node-button" data-node="${e.to}">${esc(N[e.to].name)}</button></div>`).join('')||'<p class="relation-note">暂无已整理的直接关系。</p>';return}
-let ids=detail.kind==='question'?D.questions.find(q=>q.id===detail.id).nodes:[detail.id,...new Set(es.flatMap(e=>[e.from,e.to]).filter(id=>id!==detail.id))];
-// Layered layout keeps long Chinese labels readable and every relation explicit.
-const positions={};ids.forEach((id,i)=>positions[id]={x:i%2?490:185,y:45+Math.floor(i/2)*100});const height=Math.max(170,Math.ceil(ids.length/2)*100);const grouped=new Map();for(const e of es){const key=e.from+'>'+e.to;const prev=grouped.get(key);if(prev)prev.type+=' / '+e.type;else grouped.set(key,{...e})}const lines=[...grouped.values()].map(e=>{const a=positions[e.from],b=positions[e.to];if(!a||!b)return '';const dx=b.x-a.x,dy=b.y-a.y,t=Math.min(dx?96/Math.abs(dx):Infinity,dy?22/Math.abs(dy):Infinity);return `<line x1="${a.x+dx*t}" y1="${a.y+dy*t}" x2="${b.x-dx*t}" y2="${b.y-dy*t}" marker-end="url(#arrow)"/><text class="edge-text" x="${(a.x+b.x)/2+8}" y="${(a.y+b.y)/2-8}" text-anchor="middle">${esc(e.type)}</text>`}).join('');$('relations').innerHTML=`<svg class="graph" viewBox="0 0 680 ${height}" role="group" aria-label="概念关系图"><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#abb2dc"/></marker></defs>${lines}${ids.map(id=>{const p=positions[id];return `<g role="button" tabindex="0" aria-label="查看 ${esc(N[id].name)}" data-node="${id}" class="${id===detail.id?'center':''}"><rect x="${p.x-93}" y="${p.y-19}" width="186" height="38" rx="8"/><text x="${p.x}" y="${p.y+4}" text-anchor="middle">${esc(N[id].name)}</text></g>`}).join('')}</svg>`}
-document.addEventListener('click',e=>{const b=e.target.closest('[data-role],[data-filter],[data-question],[data-node],[data-star]');if(!b)return;if(b.dataset.role){selectRole(b.dataset.role);history.replaceState(null,'','#'+role)}else if(b.dataset.filter){filter=b.dataset.filter;render()}else if(b.dataset.question)navigate('question',b.dataset.question);else if(b.dataset.node)navigate('node',b.dataset.node);else if(b.dataset.star)update(b.dataset.star,'star',!state(b.dataset.star).star)});
-document.addEventListener('change',e=>{if(e.target.dataset.status)update(e.target.dataset.status,'status',e.target.value)});
-$('search').addEventListener('input',e=>{query=e.target.value;render()});$('module').onchange=e=>{module=e.target.value;render()};$('priority').onchange=e=>{priority=e.target.value;render()};$('origin').onchange=e=>{origin=e.target.value;render()};$('company').onchange=e=>{company=e.target.value;render()};$('kind').onchange=e=>{kind=e.target.value;render()};$('close').onclick=()=>$('detail').close();$('detail').addEventListener('close',()=>{detail=null;history.replaceState(null,'','#'+role)});$('detail').addEventListener('click',e=>{if(e.target===$('detail')){const r=$('detail').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('detail').close()}});$('list-view').onclick=()=>{view='list';renderRelations()};$('graph-view').onclick=()=>{view='graph';renderRelations()};$('theme').onclick=()=>{saved.theme=saved.theme==='dark'?'light':'dark';setTheme();persist()};
-document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','SELECT','TEXTAREA'].includes(document.activeElement.tagName)&&!$('detail').open){e.preventDefault();$('search').focus()}if((e.key==='Enter'||e.key===' ')&&e.target.matches('g[data-node]')){e.preventDefault();navigate('node',e.target.dataset.node)}});
-$('export').onclick=()=>{const b=new Blob([JSON.stringify({format:KEY,...saved},null,2)],{type:'application/json'}),url=URL.createObjectURL(b),a=document.createElement('a');a.href=url;a.download='面试地图-复习进度.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('进度已导出')};
-$('import').onchange=async e=>{try{const file=e.target.files[0];if(!file)return;if(file.size>2e6)throw Error();const v=JSON.parse(await file.text());if(v.format!==KEY||!v.questions||Array.isArray(v.questions))throw Error();const clean={};for(const [id,s] of Object.entries(v.questions)){if(D.questions.some(q=>q.id===id)&&s&&['todo','weak','done'].includes(s.status)&&typeof s.star==='boolean')clean[id]={status:s.status,star:s.star}}saved.questions={...saved.questions,...clean};persist();render();toast('已合并导入的复习进度')}catch{toast('文件格式不正确，请导入本站导出的 JSON')}e.target.value=''};
-function route(){const [r,kind,id]=location.hash.slice(1).split('/');selectRole(r||'frontend');if(kind&&id)navigate(kind,id)}
-fetch('./data.json?v=2').then(r=>{if(!r.ok)throw Error();return r.json()}).then(data=>{D=data;N=Object.fromEntries(D.nodes.map(n=>[n.id,n]));route();window.addEventListener('hashchange',route)}).catch(()=>{$('results').innerHTML='<div class="empty">内容加载失败，请刷新页面。若在本地预览，请使用 HTTP 服务打开。</div>'});
+function actionHTML(s) {
+  const v = state(s.id);
+  return `<div class="step-actions"><select data-status="${s.id}" aria-label="第 ${s.number} 问掌握程度">${[['todo','待复习'],['weak','不熟'],['done','已掌握']].map(([id,label]) => `<option value="${id}" ${id === v.status ? 'selected' : ''}>${label}</option>`).join('')}</select><button data-star="${s.id}" aria-label="${v.star ? '取消收藏' : '收藏'}第 ${s.number} 问" aria-pressed="${v.star}">${v.star ? '★ 已收藏' : '☆ 收藏'}</button><button data-link="${s.id}" aria-label="复制第 ${s.number} 问链接">↗</button></div>`;
+}
+function sourceLink(id) {
+  const s = D.sources[id]; if (!s) return '';
+  return `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)} ↗</a><small>${esc(s.kind || '技术参考')}${s.version ? ' · '+esc(s.version) : ''}${s.verified ? ' · 核验 '+s.verified : ''}</small></li>`;
+}
+function reportHTML(q) {
+  if (!q?.report) return '';
+  const r = D.sources[q.report];
+  return `<div class="evidence"><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.company)} · ${r.date.slice(0,4)} 面经主题 ↗</a><span>${esc(r.dateType)} ${r.date}${r.endDate ? ' — '+r.endDate : ''} · ${esc(r.job)}</span><p>${esc(r.notice)} 该问经编辑改写。</p></div>`;
+}
+function answerHTML(s, c) {
+  const q = s.q;
+  return `<details class="answer"><summary>回答抓手与参考 <span>按需展开</span></summary><div class="answer-body">${q?.scenario ? `<p class="scenario">场景：${esc(q.scenario)}</p>` : ''}${q?.points ? `<ul>${q.points.map(p => `<li>${esc(p)}</li>`).join('')}</ul>` : `<p>${esc(s.focus || q?.cue || '')}</p>`}${q?.pitfall ? `<p class="pitfall">易错点：${esc(q.pitfall)}</p>` : ''}${q?.nodes ? `<p class="concepts">关联概念：${q.nodes.map(n => esc(N[n].name)).join(' · ')}</p>` : ''}${reportHTML(q)}<ul class="sources">${(q?.references || c.references).map(sourceLink).join('')}</ul></div></details>`;
+}
+function renderSummary() {
+  const ids = [...new Set(roleChains().flatMap(c => c.steps.map(s => s.id)))];
+  const done = ids.filter(id => state(id).status === 'done').length;
+  const weak = ids.filter(id => state(id).status === 'weak').length;
+  $('progress-label').textContent = `${done} / ${ids.length} 问已掌握`;
+  $('stats').textContent = `${roleChains().length} 条话题链 · ${weak} 问不熟`;
+  $('progress').style.width = (ids.length ? done / ids.length * 100 : 0)+'%';
+}
+function renderDirectory() {
+  const list = roleChains().filter(matches);
+  $('results-count').textContent = `${list.length} 条`;
+  const groups = [...new Set(list.map(c => c.group))];
+  $('topics').innerHTML = groups.map(g => `<section class="topic-group"><h2>${esc(g)}</h2>${list.filter(c => c.group === g).map(c => {
+    const done = c.steps.filter(s => state(s.id).status === 'done').length;
+    return `<button class="topic-link ${topic === c.id ? 'active' : ''}" data-topic="${c.id}" ${topic === c.id ? 'aria-current="true"' : ''}><span>${esc(c.title)}</span><small>${c.steps.length} 问 <span>${done === c.steps.length ? '✓ 已掌握' : done+' 已掌握'}</span></small></button>`;
+  }).join('')}</section>`).join('') || '<p class="empty">没有匹配的话题。试试清空搜索或筛选。</p>';
+  renderSummary();
+  return list;
+}
+function renderChain() {
+  const c = D.chains.find(c => c.id === topic && c.roles.includes(role));
+  if (!c) { $('chain').innerHTML = '<div class="empty"><h2>没有匹配的追问链</h2><p>换个关键词，或重置筛选继续复习。</p><button data-reset>重置筛选</button></div>'; return; }
+  const ss = steps(c), shown = practice ? ss.slice(0, revealed) : ss;
+  const done = ss.filter(s => state(s.id).status === 'done').length;
+  $('chain').innerHTML = `<div class="chain-heading"><div class="eyebrow">03 / 沿着问题往下走</div><h2>${esc(c.title)}</h2><p class="chain-meta">${ss.length} 问 · <span id="chain-progress">${done} 已掌握</span> · 核验 ${c.reviewed}</p><div class="chain-tools"><button id="practice" aria-pressed="${practice}">${practice ? '查看整条链' : '开始逐问自测'}</button><span>${practice ? '先口述，再揭开下一问' : '默认只看问题，答案按需展开'}</span></div><p class="editor-note">追问顺序为编辑整理；带公司标签的单问附近期面经出处。</p>${query ? '<p class="search-note">已保留上下文；命中的问题会单独标记。</p>' : ''}</div><ol class="question-chain">${shown.map((s,i) => {
+    s.number = i+1;
+    return `<li class="step ${searched(s) ? 'matched' : ''}" id="step-${s.id}">${i ? `<div class="bridge"><span aria-hidden="true">↓</span><p>${esc(s.why)}</p></div>` : ''}<div class="step-content"><span class="step-number" aria-hidden="true">${String(i+1).padStart(2,'0')}</span><div class="step-main"><div class="step-kicker">${esc(s.stage)}${searched(s) ? '<b>搜索命中</b>' : ''}${s.q?.report ? `<a href="${esc(D.sources[s.q.report].url)}" target="_blank" rel="noopener">${esc(D.sources[s.q.report].company)} ${D.sources[s.q.report].date.slice(0,4)} · 面经改编 ↗</a>` : '<span>编辑追问</span>'}</div><h3>${esc(s.title)}</h3>${s.q?.code ? `<pre><code>${esc(s.q.code)}</code></pre>` : ''}${actionHTML(s)}${answerHTML(s,c)}</div></div></li>`;
+  }).join('')}</ol>${practice && revealed < ss.length ? `<button class="next-question" id="next">继续下一问 <span>${revealed} / ${ss.length} →</span></button>` : `<div class="chain-end"><span>✓</span><div><b>这条链走完了</b><p>能顺着讲清楚每一问，再用自己的项目串一次。</p></div></div>`}<section class="branches"><h3>面试官也可能转向</h3>${c.related.map(id => D.chains.find(x => x.id === id && x.roles.includes(role))).filter(Boolean).map(x => `<button data-topic="${x.id}">${esc(x.title)} <span>→</span></button>`).join('') || '<p>回到话题目录，继续准备其他方向。</p>'}</section><details class="topic-sources"><summary>话题来源与更新说明</summary><p>新增问句和衔接为编辑组织，不代表某家公司实际完整提问顺序。技术参考支持相关语义；公开面经仅支持明确标注的主题。你补充的新资料可通过仓库内容文件持续更新。</p><ul class="sources">${c.references.map(sourceLink).join('')}</ul></details>`;
+}
+function setTopic(id, navigate = true) {
+  const c = D.chains.find(c => c.id === id && c.roles.includes(role)); if (!c) return;
+  topic = c.id; practice = false; revealed = 1; renderDirectory(); renderChain();
+  if (navigate) { history.pushState(null,'',`#${role}/topic/${topic}`); $('chain').focus({preventScroll:true}); $('chain').scrollIntoView({block:'start'}); }
+}
+function resetFilters() { query=''; company=''; filter='all'; $('search').value=''; $('company').value=''; $('filter').value='all'; }
+function selectRole(id) {
+  role = D.roles.some(r => r.id === id) ? id : 'frontend'; resetFilters();
+  const r = D.roles.find(r => r.id === role);
+  $('crumb').textContent = r.name; $('role-title').textContent = r.name+' · 面试追问链';
+  $('roles').innerHTML = D.roles.map(r => `<a class="role-link ${r.id === role ? 'active' : ''}" href="#${r.id}" ${r.id === role ? 'aria-current="page"' : ''}><span>${esc(r.number)}</span>${esc(r.name)}</a>`).join('');
+  const reports = roleChains().flatMap(c => steps(c)).filter(s => s.q?.report).map(s => D.sources[s.q.report].company);
+  $('company').innerHTML = '<option value="">全部面经来源</option>'+[...new Set(reports)].map(c => `<option>${esc(c)}</option>`).join('');
+}
+function applyFilters() {
+  const list = roleChains().filter(matches);
+  if (!list.some(c => c.id === topic)) { topic=list[0]?.id || ''; practice=false; revealed=1; }
+  renderDirectory(); renderChain(); history.replaceState(null,'',`#${role}${topic ? '/topic/'+topic : ''}`);
+}
+function route() {
+  const [r, type, id, stepId] = location.hash.slice(1).split('/'); selectRole(r);
+  const preferred = {frontend:'js-async',java:'java-thread',go:'go-runtime',python:'python-async',fullstack:'http',ai:'rag-flow',ml:'ml-eval',test:'test-cases',ops:'linux',cpp:'cpp-ownership'};
+  let c = type === 'topic' ? roleChains().find(c => c.id === id) : null;
+  if (type === 'question') c = roleChains().find(c => c.steps.some(s => s.questionId === id));
+  c ||= roleChains().find(c => c.id === preferred[role]) || roleChains()[0];
+  if (c) setTopic(c.id, false);
+  const target = type === 'question' ? id : stepId;
+  if (target) requestAnimationFrame(() => document.getElementById('step-'+target)?.scrollIntoView({block:'center'}));
+  if (type === 'question' && Q[id] && !c?.steps.some(s => s.questionId === id)) {
+    const q = Q[id]; $('legacy-body').innerHTML = `<p>保留的旧题链接 · 原复习进度仍有效</p><h2>${esc(q.title)}</h2>${actionHTML({id:q.id,number:1})}${answerHTML({q}, {references:q.references})}`; $('legacy').showModal();
+  }
+}
+document.addEventListener('click', async e => {
+  const b = e.target.closest('button'); if (!b || !D) return;
+  if (b.dataset.topic) setTopic(b.dataset.topic);
+  if (b.hasAttribute('data-reset')) { resetFilters(); applyFilters(); }
+  if (b.dataset.star) {
+    const id=b.dataset.star; saved.questions[id]={...state(id),star:!state(id).star}; persist();
+    b.textContent=state(id).star?'★ 已收藏':'☆ 收藏'; b.setAttribute('aria-pressed',state(id).star); b.setAttribute('aria-label',b.getAttribute('aria-label').replace(/^(取消收藏|收藏)/,state(id).star?'取消收藏':'收藏')); renderDirectory();
+  }
+  if (b.dataset.link) {
+    const url=new URL(location.href); url.hash=`${role}/topic/${topic}/${b.dataset.link}`;
+    try { await navigator.clipboard.writeText(url.href); toast('这一问的链接已复制'); } catch { history.replaceState(null,'',url); toast('已定位到这一问，可复制地址栏链接'); }
+  }
+  if (b.id === 'practice') { practice=!practice; revealed=1; renderChain(); }
+  if (b.id === 'next') { revealed++; renderChain(); document.querySelector('.step:last-child')?.scrollIntoView({block:'center'}); }
+});
+document.addEventListener('change', e => {
+  const id=e.target.dataset.status; if (!id) return;
+  saved.questions[id]={...state(id),status:e.target.value}; persist(); renderDirectory();
+  const c=D.chains.find(c=>c.id===topic); if(c && $('chain-progress')) $('chain-progress').textContent=c.steps.filter(s=>state(s.id).status==='done').length+' 已掌握';
+});
+$('search').addEventListener('input',e=>{if(!D)return;query=e.target.value;applyFilters();});
+$('company').onchange=e=>{if(!D)return;company=e.target.value;applyFilters();};
+$('filter').onchange=e=>{if(!D)return;filter=e.target.value;applyFilters();};
+$('theme').onclick=()=>{saved.theme=saved.theme==='dark'?'light':'dark';theme();persist();};
+$('close').onclick=()=>$('legacy').close();
+document.querySelector('.skip').onclick=e=>{e.preventDefault();$('chain').focus();$('chain').scrollIntoView({block:'start'});};
+document.querySelector('.import-label').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();$('import').click();}};
+document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','SELECT','TEXTAREA'].includes(document.activeElement.tagName)&&!$('legacy').open){e.preventDefault();$('search').focus();}});
+$('export').onclick=()=>{
+  const url=URL.createObjectURL(new Blob([JSON.stringify({format:KEY,...saved},null,2)],{type:'application/json'}));
+  const a=document.createElement('a'); a.href=url;a.download='面试地图-复习进度.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('进度已导出');
+};
+$('import').onchange=async e=>{
+  try {
+    if(!D)throw Error();const file=e.target.files[0];if(!file)return;if(file.size>2e6)throw Error();
+    const v=JSON.parse(await file.text());if(v.format!==KEY||!v.questions||typeof v.questions!=='object'||Array.isArray(v.questions))throw Error();
+    const ids=new Set([...D.questions.map(q=>q.id),...D.chains.flatMap(c=>c.steps.map(s=>s.id))]);
+    for(const [id,s] of Object.entries(v.questions)) if(ids.has(id)&&s&&['todo','weak','done'].includes(s.status)&&typeof s.star==='boolean')saved.questions[id]={status:s.status,star:s.star};
+    persist();renderDirectory();renderChain();toast('已合并进度，旧版导出文件也支持');
+  } catch {toast('文件格式不正确，请使用本站导出的 JSON');}e.target.value='';
+};
+fetch('./data.json?v=3').then(r=>{if(!r.ok)throw Error();return r.json();}).then(data=>{
+  if(!data.chains?.length)throw Error();D=data;Q=Object.fromEntries(D.questions.map(q=>[q.id,q]));N=Object.fromEntries(D.nodes.map(n=>[n.id,n]));route();window.addEventListener('hashchange',route);
+}).catch(()=>{$('chain').innerHTML='<p class="empty">内容加载失败，请刷新。若本地预览，请通过 HTTP 服务打开。</p>';$('stats').textContent='加载失败';});

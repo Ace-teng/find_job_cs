@@ -85,3 +85,14 @@
 - [LeetCode 102 · 层序遍历](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 - [MCP 2026-07-28 · stdio](https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/stdio)
 - [MCP 2026-07-28 · Streamable HTTP](https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/streamable-http)
+
+## 2026-10-12 追问链重构补充
+
+新增 `content/chains.json`，逐问区分公开面经改编与编辑组织的衔接。未将编辑扩展包装为公司实际问序。
+
+- [小林 coding · HTTP 常见面试题](https://www.xiaolincoding.com/network/2_http/http_interview.html)：HTTP 话题阅读入口；本次通过搜索索引复核页面，直接抓取存在超时。
+- [JavaGuide · Redis 面试题](https://interview.javaguide.cn/database/redis.html)：Redis 话题组织参考，2026-10-12 查看。
+- [RFC 9110 · HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html)：HTTP 方法与幂等语义。
+- [RFC 9293 · TCP](https://www.rfc-editor.org/rfc/rfc9293.html)：TCP 连接、可靠传输与关闭语义。
+
+面经优先近两年；仍适用的协议标准作为技术语义来源保留，不将其发布日期标作近期面经日期。新增问题为编辑自拟与简要回答抓手，不复制参考文章长段落。

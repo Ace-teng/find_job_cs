@@ -31,3 +31,30 @@ for(const q of d.questions){
 }
 for(const r of d.roles)assert(d.questions.some(q=>q.roles.includes(r.id)&&q.origin!=='总览'),`No specific drills ${r.id}`);
 console.log('Recent interview dates, provenance, and drill completeness validated');
+assert.equal(d.version,3);
+unique(d.chains,'id');
+const chainIds=new Set(d.chains.map(c=>c.id));
+const questions=new Map(d.questions.map(q=>[q.id,q]));
+const stepIdentity=new Map();
+for(const c of d.chains){
+  assert(c.title&&c.group&&c.reviewed&&c.roles.length&&c.references.length,`Incomplete chain ${c.id}`);
+  assert(c.steps.length>=4,`Too short ${c.id}`);
+  unique(c.steps,'id');
+  c.roles.forEach(r=>assert(roles.has(r),`Unknown role ${r}`));
+  c.references.forEach(s=>assert(d.sources[s],`Unknown chain source ${s}`));
+  c.related.forEach(id=>assert(chainIds.has(id)&&id!==c.id,`Invalid branch ${c.id} -> ${id}`));
+  c.steps.forEach((s,i)=>{
+    assert(/^[a-z0-9-]+$/.test(s.id),`Unsafe step ID ${s.id}`);
+    assert(s.stage&&(!i||s.why?.length>=8),`Missing transition ${c.id}:${i}`);
+    if(s.questionId){assert(questions.has(s.questionId));assert.equal(s.id,s.questionId,`Progress ID mismatch ${s.id}`);}
+    else assert(s.title&&s.focus,`Missing authored question ${s.id}`);
+    const identity=s.questionId||s.title;
+    assert(!stepIdentity.has(s.id)||stepIdentity.get(s.id)===identity,`Conflicting progress ID ${s.id}`);
+    stepIdentity.set(s.id,identity);
+  });
+}
+for(const r of d.roles)assert(d.chains.filter(c=>c.roles.includes(r.id)).length>=4,`Insufficient topics ${r.id}`);
+console.log(`Validated ${d.chains.length} chains / ${d.chains.reduce((n,c)=>n+c.steps.length,0)} steps / ${stepIdentity.size} unique progress IDs`);
+const chainSource=JSON.parse(fs.readFileSync(new URL('../content/chains.json',import.meta.url)));
+assert.deepEqual(d.chains,chainSource.chains,'Run python3 scripts/seed.py after editing chains');
+for(const [id,source] of Object.entries(chainSource.sources))assert.deepEqual(d.sources[id],source);

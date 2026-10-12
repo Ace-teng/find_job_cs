@@ -30,5 +30,8 @@ def enrich(data):
             x,y=lookup[a]['id'],lookup[b]['id']
             if (x,y,t) not in edgekeys:
                 data['edges'].append({'from':x,'to':y,'type':t});edgekeys.add((x,y,t))
-    data['version']=2
+    chains=json.loads(Path('content/chains.json').read_text())
+    data['sources'].update(chains['sources'])
+    data['chains']=chains['chains']
+    data['version']=3
     return data
