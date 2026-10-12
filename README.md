@@ -1,8 +1,10 @@
+**🌐 在线访问：[https://ace-teng.github.io/find_job_cs/](https://ace-teng.github.io/find_job_cs/)**
+
 # 面试地图 · Internship Atlas
 
 **为自己的实习面试准备而做：从岗位和问题出发，沿概念关系和追问链复习。**
 
-[在线使用](https://ace-teng.github.io/find_job_cs/) · [补充问题 / 纠错](https://github.com/Ace-teng/find_job_cs/issues)
+[补充问题 / 纠错](https://github.com/Ace-teng/find_job_cs/issues)
 
 10 个岗位入口 · **90 道具体练习 + 78 个概念总览** · 700 个概念 · 862 条关系。数字以 `data.json` 为准。
 
