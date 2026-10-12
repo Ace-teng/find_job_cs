@@ -1,0 +1,11658 @@
+{
+  "version": 1,
+  "updated": "2026-10-12",
+  "roles": [
+    {
+      "id": "frontend",
+      "name": "前端实习",
+      "description": "浏览器 · JavaScript · React / Vue",
+      "number": "01"
+    },
+    {
+      "id": "java",
+      "name": "Java 后端",
+      "description": "Java · Spring · 数据库 · 并发",
+      "number": "02"
+    },
+    {
+      "id": "go",
+      "name": "Go 后端",
+      "description": "Go · 服务开发 · 并发 · 存储",
+      "number": "03"
+    },
+    {
+      "id": "python",
+      "name": "Python 后端",
+      "description": "Python · API · 异步 · 数据库",
+      "number": "04"
+    },
+    {
+      "id": "fullstack",
+      "name": "全栈实习",
+      "description": "前后端交互 · 认证 · 部署",
+      "number": "05"
+    },
+    {
+      "id": "ai",
+      "name": "AI 应用 / Agent",
+      "description": "RAG · 工具调用 · 工作流 · 评测",
+      "number": "06"
+    },
+    {
+      "id": "ml",
+      "name": "机器学习实习",
+      "description": "训练 · 评估 · 推理 · 项目",
+      "number": "07"
+    },
+    {
+      "id": "test",
+      "name": "测试开发",
+      "description": "接口 · 自动化 · 性能 · 排障",
+      "number": "08"
+    },
+    {
+      "id": "ops",
+      "name": "运维 / 云原生",
+      "description": "Linux · 容器 · 网络 · 可观测性",
+      "number": "09"
+    },
+    {
+      "id": "cpp",
+      "name": "C++ / 客户端",
+      "description": "内存 · 对象生命周期 · 并发",
+      "number": "10"
+    }
+  ],
+  "sources": {
+    "web": {
+      "name": "MDN Web Docs",
+      "url": "https://developer.mozilla.org/zh-CN/docs/Web",
+      "verified": null
+    },
+    "react": {
+      "name": "React 官方文档",
+      "url": "https://react.dev/learn",
+      "verified": "2026-10-12"
+    },
+    "java": {
+      "name": "Java 文档",
+      "url": "https://docs.oracle.com/en/java/",
+      "verified": null
+    },
+    "go": {
+      "name": "Go 官方文档",
+      "url": "https://go.dev/doc/",
+      "verified": null
+    },
+    "python": {
+      "name": "Python 官方文档",
+      "url": "https://docs.python.org/3/",
+      "verified": null
+    },
+    "db": {
+      "name": "MySQL 官方文档",
+      "url": "https://dev.mysql.com/doc/refman/8.4/en/",
+      "verified": null
+    },
+    "redis": {
+      "name": "Redis 官方文档",
+      "url": "https://redis.io/docs/latest/",
+      "verified": null
+    },
+    "ops": {
+      "name": "Kubernetes 官方文档",
+      "url": "https://kubernetes.io/docs/concepts/",
+      "verified": null
+    },
+    "ai": {
+      "name": "LangChain Agents",
+      "url": "https://docs.langchain.com/oss/python/langchain/agents",
+      "verified": "2026-10-12"
+    },
+    "rag": {
+      "name": "LangChain Retrieval",
+      "url": "https://docs.langchain.com/oss/python/langchain/retrieval",
+      "verified": "2026-10-12"
+    },
+    "graph": {
+      "name": "LangGraph Overview",
+      "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+      "verified": "2026-10-12"
+    },
+    "mcp": {
+      "name": "MCP 官方文档",
+      "url": "https://modelcontextprotocol.io/docs/getting-started/intro",
+      "verified": "2026-10-12"
+    },
+    "ml": {
+      "name": "PyTorch 官方文档",
+      "url": "https://docs.pytorch.org/docs/stable/index.html",
+      "verified": null
+    },
+    "cpp": {
+      "name": "C++ 参考资料",
+      "url": "https://en.cppreference.com/w/",
+      "verified": null
+    },
+    "qa": {
+      "name": "Playwright 官方文档",
+      "url": "https://playwright.dev/docs/intro",
+      "verified": null
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "name": "闭包",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n2",
+      "name": "词法作用域",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n3",
+      "name": "作用域链",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n4",
+      "name": "垃圾回收",
+      "roles": [
+        "frontend",
+        "fullstack",
+        "java"
+      ],
+      "modules": [
+        "JavaScript",
+        "JVM / Spring"
+      ],
+      "sources": [
+        "web",
+        "java"
+      ]
+    },
+    {
+      "id": "n5",
+      "name": "内存泄漏",
+      "roles": [
+        "frontend",
+        "fullstack",
+        "java"
+      ],
+      "modules": [
+        "JavaScript",
+        "JVM / Spring"
+      ],
+      "sources": [
+        "web",
+        "java"
+      ]
+    },
+    {
+      "id": "n6",
+      "name": "事件循环",
+      "roles": [
+        "frontend",
+        "fullstack",
+        "python",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "JavaScript",
+        "Python 并发"
+      ],
+      "sources": [
+        "web",
+        "python"
+      ]
+    },
+    {
+      "id": "n7",
+      "name": "调用栈",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n8",
+      "name": "任务队列",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n9",
+      "name": "微任务",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n10",
+      "name": "Promise",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n11",
+      "name": "async/await",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n12",
+      "name": "this",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n13",
+      "name": "调用方式",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n14",
+      "name": "箭头函数",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n15",
+      "name": "call/apply/bind",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n16",
+      "name": "原型链",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n17",
+      "name": "引用类型",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n18",
+      "name": "浅拷贝",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n19",
+      "name": "深拷贝",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n20",
+      "name": "structuredClone",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n21",
+      "name": "循环引用",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n22",
+      "name": "序列化",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n23",
+      "name": "事件处理",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n24",
+      "name": "防抖",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n25",
+      "name": "节流",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n26",
+      "name": "定时器",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n27",
+      "name": "请求取消",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "JavaScript"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n28",
+      "name": "URL",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n29",
+      "name": "DNS",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n30",
+      "name": "TCP",
+      "roles": [
+        "frontend",
+        "fullstack",
+        "java",
+        "go",
+        "python",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "浏览器与页面",
+        "网络与接口"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n31",
+      "name": "TLS",
+      "roles": [
+        "frontend",
+        "fullstack",
+        "java",
+        "go",
+        "python",
+        "ai",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "浏览器与页面",
+        "网络与接口"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n32",
+      "name": "HTTP",
+      "roles": [
+        "frontend",
+        "fullstack",
+        "java",
+        "go",
+        "python",
+        "ai",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "浏览器与页面",
+        "网络与接口"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n33",
+      "name": "DOM",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n34",
+      "name": "CSSOM",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n35",
+      "name": "渲染树",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n36",
+      "name": "布局",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n37",
+      "name": "绘制",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n38",
+      "name": "HTTP 缓存",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n39",
+      "name": "Cache-Control",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n40",
+      "name": "强缓存",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n41",
+      "name": "协商缓存",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n42",
+      "name": "ETag",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n43",
+      "name": "Last-Modified",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n44",
+      "name": "同源策略",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n45",
+      "name": "CORS",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n46",
+      "name": "预检请求",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n47",
+      "name": "凭据请求",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n48",
+      "name": "反向代理",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n49",
+      "name": "性能分析",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n50",
+      "name": "长任务",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n51",
+      "name": "重排",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n52",
+      "name": "重绘",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n53",
+      "name": "requestAnimationFrame",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n54",
+      "name": "虚拟列表",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n55",
+      "name": "盒模型",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n56",
+      "name": "Flex",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n57",
+      "name": "Grid",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n58",
+      "name": "定位",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n59",
+      "name": "层叠上下文",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n60",
+      "name": "响应式布局",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "浏览器与页面"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n61",
+      "name": "React",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "react"
+      ]
+    },
+    {
+      "id": "n62",
+      "name": "state",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "react"
+      ]
+    },
+    {
+      "id": "n63",
+      "name": "不可变更新",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "react"
+      ]
+    },
+    {
+      "id": "n64",
+      "name": "重新渲染",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "react"
+      ]
+    },
+    {
+      "id": "n65",
+      "name": "批量更新",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "react"
+      ]
+    },
+    {
+      "id": "n66",
+      "name": "Hooks",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "react"
+      ]
+    },
+    {
+      "id": "n67",
+      "name": "useEffect",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "react"
+      ]
+    },
+    {
+      "id": "n68",
+      "name": "依赖数组",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "react"
+      ]
+    },
+    {
+      "id": "n69",
+      "name": "清理函数",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "react"
+      ]
+    },
+    {
+      "id": "n70",
+      "name": "useMemo",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "react"
+      ]
+    },
+    {
+      "id": "n71",
+      "name": "useCallback",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "react"
+      ]
+    },
+    {
+      "id": "n72",
+      "name": "虚拟 DOM",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "react"
+      ]
+    },
+    {
+      "id": "n73",
+      "name": "协调过程",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "react"
+      ]
+    },
+    {
+      "id": "n74",
+      "name": "key",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "react"
+      ]
+    },
+    {
+      "id": "n75",
+      "name": "组件身份",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "react"
+      ]
+    },
+    {
+      "id": "n76",
+      "name": "组件状态",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "react"
+      ]
+    },
+    {
+      "id": "n77",
+      "name": "Vue",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n78",
+      "name": "Proxy",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n79",
+      "name": "响应式依赖",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n80",
+      "name": "computed",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n81",
+      "name": "watch",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n82",
+      "name": "props",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n83",
+      "name": "emit",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n84",
+      "name": "Pinia",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "React / Vue"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n85",
+      "name": "首屏性能",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "前端工程"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n86",
+      "name": "LCP",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "前端工程"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n87",
+      "name": "代码分割",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "前端工程"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n88",
+      "name": "懒加载",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "前端工程"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n89",
+      "name": "资源压缩",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "前端工程"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n90",
+      "name": "CDN",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "前端工程"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n91",
+      "name": "SSR",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "前端工程"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n92",
+      "name": "水合",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "前端工程"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n93",
+      "name": "TypeScript",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "前端工程"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n94",
+      "name": "类型收窄",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "前端工程"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n95",
+      "name": "泛型",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "前端工程"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n96",
+      "name": "结构类型",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "前端工程"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n97",
+      "name": "运行时校验",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "前端工程"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n98",
+      "name": "模块化",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "前端工程"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n99",
+      "name": "ES Modules",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "前端工程"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n100",
+      "name": "构建工具",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "前端工程"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n101",
+      "name": "Tree Shaking",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "前端工程"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n102",
+      "name": "单元测试",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "前端工程"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n103",
+      "name": "端到端测试",
+      "roles": [
+        "frontend",
+        "fullstack",
+        "test"
+      ],
+      "modules": [
+        "前端工程",
+        "测试开发"
+      ],
+      "sources": [
+        "web",
+        "qa"
+      ]
+    },
+    {
+      "id": "n104",
+      "name": "HTTPS",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "网络与接口"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n105",
+      "name": "证书",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "网络与接口"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n106",
+      "name": "对称加密",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "网络与接口"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n107",
+      "name": "非对称加密",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "网络与接口"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n108",
+      "name": "三次握手",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "网络与接口"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n109",
+      "name": "序列号",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "网络与接口"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n110",
+      "name": "确认应答",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "网络与接口"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n111",
+      "name": "重传",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "网络与接口"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n112",
+      "name": "流量控制",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "网络与接口"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n113",
+      "name": "拥塞控制",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "网络与接口"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n114",
+      "name": "REST API",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "网络与接口"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n115",
+      "name": "HTTP 方法",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "网络与接口"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n116",
+      "name": "状态码",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "网络与接口"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n117",
+      "name": "幂等性",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test",
+        "ops"
+      ],
+      "modules": [
+        "网络与接口",
+        "系统设计",
+        "Agent",
+        "测试开发"
+      ],
+      "sources": [
+        "web",
+        "ops",
+        "ai",
+        "qa"
+      ]
+    },
+    {
+      "id": "n118",
+      "name": "幂等键",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "网络与接口"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n119",
+      "name": "重试",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test",
+        "ops"
+      ],
+      "modules": [
+        "网络与接口",
+        "系统设计",
+        "AI 应用基础"
+      ],
+      "sources": [
+        "web",
+        "ops",
+        "ai"
+      ]
+    },
+    {
+      "id": "n120",
+      "name": "Cookie",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "安全与认证"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n121",
+      "name": "Session",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "安全与认证"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n122",
+      "name": "JWT",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "安全与认证"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n123",
+      "name": "认证",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "安全与认证"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n124",
+      "name": "授权",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "安全与认证"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n125",
+      "name": "Token 过期",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "安全与认证"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n126",
+      "name": "刷新令牌",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "安全与认证"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n127",
+      "name": "XSS",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "安全与认证"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n128",
+      "name": "输出编码",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "安全与认证"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n129",
+      "name": "CSP",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "安全与认证"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n130",
+      "name": "CSRF",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "安全与认证"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n131",
+      "name": "SameSite",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "安全与认证"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n132",
+      "name": "SQL 注入",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "安全与认证"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n133",
+      "name": "参数化查询",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "安全与认证"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n134",
+      "name": "Java",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 基础"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n135",
+      "name": "equals",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 基础"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n136",
+      "name": "hashCode",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 基础"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n137",
+      "name": "HashMap",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 基础"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n138",
+      "name": "哈希冲突",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 基础"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n139",
+      "name": "扩容",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 基础"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n140",
+      "name": "集合",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 基础"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n141",
+      "name": "ArrayList",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 基础"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n142",
+      "name": "LinkedList",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 基础"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n143",
+      "name": "随机访问",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 基础"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n144",
+      "name": "数组扩容",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 基础"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n145",
+      "name": "缓存局部性",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 基础"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n146",
+      "name": "Java 内存模型",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 并发"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n147",
+      "name": "可见性",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 并发"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n148",
+      "name": "原子性",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 并发"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n149",
+      "name": "有序性",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 并发"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n150",
+      "name": "volatile",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 并发"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n151",
+      "name": "synchronized",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 并发"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n152",
+      "name": "happens-before",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 并发"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n153",
+      "name": "线程池",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 并发"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n154",
+      "name": "核心线程数",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 并发"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n155",
+      "name": "工作队列",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 并发"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n156",
+      "name": "拒绝策略",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 并发"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n157",
+      "name": "CPU 密集",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 并发"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n158",
+      "name": "I/O 密集",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "Java 并发"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n159",
+      "name": "背压",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "modules": [
+        "Java 并发",
+        "系统设计"
+      ],
+      "sources": [
+        "java",
+        "ops"
+      ]
+    },
+    {
+      "id": "n160",
+      "name": "JVM",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "JVM / Spring"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n161",
+      "name": "堆",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "JVM / Spring"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n162",
+      "name": "栈",
+      "roles": [
+        "java",
+        "frontend",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "cpp"
+      ],
+      "modules": [
+        "JVM / Spring",
+        "手写与算法"
+      ],
+      "sources": [
+        "java",
+        "web"
+      ]
+    },
+    {
+      "id": "n163",
+      "name": "GC Roots",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "JVM / Spring"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n164",
+      "name": "OOM",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "JVM / Spring"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n165",
+      "name": "Spring",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "JVM / Spring"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n166",
+      "name": "IoC",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "JVM / Spring"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n167",
+      "name": "依赖注入",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "JVM / Spring"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n168",
+      "name": "Bean 生命周期",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "JVM / Spring"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n169",
+      "name": "AOP",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "JVM / Spring"
+      ],
+      "sources": [
+        "java"
+      ]
+    },
+    {
+      "id": "n170",
+      "name": "动态代理",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "JVM / Spring"
+      ],
+      "sources": [
+        "java",
+        "db"
+      ]
+    },
+    {
+      "id": "n171",
+      "name": "Spring 事务",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "JVM / Spring"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n172",
+      "name": "自调用",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "JVM / Spring"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n173",
+      "name": "事务传播",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "JVM / Spring"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n174",
+      "name": "回滚规则",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "JVM / Spring"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n175",
+      "name": "数据库事务",
+      "roles": [
+        "java"
+      ],
+      "modules": [
+        "JVM / Spring"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n176",
+      "name": "Go",
+      "roles": [
+        "go"
+      ],
+      "modules": [
+        "Go 基础"
+      ],
+      "sources": [
+        "go"
+      ]
+    },
+    {
+      "id": "n177",
+      "name": "goroutine",
+      "roles": [
+        "go"
+      ],
+      "modules": [
+        "Go 基础"
+      ],
+      "sources": [
+        "go"
+      ]
+    },
+    {
+      "id": "n178",
+      "name": "GMP 调度",
+      "roles": [
+        "go"
+      ],
+      "modules": [
+        "Go 基础"
+      ],
+      "sources": [
+        "go"
+      ]
+    },
+    {
+      "id": "n179",
+      "name": "线程",
+      "roles": [
+        "go",
+        "python",
+        "ai",
+        "test",
+        "java",
+        "fullstack",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "Go 基础",
+        "Python 并发",
+        "并发与服务"
+      ],
+      "sources": [
+        "go",
+        "python",
+        "ops"
+      ]
+    },
+    {
+      "id": "n180",
+      "name": "栈增长",
+      "roles": [
+        "go"
+      ],
+      "modules": [
+        "Go 基础"
+      ],
+      "sources": [
+        "go"
+      ]
+    },
+    {
+      "id": "n181",
+      "name": "并发",
+      "roles": [
+        "go"
+      ],
+      "modules": [
+        "Go 基础"
+      ],
+      "sources": [
+        "go"
+      ]
+    },
+    {
+      "id": "n182",
+      "name": "channel",
+      "roles": [
+        "go"
+      ],
+      "modules": [
+        "Go 基础"
+      ],
+      "sources": [
+        "go"
+      ]
+    },
+    {
+      "id": "n183",
+      "name": "select",
+      "roles": [
+        "go"
+      ],
+      "modules": [
+        "Go 基础"
+      ],
+      "sources": [
+        "go"
+      ]
+    },
+    {
+      "id": "n184",
+      "name": "互斥锁",
+      "roles": [
+        "go",
+        "java",
+        "python",
+        "fullstack",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "Go 基础",
+        "并发与服务"
+      ],
+      "sources": [
+        "go",
+        "ops"
+      ]
+    },
+    {
+      "id": "n185",
+      "name": "context",
+      "roles": [
+        "go"
+      ],
+      "modules": [
+        "Go 基础"
+      ],
+      "sources": [
+        "go"
+      ]
+    },
+    {
+      "id": "n186",
+      "name": "超时",
+      "roles": [
+        "go",
+        "java",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "modules": [
+        "Go 基础",
+        "系统设计",
+        "AI 应用基础"
+      ],
+      "sources": [
+        "go",
+        "ops",
+        "ai"
+      ]
+    },
+    {
+      "id": "n187",
+      "name": "取消传播",
+      "roles": [
+        "go"
+      ],
+      "modules": [
+        "Go 基础"
+      ],
+      "sources": [
+        "go"
+      ]
+    },
+    {
+      "id": "n188",
+      "name": "goroutine 泄漏",
+      "roles": [
+        "go"
+      ],
+      "modules": [
+        "Go 基础"
+      ],
+      "sources": [
+        "go"
+      ]
+    },
+    {
+      "id": "n189",
+      "name": "slice",
+      "roles": [
+        "go"
+      ],
+      "modules": [
+        "Go 基础"
+      ],
+      "sources": [
+        "go"
+      ]
+    },
+    {
+      "id": "n190",
+      "name": "底层数组",
+      "roles": [
+        "go"
+      ],
+      "modules": [
+        "Go 基础"
+      ],
+      "sources": [
+        "go"
+      ]
+    },
+    {
+      "id": "n191",
+      "name": "append",
+      "roles": [
+        "go"
+      ],
+      "modules": [
+        "Go 基础"
+      ],
+      "sources": [
+        "go"
+      ]
+    },
+    {
+      "id": "n192",
+      "name": "map",
+      "roles": [
+        "go"
+      ],
+      "modules": [
+        "Go 基础"
+      ],
+      "sources": [
+        "go"
+      ]
+    },
+    {
+      "id": "n193",
+      "name": "并发读写",
+      "roles": [
+        "go"
+      ],
+      "modules": [
+        "Go 基础"
+      ],
+      "sources": [
+        "go"
+      ]
+    },
+    {
+      "id": "n194",
+      "name": "interface",
+      "roles": [
+        "go"
+      ],
+      "modules": [
+        "Go 基础"
+      ],
+      "sources": [
+        "go"
+      ]
+    },
+    {
+      "id": "n195",
+      "name": "nil",
+      "roles": [
+        "go"
+      ],
+      "modules": [
+        "Go 基础"
+      ],
+      "sources": [
+        "go"
+      ]
+    },
+    {
+      "id": "n196",
+      "name": "Python",
+      "roles": [
+        "python",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "Python 基础"
+      ],
+      "sources": [
+        "python"
+      ]
+    },
+    {
+      "id": "n197",
+      "name": "迭代器",
+      "roles": [
+        "python",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "Python 基础"
+      ],
+      "sources": [
+        "python"
+      ]
+    },
+    {
+      "id": "n198",
+      "name": "生成器",
+      "roles": [
+        "python",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "Python 基础"
+      ],
+      "sources": [
+        "python"
+      ]
+    },
+    {
+      "id": "n199",
+      "name": "装饰器",
+      "roles": [
+        "python",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "Python 基础"
+      ],
+      "sources": [
+        "python"
+      ]
+    },
+    {
+      "id": "n200",
+      "name": "可变默认参数",
+      "roles": [
+        "python",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "Python 基础"
+      ],
+      "sources": [
+        "python"
+      ]
+    },
+    {
+      "id": "n201",
+      "name": "对象引用",
+      "roles": [
+        "python",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "Python 基础"
+      ],
+      "sources": [
+        "python"
+      ]
+    },
+    {
+      "id": "n202",
+      "name": "GIL",
+      "roles": [
+        "python",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "Python 并发"
+      ],
+      "sources": [
+        "python"
+      ]
+    },
+    {
+      "id": "n203",
+      "name": "进程",
+      "roles": [
+        "python",
+        "ai",
+        "test",
+        "java",
+        "go",
+        "fullstack",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "Python 并发",
+        "并发与服务",
+        "部署与运维"
+      ],
+      "sources": [
+        "python",
+        "ops"
+      ]
+    },
+    {
+      "id": "n204",
+      "name": "asyncio",
+      "roles": [
+        "python",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "Python 并发"
+      ],
+      "sources": [
+        "python"
+      ]
+    },
+    {
+      "id": "n205",
+      "name": "协程",
+      "roles": [
+        "python",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "Python 并发"
+      ],
+      "sources": [
+        "python"
+      ]
+    },
+    {
+      "id": "n206",
+      "name": "阻塞 I/O",
+      "roles": [
+        "python",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "Python 并发"
+      ],
+      "sources": [
+        "python"
+      ]
+    },
+    {
+      "id": "n207",
+      "name": "ASGI",
+      "roles": [
+        "python",
+        "ai",
+        "fullstack"
+      ],
+      "modules": [
+        "Python 服务"
+      ],
+      "sources": [
+        "python"
+      ]
+    },
+    {
+      "id": "n208",
+      "name": "WSGI",
+      "roles": [
+        "python",
+        "ai",
+        "fullstack"
+      ],
+      "modules": [
+        "Python 服务"
+      ],
+      "sources": [
+        "python"
+      ]
+    },
+    {
+      "id": "n209",
+      "name": "FastAPI",
+      "roles": [
+        "python",
+        "ai",
+        "fullstack"
+      ],
+      "modules": [
+        "Python 服务"
+      ],
+      "sources": [
+        "python"
+      ]
+    },
+    {
+      "id": "n210",
+      "name": "参数校验",
+      "roles": [
+        "python",
+        "ai",
+        "fullstack"
+      ],
+      "modules": [
+        "Python 服务",
+        "Agent"
+      ],
+      "sources": [
+        "python",
+        "ai"
+      ]
+    },
+    {
+      "id": "n211",
+      "name": "连接池",
+      "roles": [
+        "python",
+        "ai",
+        "fullstack",
+        "java",
+        "go",
+        "test",
+        "ops"
+      ],
+      "modules": [
+        "Python 服务",
+        "数据库",
+        "并发与服务"
+      ],
+      "sources": [
+        "python",
+        "db",
+        "ops"
+      ]
+    },
+    {
+      "id": "n212",
+      "name": "异步驱动",
+      "roles": [
+        "python",
+        "ai",
+        "fullstack"
+      ],
+      "modules": [
+        "Python 服务"
+      ],
+      "sources": [
+        "python"
+      ]
+    },
+    {
+      "id": "n213",
+      "name": "索引",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test",
+        "ops"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n214",
+      "name": "B+ 树",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test",
+        "ops"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n215",
+      "name": "联合索引",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test",
+        "ops"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n216",
+      "name": "最左前缀",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test",
+        "ops"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n217",
+      "name": "覆盖索引",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test",
+        "ops"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n218",
+      "name": "回表",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test",
+        "ops"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n219",
+      "name": "执行计划",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test",
+        "ops"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n220",
+      "name": "事务",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n221",
+      "name": "ACID",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n222",
+      "name": "隔离级别",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n223",
+      "name": "脏读",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n224",
+      "name": "不可重复读",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n225",
+      "name": "幻读",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n226",
+      "name": "MVCC",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n227",
+      "name": "快照读",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n228",
+      "name": "慢查询",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n229",
+      "name": "扫描行数",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n230",
+      "name": "锁等待",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n231",
+      "name": "数据库锁",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n232",
+      "name": "行锁",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n233",
+      "name": "间隙锁",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n234",
+      "name": "死锁",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "数据库",
+        "并发与服务"
+      ],
+      "sources": [
+        "db",
+        "ops"
+      ]
+    },
+    {
+      "id": "n235",
+      "name": "锁顺序",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n236",
+      "name": "事务重试",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "modules": [
+        "数据库"
+      ],
+      "sources": [
+        "db"
+      ]
+    },
+    {
+      "id": "n237",
+      "name": "缓存",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "modules": [
+        "缓存"
+      ],
+      "sources": [
+        "redis"
+      ]
+    },
+    {
+      "id": "n238",
+      "name": "缓存穿透",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "modules": [
+        "缓存"
+      ],
+      "sources": [
+        "redis"
+      ]
+    },
+    {
+      "id": "n239",
+      "name": "缓存击穿",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "modules": [
+        "缓存"
+      ],
+      "sources": [
+        "redis"
+      ]
+    },
+    {
+      "id": "n240",
+      "name": "缓存雪崩",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "modules": [
+        "缓存"
+      ],
+      "sources": [
+        "redis"
+      ]
+    },
+    {
+      "id": "n241",
+      "name": "空值缓存",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "modules": [
+        "缓存"
+      ],
+      "sources": [
+        "redis"
+      ]
+    },
+    {
+      "id": "n242",
+      "name": "布隆过滤器",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "modules": [
+        "缓存"
+      ],
+      "sources": [
+        "redis"
+      ]
+    },
+    {
+      "id": "n243",
+      "name": "互斥重建",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "modules": [
+        "缓存"
+      ],
+      "sources": [
+        "redis"
+      ]
+    },
+    {
+      "id": "n244",
+      "name": "TTL 抖动",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "modules": [
+        "缓存"
+      ],
+      "sources": [
+        "redis"
+      ]
+    },
+    {
+      "id": "n245",
+      "name": "Cache Aside",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack"
+      ],
+      "modules": [
+        "缓存"
+      ],
+      "sources": [
+        "redis"
+      ]
+    },
+    {
+      "id": "n246",
+      "name": "数据库更新",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack"
+      ],
+      "modules": [
+        "缓存"
+      ],
+      "sources": [
+        "redis"
+      ]
+    },
+    {
+      "id": "n247",
+      "name": "缓存删除",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack"
+      ],
+      "modules": [
+        "缓存"
+      ],
+      "sources": [
+        "redis"
+      ]
+    },
+    {
+      "id": "n248",
+      "name": "并发竞争",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack"
+      ],
+      "modules": [
+        "缓存"
+      ],
+      "sources": [
+        "redis"
+      ]
+    },
+    {
+      "id": "n249",
+      "name": "最终一致性",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack"
+      ],
+      "modules": [
+        "缓存"
+      ],
+      "sources": [
+        "redis"
+      ]
+    },
+    {
+      "id": "n250",
+      "name": "CDC",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack"
+      ],
+      "modules": [
+        "缓存"
+      ],
+      "sources": [
+        "redis"
+      ]
+    },
+    {
+      "id": "n251",
+      "name": "Redis",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack"
+      ],
+      "modules": [
+        "缓存"
+      ],
+      "sources": [
+        "redis"
+      ]
+    },
+    {
+      "id": "n252",
+      "name": "分布式锁",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack"
+      ],
+      "modules": [
+        "缓存"
+      ],
+      "sources": [
+        "redis"
+      ]
+    },
+    {
+      "id": "n253",
+      "name": "租约",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack"
+      ],
+      "modules": [
+        "缓存"
+      ],
+      "sources": [
+        "redis"
+      ]
+    },
+    {
+      "id": "n254",
+      "name": "原子释放",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack"
+      ],
+      "modules": [
+        "缓存"
+      ],
+      "sources": [
+        "redis"
+      ]
+    },
+    {
+      "id": "n255",
+      "name": "锁续期",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack"
+      ],
+      "modules": [
+        "缓存"
+      ],
+      "sources": [
+        "redis"
+      ]
+    },
+    {
+      "id": "n256",
+      "name": "fencing token",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack"
+      ],
+      "modules": [
+        "缓存"
+      ],
+      "sources": [
+        "redis"
+      ]
+    },
+    {
+      "id": "n257",
+      "name": "上下文切换",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "并发与服务"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n258",
+      "name": "共享内存",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "并发与服务"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n259",
+      "name": "可观测性",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "modules": [
+        "并发与服务"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n260",
+      "name": "指标",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "modules": [
+        "并发与服务"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n261",
+      "name": "日志",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "modules": [
+        "并发与服务",
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n262",
+      "name": "链路追踪",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops",
+        "test"
+      ],
+      "modules": [
+        "并发与服务",
+        "AI 工程"
+      ],
+      "sources": [
+        "ops",
+        "graph"
+      ]
+    },
+    {
+      "id": "n263",
+      "name": "P99",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops",
+        "test"
+      ],
+      "modules": [
+        "并发与服务",
+        "测试开发"
+      ],
+      "sources": [
+        "ops",
+        "qa"
+      ]
+    },
+    {
+      "id": "n264",
+      "name": "CPU",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "modules": [
+        "并发与服务"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n265",
+      "name": "内存",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "modules": [
+        "并发与服务"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n266",
+      "name": "I/O",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "modules": [
+        "并发与服务"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n267",
+      "name": "限流",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "modules": [
+        "系统设计",
+        "AI 应用基础"
+      ],
+      "sources": [
+        "ops",
+        "ai"
+      ]
+    },
+    {
+      "id": "n268",
+      "name": "令牌桶",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "modules": [
+        "系统设计"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n269",
+      "name": "熔断",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "modules": [
+        "系统设计"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n270",
+      "name": "降级",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "modules": [
+        "系统设计"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n271",
+      "name": "消息队列",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops"
+      ],
+      "modules": [
+        "系统设计"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n272",
+      "name": "生产确认",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops"
+      ],
+      "modules": [
+        "系统设计"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n273",
+      "name": "消费确认",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops"
+      ],
+      "modules": [
+        "系统设计"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n274",
+      "name": "重复投递",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops"
+      ],
+      "modules": [
+        "系统设计"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n275",
+      "name": "死信队列",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops"
+      ],
+      "modules": [
+        "系统设计"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n276",
+      "name": "Outbox",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops"
+      ],
+      "modules": [
+        "系统设计"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n277",
+      "name": "负载均衡",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops"
+      ],
+      "modules": [
+        "系统设计"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n278",
+      "name": "复制",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops"
+      ],
+      "modules": [
+        "系统设计"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n279",
+      "name": "分片",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops"
+      ],
+      "modules": [
+        "系统设计"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n280",
+      "name": "一致性",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops"
+      ],
+      "modules": [
+        "系统设计"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n281",
+      "name": "网络分区",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops"
+      ],
+      "modules": [
+        "系统设计"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n282",
+      "name": "共识",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops"
+      ],
+      "modules": [
+        "系统设计"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n283",
+      "name": "CAP",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops"
+      ],
+      "modules": [
+        "系统设计"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n284",
+      "name": "LLM API",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "AI 应用基础"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n285",
+      "name": "Token",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "AI 应用基础"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n286",
+      "name": "上下文窗口",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "AI 应用基础"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n287",
+      "name": "流式输出",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "AI 应用基础"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n288",
+      "name": "结构化输出",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "AI 应用基础"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n289",
+      "name": "Prompt",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "AI 应用基础"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n290",
+      "name": "系统指令",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "AI 应用基础"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n291",
+      "name": "上下文工程",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "AI 应用基础"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n292",
+      "name": "历史消息",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "AI 应用基础"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n293",
+      "name": "上下文压缩",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "AI 应用基础"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n294",
+      "name": "Token 预算",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "AI 应用基础"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n295",
+      "name": "RAG",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "RAG"
+      ],
+      "sources": [
+        "rag"
+      ]
+    },
+    {
+      "id": "n296",
+      "name": "文档解析",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "RAG"
+      ],
+      "sources": [
+        "rag"
+      ]
+    },
+    {
+      "id": "n297",
+      "name": "Chunking",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "RAG"
+      ],
+      "sources": [
+        "rag"
+      ]
+    },
+    {
+      "id": "n298",
+      "name": "Embedding",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "RAG"
+      ],
+      "sources": [
+        "rag"
+      ]
+    },
+    {
+      "id": "n299",
+      "name": "向量数据库",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "RAG"
+      ],
+      "sources": [
+        "rag"
+      ]
+    },
+    {
+      "id": "n300",
+      "name": "检索",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "RAG"
+      ],
+      "sources": [
+        "rag"
+      ]
+    },
+    {
+      "id": "n301",
+      "name": "Rerank",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "RAG"
+      ],
+      "sources": [
+        "rag"
+      ]
+    },
+    {
+      "id": "n302",
+      "name": "上下文构建",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "RAG"
+      ],
+      "sources": [
+        "rag"
+      ]
+    },
+    {
+      "id": "n303",
+      "name": "引用",
+      "roles": [
+        "ai",
+        "cpp"
+      ],
+      "modules": [
+        "RAG",
+        "C++ / 客户端"
+      ],
+      "sources": [
+        "rag",
+        "cpp"
+      ]
+    },
+    {
+      "id": "n304",
+      "name": "BM25",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "RAG"
+      ],
+      "sources": [
+        "rag"
+      ]
+    },
+    {
+      "id": "n305",
+      "name": "向量检索",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "RAG"
+      ],
+      "sources": [
+        "rag"
+      ]
+    },
+    {
+      "id": "n306",
+      "name": "混合检索",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "RAG"
+      ],
+      "sources": [
+        "rag"
+      ]
+    },
+    {
+      "id": "n307",
+      "name": "Top K",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "RAG"
+      ],
+      "sources": [
+        "rag"
+      ]
+    },
+    {
+      "id": "n308",
+      "name": "召回率",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "RAG"
+      ],
+      "sources": [
+        "rag"
+      ]
+    },
+    {
+      "id": "n309",
+      "name": "RAG 评测",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "RAG"
+      ],
+      "sources": [
+        "rag"
+      ]
+    },
+    {
+      "id": "n310",
+      "name": "检索命中",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "RAG"
+      ],
+      "sources": [
+        "rag"
+      ]
+    },
+    {
+      "id": "n311",
+      "name": "上下文相关性",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "RAG"
+      ],
+      "sources": [
+        "rag"
+      ]
+    },
+    {
+      "id": "n312",
+      "name": "忠实度",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "RAG"
+      ],
+      "sources": [
+        "rag"
+      ]
+    },
+    {
+      "id": "n313",
+      "name": "回答正确性",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "RAG"
+      ],
+      "sources": [
+        "rag"
+      ]
+    },
+    {
+      "id": "n314",
+      "name": "测试集",
+      "roles": [
+        "ai",
+        "ml"
+      ],
+      "modules": [
+        "RAG",
+        "机器学习"
+      ],
+      "sources": [
+        "rag",
+        "ml"
+      ]
+    },
+    {
+      "id": "n315",
+      "name": "微调",
+      "roles": [
+        "ai",
+        "ml"
+      ],
+      "modules": [
+        "RAG",
+        "机器学习"
+      ],
+      "sources": [
+        "rag",
+        "ml"
+      ]
+    },
+    {
+      "id": "n316",
+      "name": "知识更新",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "RAG"
+      ],
+      "sources": [
+        "rag"
+      ]
+    },
+    {
+      "id": "n317",
+      "name": "行为适配",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "RAG"
+      ],
+      "sources": [
+        "rag"
+      ]
+    },
+    {
+      "id": "n318",
+      "name": "训练数据",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "RAG"
+      ],
+      "sources": [
+        "rag"
+      ]
+    },
+    {
+      "id": "n319",
+      "name": "评测",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "RAG",
+        "Agent"
+      ],
+      "sources": [
+        "rag",
+        "ai"
+      ]
+    },
+    {
+      "id": "n320",
+      "name": "Agent",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "ai",
+        "graph"
+      ]
+    },
+    {
+      "id": "n321",
+      "name": "工作流",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n322",
+      "name": "模型决策",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n323",
+      "name": "工具调用",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "ai",
+        "mcp"
+      ]
+    },
+    {
+      "id": "n324",
+      "name": "状态",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "ai",
+        "graph"
+      ]
+    },
+    {
+      "id": "n325",
+      "name": "终止条件",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n326",
+      "name": "JSON Schema",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n327",
+      "name": "工具执行",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n328",
+      "name": "异常处理",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n329",
+      "name": "短期记忆",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "n330",
+      "name": "长期记忆",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "n331",
+      "name": "检查点",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "n332",
+      "name": "持久化",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "n333",
+      "name": "恢复执行",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "n334",
+      "name": "LangChain",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "n335",
+      "name": "LangGraph",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "n336",
+      "name": "状态图",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "n337",
+      "name": "人工介入",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "n338",
+      "name": "MCP",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "mcp"
+      ]
+    },
+    {
+      "id": "n339",
+      "name": "Host",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "mcp"
+      ]
+    },
+    {
+      "id": "n340",
+      "name": "Client",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "mcp"
+      ]
+    },
+    {
+      "id": "n341",
+      "name": "Server",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "mcp"
+      ]
+    },
+    {
+      "id": "n342",
+      "name": "Tools",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "mcp"
+      ]
+    },
+    {
+      "id": "n343",
+      "name": "Resources",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "mcp"
+      ]
+    },
+    {
+      "id": "n344",
+      "name": "Prompts",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "mcp"
+      ]
+    },
+    {
+      "id": "n345",
+      "name": "多 Agent",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n346",
+      "name": "任务拆分",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n347",
+      "name": "协调",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n348",
+      "name": "上下文隔离",
+      "roles": [
+        "ai"
+      ],
+      "modules": [
+        "Agent"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n349",
+      "name": "延迟",
+      "roles": [
+        "ai",
+        "test",
+        "ml"
+      ],
+      "modules": [
+        "Agent",
+        "AI 工程",
+        "机器学习"
+      ],
+      "sources": [
+        "ai",
+        "graph",
+        "ml"
+      ]
+    },
+    {
+      "id": "n350",
+      "name": "成本",
+      "roles": [
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "Agent",
+        "AI 工程"
+      ],
+      "sources": [
+        "ai",
+        "graph"
+      ]
+    },
+    {
+      "id": "n351",
+      "name": "提示词注入",
+      "roles": [
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "AI 工程"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n352",
+      "name": "不可信输入",
+      "roles": [
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "AI 工程"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n353",
+      "name": "权限边界",
+      "roles": [
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "AI 工程"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n354",
+      "name": "最小权限",
+      "roles": [
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "AI 工程"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n355",
+      "name": "沙箱",
+      "roles": [
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "AI 工程"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n356",
+      "name": "人工确认",
+      "roles": [
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "AI 工程"
+      ],
+      "sources": [
+        "ai"
+      ]
+    },
+    {
+      "id": "n357",
+      "name": "Agent 评测",
+      "roles": [
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "AI 工程"
+      ],
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "n358",
+      "name": "任务成功率",
+      "roles": [
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "AI 工程"
+      ],
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "n359",
+      "name": "工具正确率",
+      "roles": [
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "AI 工程"
+      ],
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "n360",
+      "name": "回归集",
+      "roles": [
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "AI 工程"
+      ],
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "n361",
+      "name": "数据划分",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n362",
+      "name": "数据泄漏",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n363",
+      "name": "验证集",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n364",
+      "name": "交叉验证",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n365",
+      "name": "泛化",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n366",
+      "name": "过拟合",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n367",
+      "name": "训练误差",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n368",
+      "name": "验证误差",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n369",
+      "name": "正则化",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n370",
+      "name": "Dropout",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n371",
+      "name": "早停",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n372",
+      "name": "数据增强",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n373",
+      "name": "混淆矩阵",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n374",
+      "name": "Precision",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n375",
+      "name": "Recall",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n376",
+      "name": "F1",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n377",
+      "name": "ROC-AUC",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n378",
+      "name": "PR-AUC",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n379",
+      "name": "类别不平衡",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n380",
+      "name": "Transformer",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n381",
+      "name": "Attention",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n382",
+      "name": "位置编码",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n383",
+      "name": "预训练",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n384",
+      "name": "LoRA",
+      "roles": [
+        "ml"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n385",
+      "name": "量化",
+      "roles": [
+        "ml",
+        "ai"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n386",
+      "name": "模型推理",
+      "roles": [
+        "ml",
+        "ai"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n387",
+      "name": "批处理",
+      "roles": [
+        "ml",
+        "ai"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n388",
+      "name": "KV Cache",
+      "roles": [
+        "ml",
+        "ai"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n389",
+      "name": "显存",
+      "roles": [
+        "ml",
+        "ai"
+      ],
+      "modules": [
+        "机器学习"
+      ],
+      "sources": [
+        "ml"
+      ]
+    },
+    {
+      "id": "n390",
+      "name": "吞吐",
+      "roles": [
+        "ml",
+        "ai",
+        "test",
+        "ops"
+      ],
+      "modules": [
+        "机器学习",
+        "测试开发"
+      ],
+      "sources": [
+        "ml",
+        "qa"
+      ]
+    },
+    {
+      "id": "n391",
+      "name": "接口测试",
+      "roles": [
+        "test"
+      ],
+      "modules": [
+        "测试开发"
+      ],
+      "sources": [
+        "qa"
+      ]
+    },
+    {
+      "id": "n392",
+      "name": "等价类",
+      "roles": [
+        "test"
+      ],
+      "modules": [
+        "测试开发"
+      ],
+      "sources": [
+        "qa"
+      ]
+    },
+    {
+      "id": "n393",
+      "name": "边界值",
+      "roles": [
+        "test"
+      ],
+      "modules": [
+        "测试开发"
+      ],
+      "sources": [
+        "qa"
+      ]
+    },
+    {
+      "id": "n394",
+      "name": "异常输入",
+      "roles": [
+        "test"
+      ],
+      "modules": [
+        "测试开发"
+      ],
+      "sources": [
+        "qa"
+      ]
+    },
+    {
+      "id": "n395",
+      "name": "鉴权",
+      "roles": [
+        "test"
+      ],
+      "modules": [
+        "测试开发"
+      ],
+      "sources": [
+        "qa"
+      ]
+    },
+    {
+      "id": "n396",
+      "name": "数据库断言",
+      "roles": [
+        "test"
+      ],
+      "modules": [
+        "测试开发"
+      ],
+      "sources": [
+        "qa"
+      ]
+    },
+    {
+      "id": "n397",
+      "name": "选择器",
+      "roles": [
+        "test",
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "测试开发"
+      ],
+      "sources": [
+        "qa"
+      ]
+    },
+    {
+      "id": "n398",
+      "name": "自动等待",
+      "roles": [
+        "test",
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "测试开发"
+      ],
+      "sources": [
+        "qa"
+      ]
+    },
+    {
+      "id": "n399",
+      "name": "测试隔离",
+      "roles": [
+        "test",
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "测试开发"
+      ],
+      "sources": [
+        "qa"
+      ]
+    },
+    {
+      "id": "n400",
+      "name": "Mock",
+      "roles": [
+        "test",
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "测试开发"
+      ],
+      "sources": [
+        "qa"
+      ]
+    },
+    {
+      "id": "n401",
+      "name": "Flaky Test",
+      "roles": [
+        "test",
+        "frontend",
+        "fullstack"
+      ],
+      "modules": [
+        "测试开发"
+      ],
+      "sources": [
+        "qa"
+      ]
+    },
+    {
+      "id": "n402",
+      "name": "压力测试",
+      "roles": [
+        "test",
+        "ops"
+      ],
+      "modules": [
+        "测试开发"
+      ],
+      "sources": [
+        "qa"
+      ]
+    },
+    {
+      "id": "n403",
+      "name": "并发数",
+      "roles": [
+        "test",
+        "ops"
+      ],
+      "modules": [
+        "测试开发"
+      ],
+      "sources": [
+        "qa"
+      ]
+    },
+    {
+      "id": "n404",
+      "name": "错误率",
+      "roles": [
+        "test",
+        "ops"
+      ],
+      "modules": [
+        "测试开发"
+      ],
+      "sources": [
+        "qa"
+      ]
+    },
+    {
+      "id": "n405",
+      "name": "资源饱和",
+      "roles": [
+        "test",
+        "ops"
+      ],
+      "modules": [
+        "测试开发"
+      ],
+      "sources": [
+        "qa"
+      ]
+    },
+    {
+      "id": "n406",
+      "name": "容量",
+      "roles": [
+        "test",
+        "ops"
+      ],
+      "modules": [
+        "测试开发"
+      ],
+      "sources": [
+        "qa"
+      ]
+    },
+    {
+      "id": "n407",
+      "name": "容器",
+      "roles": [
+        "ops",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n408",
+      "name": "虚拟机",
+      "roles": [
+        "ops",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n409",
+      "name": "Namespace",
+      "roles": [
+        "ops",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n410",
+      "name": "cgroups",
+      "roles": [
+        "ops",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n411",
+      "name": "镜像",
+      "roles": [
+        "ops",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n412",
+      "name": "容器网络",
+      "roles": [
+        "ops",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n413",
+      "name": "Kubernetes",
+      "roles": [
+        "ops"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n414",
+      "name": "Pod",
+      "roles": [
+        "ops"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n415",
+      "name": "Deployment",
+      "roles": [
+        "ops"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n416",
+      "name": "Service",
+      "roles": [
+        "ops"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n417",
+      "name": "Ingress",
+      "roles": [
+        "ops"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n418",
+      "name": "健康检查",
+      "roles": [
+        "ops"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n419",
+      "name": "滚动更新",
+      "roles": [
+        "ops"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n420",
+      "name": "Linux",
+      "roles": [
+        "ops",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n421",
+      "name": "文件描述符",
+      "roles": [
+        "ops",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n422",
+      "name": "端口",
+      "roles": [
+        "ops",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n423",
+      "name": "权限",
+      "roles": [
+        "ops",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n424",
+      "name": "磁盘",
+      "roles": [
+        "ops",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n425",
+      "name": "信号",
+      "roles": [
+        "ops",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n426",
+      "name": "Git",
+      "roles": [
+        "ops",
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n427",
+      "name": "分支",
+      "roles": [
+        "ops",
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n428",
+      "name": "代码审查",
+      "roles": [
+        "ops",
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n429",
+      "name": "CI/CD",
+      "roles": [
+        "ops",
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n430",
+      "name": "自动测试",
+      "roles": [
+        "ops",
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n431",
+      "name": "制品",
+      "roles": [
+        "ops",
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n432",
+      "name": "回滚",
+      "roles": [
+        "ops",
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "modules": [
+        "部署与运维"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n433",
+      "name": "C++",
+      "roles": [
+        "cpp"
+      ],
+      "modules": [
+        "C++ / 客户端"
+      ],
+      "sources": [
+        "cpp"
+      ]
+    },
+    {
+      "id": "n434",
+      "name": "指针",
+      "roles": [
+        "cpp"
+      ],
+      "modules": [
+        "C++ / 客户端"
+      ],
+      "sources": [
+        "cpp"
+      ]
+    },
+    {
+      "id": "n435",
+      "name": "RAII",
+      "roles": [
+        "cpp"
+      ],
+      "modules": [
+        "C++ / 客户端"
+      ],
+      "sources": [
+        "cpp"
+      ]
+    },
+    {
+      "id": "n436",
+      "name": "unique_ptr",
+      "roles": [
+        "cpp"
+      ],
+      "modules": [
+        "C++ / 客户端"
+      ],
+      "sources": [
+        "cpp"
+      ]
+    },
+    {
+      "id": "n437",
+      "name": "shared_ptr",
+      "roles": [
+        "cpp"
+      ],
+      "modules": [
+        "C++ / 客户端"
+      ],
+      "sources": [
+        "cpp"
+      ]
+    },
+    {
+      "id": "n438",
+      "name": "weak_ptr",
+      "roles": [
+        "cpp"
+      ],
+      "modules": [
+        "C++ / 客户端"
+      ],
+      "sources": [
+        "cpp"
+      ]
+    },
+    {
+      "id": "n439",
+      "name": "对象生命周期",
+      "roles": [
+        "cpp"
+      ],
+      "modules": [
+        "C++ / 客户端"
+      ],
+      "sources": [
+        "cpp"
+      ]
+    },
+    {
+      "id": "n440",
+      "name": "拷贝构造",
+      "roles": [
+        "cpp"
+      ],
+      "modules": [
+        "C++ / 客户端"
+      ],
+      "sources": [
+        "cpp"
+      ]
+    },
+    {
+      "id": "n441",
+      "name": "移动语义",
+      "roles": [
+        "cpp"
+      ],
+      "modules": [
+        "C++ / 客户端"
+      ],
+      "sources": [
+        "cpp"
+      ]
+    },
+    {
+      "id": "n442",
+      "name": "右值引用",
+      "roles": [
+        "cpp"
+      ],
+      "modules": [
+        "C++ / 客户端"
+      ],
+      "sources": [
+        "cpp"
+      ]
+    },
+    {
+      "id": "n443",
+      "name": "析构",
+      "roles": [
+        "cpp"
+      ],
+      "modules": [
+        "C++ / 客户端"
+      ],
+      "sources": [
+        "cpp"
+      ]
+    },
+    {
+      "id": "n444",
+      "name": "悬空引用",
+      "roles": [
+        "cpp"
+      ],
+      "modules": [
+        "C++ / 客户端"
+      ],
+      "sources": [
+        "cpp"
+      ]
+    },
+    {
+      "id": "n445",
+      "name": "虚函数",
+      "roles": [
+        "cpp"
+      ],
+      "modules": [
+        "C++ / 客户端"
+      ],
+      "sources": [
+        "cpp"
+      ]
+    },
+    {
+      "id": "n446",
+      "name": "多态",
+      "roles": [
+        "cpp"
+      ],
+      "modules": [
+        "C++ / 客户端"
+      ],
+      "sources": [
+        "cpp"
+      ]
+    },
+    {
+      "id": "n447",
+      "name": "虚析构",
+      "roles": [
+        "cpp"
+      ],
+      "modules": [
+        "C++ / 客户端"
+      ],
+      "sources": [
+        "cpp"
+      ]
+    },
+    {
+      "id": "n448",
+      "name": "vector",
+      "roles": [
+        "cpp"
+      ],
+      "modules": [
+        "C++ / 客户端"
+      ],
+      "sources": [
+        "cpp"
+      ]
+    },
+    {
+      "id": "n449",
+      "name": "unordered_map",
+      "roles": [
+        "cpp"
+      ],
+      "modules": [
+        "C++ / 客户端"
+      ],
+      "sources": [
+        "cpp"
+      ]
+    },
+    {
+      "id": "n450",
+      "name": "迭代器失效",
+      "roles": [
+        "cpp"
+      ],
+      "modules": [
+        "C++ / 客户端"
+      ],
+      "sources": [
+        "cpp"
+      ]
+    },
+    {
+      "id": "n451",
+      "name": "数组",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "cpp"
+      ],
+      "modules": [
+        "手写与算法"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n452",
+      "name": "哈希表",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "cpp"
+      ],
+      "modules": [
+        "手写与算法"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n453",
+      "name": "双指针",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "cpp"
+      ],
+      "modules": [
+        "手写与算法"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n454",
+      "name": "滑动窗口",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "cpp"
+      ],
+      "modules": [
+        "手写与算法"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n455",
+      "name": "队列",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "cpp"
+      ],
+      "modules": [
+        "手写与算法"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n456",
+      "name": "二分查找",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "cpp"
+      ],
+      "modules": [
+        "手写与算法"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n457",
+      "name": "链表",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "cpp"
+      ],
+      "modules": [
+        "手写与算法"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n458",
+      "name": "树",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "cpp"
+      ],
+      "modules": [
+        "手写与算法"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n459",
+      "name": "DFS",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "cpp"
+      ],
+      "modules": [
+        "手写与算法"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n460",
+      "name": "BFS",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "cpp"
+      ],
+      "modules": [
+        "手写与算法"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n461",
+      "name": "动态规划",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "cpp"
+      ],
+      "modules": [
+        "手写与算法"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n462",
+      "name": "复杂度",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "cpp"
+      ],
+      "modules": [
+        "手写与算法"
+      ],
+      "sources": [
+        "web"
+      ]
+    },
+    {
+      "id": "n463",
+      "name": "项目背景",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "项目追问"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n464",
+      "name": "个人贡献",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "项目追问"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n465",
+      "name": "技术选型",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "项目追问"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n466",
+      "name": "实现链路",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "项目追问"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n467",
+      "name": "性能瓶颈",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "项目追问"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n468",
+      "name": "失败案例",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "项目追问"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n469",
+      "name": "指标验证",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "项目追问"
+      ],
+      "sources": [
+        "ops"
+      ]
+    },
+    {
+      "id": "n470",
+      "name": "改进方案",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "modules": [
+        "项目追问"
+      ],
+      "sources": [
+        "ops"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2",
+      "type": "追问"
+    },
+    {
+      "from": "n2",
+      "to": "n3",
+      "type": "追问"
+    },
+    {
+      "from": "n3",
+      "to": "n4",
+      "type": "追问"
+    },
+    {
+      "from": "n4",
+      "to": "n5",
+      "type": "追问"
+    },
+    {
+      "from": "n6",
+      "to": "n7",
+      "type": "追问"
+    },
+    {
+      "from": "n7",
+      "to": "n8",
+      "type": "追问"
+    },
+    {
+      "from": "n8",
+      "to": "n9",
+      "type": "追问"
+    },
+    {
+      "from": "n9",
+      "to": "n10",
+      "type": "追问"
+    },
+    {
+      "from": "n10",
+      "to": "n11",
+      "type": "追问"
+    },
+    {
+      "from": "n12",
+      "to": "n13",
+      "type": "追问"
+    },
+    {
+      "from": "n13",
+      "to": "n14",
+      "type": "追问"
+    },
+    {
+      "from": "n14",
+      "to": "n15",
+      "type": "追问"
+    },
+    {
+      "from": "n15",
+      "to": "n16",
+      "type": "追问"
+    },
+    {
+      "from": "n17",
+      "to": "n18",
+      "type": "追问"
+    },
+    {
+      "from": "n18",
+      "to": "n19",
+      "type": "追问"
+    },
+    {
+      "from": "n19",
+      "to": "n20",
+      "type": "追问"
+    },
+    {
+      "from": "n20",
+      "to": "n21",
+      "type": "追问"
+    },
+    {
+      "from": "n21",
+      "to": "n22",
+      "type": "追问"
+    },
+    {
+      "from": "n23",
+      "to": "n24",
+      "type": "追问"
+    },
+    {
+      "from": "n24",
+      "to": "n25",
+      "type": "追问"
+    },
+    {
+      "from": "n25",
+      "to": "n26",
+      "type": "追问"
+    },
+    {
+      "from": "n26",
+      "to": "n27",
+      "type": "追问"
+    },
+    {
+      "from": "n28",
+      "to": "n29",
+      "type": "追问"
+    },
+    {
+      "from": "n29",
+      "to": "n30",
+      "type": "追问"
+    },
+    {
+      "from": "n30",
+      "to": "n31",
+      "type": "追问"
+    },
+    {
+      "from": "n31",
+      "to": "n32",
+      "type": "追问"
+    },
+    {
+      "from": "n32",
+      "to": "n33",
+      "type": "追问"
+    },
+    {
+      "from": "n33",
+      "to": "n34",
+      "type": "追问"
+    },
+    {
+      "from": "n34",
+      "to": "n35",
+      "type": "追问"
+    },
+    {
+      "from": "n35",
+      "to": "n36",
+      "type": "追问"
+    },
+    {
+      "from": "n36",
+      "to": "n37",
+      "type": "追问"
+    },
+    {
+      "from": "n38",
+      "to": "n39",
+      "type": "追问"
+    },
+    {
+      "from": "n39",
+      "to": "n40",
+      "type": "追问"
+    },
+    {
+      "from": "n40",
+      "to": "n41",
+      "type": "追问"
+    },
+    {
+      "from": "n41",
+      "to": "n42",
+      "type": "追问"
+    },
+    {
+      "from": "n42",
+      "to": "n43",
+      "type": "追问"
+    },
+    {
+      "from": "n44",
+      "to": "n45",
+      "type": "追问"
+    },
+    {
+      "from": "n45",
+      "to": "n46",
+      "type": "追问"
+    },
+    {
+      "from": "n46",
+      "to": "n47",
+      "type": "追问"
+    },
+    {
+      "from": "n47",
+      "to": "n48",
+      "type": "追问"
+    },
+    {
+      "from": "n49",
+      "to": "n50",
+      "type": "追问"
+    },
+    {
+      "from": "n50",
+      "to": "n51",
+      "type": "追问"
+    },
+    {
+      "from": "n51",
+      "to": "n52",
+      "type": "追问"
+    },
+    {
+      "from": "n52",
+      "to": "n53",
+      "type": "追问"
+    },
+    {
+      "from": "n53",
+      "to": "n54",
+      "type": "追问"
+    },
+    {
+      "from": "n55",
+      "to": "n56",
+      "type": "追问"
+    },
+    {
+      "from": "n56",
+      "to": "n57",
+      "type": "追问"
+    },
+    {
+      "from": "n57",
+      "to": "n58",
+      "type": "追问"
+    },
+    {
+      "from": "n58",
+      "to": "n59",
+      "type": "追问"
+    },
+    {
+      "from": "n59",
+      "to": "n60",
+      "type": "追问"
+    },
+    {
+      "from": "n61",
+      "to": "n62",
+      "type": "追问"
+    },
+    {
+      "from": "n62",
+      "to": "n63",
+      "type": "追问"
+    },
+    {
+      "from": "n63",
+      "to": "n64",
+      "type": "追问"
+    },
+    {
+      "from": "n64",
+      "to": "n65",
+      "type": "追问"
+    },
+    {
+      "from": "n66",
+      "to": "n67",
+      "type": "追问"
+    },
+    {
+      "from": "n67",
+      "to": "n68",
+      "type": "追问"
+    },
+    {
+      "from": "n68",
+      "to": "n69",
+      "type": "追问"
+    },
+    {
+      "from": "n69",
+      "to": "n70",
+      "type": "追问"
+    },
+    {
+      "from": "n70",
+      "to": "n71",
+      "type": "追问"
+    },
+    {
+      "from": "n72",
+      "to": "n73",
+      "type": "追问"
+    },
+    {
+      "from": "n73",
+      "to": "n74",
+      "type": "追问"
+    },
+    {
+      "from": "n74",
+      "to": "n75",
+      "type": "追问"
+    },
+    {
+      "from": "n75",
+      "to": "n76",
+      "type": "追问"
+    },
+    {
+      "from": "n77",
+      "to": "n78",
+      "type": "追问"
+    },
+    {
+      "from": "n78",
+      "to": "n79",
+      "type": "追问"
+    },
+    {
+      "from": "n79",
+      "to": "n80",
+      "type": "追问"
+    },
+    {
+      "from": "n80",
+      "to": "n81",
+      "type": "追问"
+    },
+    {
+      "from": "n81",
+      "to": "n82",
+      "type": "追问"
+    },
+    {
+      "from": "n82",
+      "to": "n83",
+      "type": "追问"
+    },
+    {
+      "from": "n83",
+      "to": "n84",
+      "type": "追问"
+    },
+    {
+      "from": "n85",
+      "to": "n86",
+      "type": "追问"
+    },
+    {
+      "from": "n86",
+      "to": "n87",
+      "type": "追问"
+    },
+    {
+      "from": "n87",
+      "to": "n88",
+      "type": "追问"
+    },
+    {
+      "from": "n88",
+      "to": "n89",
+      "type": "追问"
+    },
+    {
+      "from": "n89",
+      "to": "n90",
+      "type": "追问"
+    },
+    {
+      "from": "n90",
+      "to": "n91",
+      "type": "追问"
+    },
+    {
+      "from": "n91",
+      "to": "n92",
+      "type": "追问"
+    },
+    {
+      "from": "n93",
+      "to": "n94",
+      "type": "追问"
+    },
+    {
+      "from": "n94",
+      "to": "n95",
+      "type": "追问"
+    },
+    {
+      "from": "n95",
+      "to": "n96",
+      "type": "追问"
+    },
+    {
+      "from": "n96",
+      "to": "n97",
+      "type": "追问"
+    },
+    {
+      "from": "n98",
+      "to": "n99",
+      "type": "追问"
+    },
+    {
+      "from": "n99",
+      "to": "n100",
+      "type": "追问"
+    },
+    {
+      "from": "n100",
+      "to": "n101",
+      "type": "追问"
+    },
+    {
+      "from": "n101",
+      "to": "n102",
+      "type": "追问"
+    },
+    {
+      "from": "n102",
+      "to": "n103",
+      "type": "追问"
+    },
+    {
+      "from": "n32",
+      "to": "n104",
+      "type": "追问"
+    },
+    {
+      "from": "n104",
+      "to": "n31",
+      "type": "追问"
+    },
+    {
+      "from": "n31",
+      "to": "n105",
+      "type": "追问"
+    },
+    {
+      "from": "n105",
+      "to": "n106",
+      "type": "追问"
+    },
+    {
+      "from": "n106",
+      "to": "n107",
+      "type": "追问"
+    },
+    {
+      "from": "n30",
+      "to": "n108",
+      "type": "追问"
+    },
+    {
+      "from": "n108",
+      "to": "n109",
+      "type": "追问"
+    },
+    {
+      "from": "n109",
+      "to": "n110",
+      "type": "追问"
+    },
+    {
+      "from": "n110",
+      "to": "n111",
+      "type": "追问"
+    },
+    {
+      "from": "n111",
+      "to": "n112",
+      "type": "追问"
+    },
+    {
+      "from": "n112",
+      "to": "n113",
+      "type": "追问"
+    },
+    {
+      "from": "n114",
+      "to": "n115",
+      "type": "追问"
+    },
+    {
+      "from": "n115",
+      "to": "n116",
+      "type": "追问"
+    },
+    {
+      "from": "n116",
+      "to": "n117",
+      "type": "追问"
+    },
+    {
+      "from": "n117",
+      "to": "n118",
+      "type": "追问"
+    },
+    {
+      "from": "n118",
+      "to": "n119",
+      "type": "追问"
+    },
+    {
+      "from": "n120",
+      "to": "n121",
+      "type": "追问"
+    },
+    {
+      "from": "n121",
+      "to": "n122",
+      "type": "追问"
+    },
+    {
+      "from": "n122",
+      "to": "n123",
+      "type": "追问"
+    },
+    {
+      "from": "n123",
+      "to": "n124",
+      "type": "追问"
+    },
+    {
+      "from": "n124",
+      "to": "n125",
+      "type": "追问"
+    },
+    {
+      "from": "n125",
+      "to": "n126",
+      "type": "追问"
+    },
+    {
+      "from": "n127",
+      "to": "n128",
+      "type": "追问"
+    },
+    {
+      "from": "n128",
+      "to": "n129",
+      "type": "追问"
+    },
+    {
+      "from": "n129",
+      "to": "n130",
+      "type": "追问"
+    },
+    {
+      "from": "n130",
+      "to": "n131",
+      "type": "追问"
+    },
+    {
+      "from": "n131",
+      "to": "n132",
+      "type": "追问"
+    },
+    {
+      "from": "n132",
+      "to": "n133",
+      "type": "追问"
+    },
+    {
+      "from": "n134",
+      "to": "n135",
+      "type": "追问"
+    },
+    {
+      "from": "n135",
+      "to": "n136",
+      "type": "追问"
+    },
+    {
+      "from": "n136",
+      "to": "n137",
+      "type": "追问"
+    },
+    {
+      "from": "n137",
+      "to": "n138",
+      "type": "追问"
+    },
+    {
+      "from": "n138",
+      "to": "n139",
+      "type": "追问"
+    },
+    {
+      "from": "n140",
+      "to": "n141",
+      "type": "追问"
+    },
+    {
+      "from": "n141",
+      "to": "n142",
+      "type": "追问"
+    },
+    {
+      "from": "n142",
+      "to": "n143",
+      "type": "追问"
+    },
+    {
+      "from": "n143",
+      "to": "n144",
+      "type": "追问"
+    },
+    {
+      "from": "n144",
+      "to": "n145",
+      "type": "追问"
+    },
+    {
+      "from": "n146",
+      "to": "n147",
+      "type": "追问"
+    },
+    {
+      "from": "n147",
+      "to": "n148",
+      "type": "追问"
+    },
+    {
+      "from": "n148",
+      "to": "n149",
+      "type": "追问"
+    },
+    {
+      "from": "n149",
+      "to": "n150",
+      "type": "追问"
+    },
+    {
+      "from": "n150",
+      "to": "n151",
+      "type": "追问"
+    },
+    {
+      "from": "n151",
+      "to": "n152",
+      "type": "追问"
+    },
+    {
+      "from": "n153",
+      "to": "n154",
+      "type": "追问"
+    },
+    {
+      "from": "n154",
+      "to": "n155",
+      "type": "追问"
+    },
+    {
+      "from": "n155",
+      "to": "n156",
+      "type": "追问"
+    },
+    {
+      "from": "n156",
+      "to": "n157",
+      "type": "追问"
+    },
+    {
+      "from": "n157",
+      "to": "n158",
+      "type": "追问"
+    },
+    {
+      "from": "n158",
+      "to": "n159",
+      "type": "追问"
+    },
+    {
+      "from": "n160",
+      "to": "n161",
+      "type": "追问"
+    },
+    {
+      "from": "n161",
+      "to": "n162",
+      "type": "追问"
+    },
+    {
+      "from": "n162",
+      "to": "n163",
+      "type": "追问"
+    },
+    {
+      "from": "n163",
+      "to": "n4",
+      "type": "追问"
+    },
+    {
+      "from": "n5",
+      "to": "n164",
+      "type": "追问"
+    },
+    {
+      "from": "n165",
+      "to": "n166",
+      "type": "追问"
+    },
+    {
+      "from": "n166",
+      "to": "n167",
+      "type": "追问"
+    },
+    {
+      "from": "n167",
+      "to": "n168",
+      "type": "追问"
+    },
+    {
+      "from": "n168",
+      "to": "n169",
+      "type": "追问"
+    },
+    {
+      "from": "n169",
+      "to": "n170",
+      "type": "追问"
+    },
+    {
+      "from": "n171",
+      "to": "n170",
+      "type": "追问"
+    },
+    {
+      "from": "n170",
+      "to": "n172",
+      "type": "追问"
+    },
+    {
+      "from": "n172",
+      "to": "n173",
+      "type": "追问"
+    },
+    {
+      "from": "n173",
+      "to": "n174",
+      "type": "追问"
+    },
+    {
+      "from": "n174",
+      "to": "n175",
+      "type": "追问"
+    },
+    {
+      "from": "n176",
+      "to": "n177",
+      "type": "追问"
+    },
+    {
+      "from": "n177",
+      "to": "n178",
+      "type": "追问"
+    },
+    {
+      "from": "n178",
+      "to": "n179",
+      "type": "追问"
+    },
+    {
+      "from": "n179",
+      "to": "n180",
+      "type": "追问"
+    },
+    {
+      "from": "n180",
+      "to": "n181",
+      "type": "追问"
+    },
+    {
+      "from": "n182",
+      "to": "n183",
+      "type": "追问"
+    },
+    {
+      "from": "n183",
+      "to": "n184",
+      "type": "追问"
+    },
+    {
+      "from": "n184",
+      "to": "n185",
+      "type": "追问"
+    },
+    {
+      "from": "n185",
+      "to": "n186",
+      "type": "追问"
+    },
+    {
+      "from": "n186",
+      "to": "n187",
+      "type": "追问"
+    },
+    {
+      "from": "n187",
+      "to": "n188",
+      "type": "追问"
+    },
+    {
+      "from": "n189",
+      "to": "n190",
+      "type": "追问"
+    },
+    {
+      "from": "n190",
+      "to": "n191",
+      "type": "追问"
+    },
+    {
+      "from": "n191",
+      "to": "n192",
+      "type": "追问"
+    },
+    {
+      "from": "n192",
+      "to": "n193",
+      "type": "追问"
+    },
+    {
+      "from": "n193",
+      "to": "n194",
+      "type": "追问"
+    },
+    {
+      "from": "n194",
+      "to": "n195",
+      "type": "追问"
+    },
+    {
+      "from": "n196",
+      "to": "n197",
+      "type": "追问"
+    },
+    {
+      "from": "n197",
+      "to": "n198",
+      "type": "追问"
+    },
+    {
+      "from": "n198",
+      "to": "n199",
+      "type": "追问"
+    },
+    {
+      "from": "n199",
+      "to": "n200",
+      "type": "追问"
+    },
+    {
+      "from": "n200",
+      "to": "n201",
+      "type": "追问"
+    },
+    {
+      "from": "n202",
+      "to": "n179",
+      "type": "追问"
+    },
+    {
+      "from": "n179",
+      "to": "n203",
+      "type": "追问"
+    },
+    {
+      "from": "n203",
+      "to": "n204",
+      "type": "追问"
+    },
+    {
+      "from": "n204",
+      "to": "n205",
+      "type": "追问"
+    },
+    {
+      "from": "n205",
+      "to": "n6",
+      "type": "追问"
+    },
+    {
+      "from": "n6",
+      "to": "n206",
+      "type": "追问"
+    },
+    {
+      "from": "n207",
+      "to": "n208",
+      "type": "追问"
+    },
+    {
+      "from": "n208",
+      "to": "n209",
+      "type": "追问"
+    },
+    {
+      "from": "n209",
+      "to": "n210",
+      "type": "追问"
+    },
+    {
+      "from": "n210",
+      "to": "n211",
+      "type": "追问"
+    },
+    {
+      "from": "n211",
+      "to": "n212",
+      "type": "追问"
+    },
+    {
+      "from": "n213",
+      "to": "n214",
+      "type": "追问"
+    },
+    {
+      "from": "n214",
+      "to": "n215",
+      "type": "追问"
+    },
+    {
+      "from": "n215",
+      "to": "n216",
+      "type": "追问"
+    },
+    {
+      "from": "n216",
+      "to": "n217",
+      "type": "追问"
+    },
+    {
+      "from": "n217",
+      "to": "n218",
+      "type": "追问"
+    },
+    {
+      "from": "n218",
+      "to": "n219",
+      "type": "追问"
+    },
+    {
+      "from": "n220",
+      "to": "n221",
+      "type": "追问"
+    },
+    {
+      "from": "n221",
+      "to": "n222",
+      "type": "追问"
+    },
+    {
+      "from": "n222",
+      "to": "n223",
+      "type": "追问"
+    },
+    {
+      "from": "n223",
+      "to": "n224",
+      "type": "追问"
+    },
+    {
+      "from": "n224",
+      "to": "n225",
+      "type": "追问"
+    },
+    {
+      "from": "n225",
+      "to": "n226",
+      "type": "追问"
+    },
+    {
+      "from": "n226",
+      "to": "n227",
+      "type": "追问"
+    },
+    {
+      "from": "n228",
+      "to": "n219",
+      "type": "追问"
+    },
+    {
+      "from": "n219",
+      "to": "n213",
+      "type": "追问"
+    },
+    {
+      "from": "n213",
+      "to": "n229",
+      "type": "追问"
+    },
+    {
+      "from": "n229",
+      "to": "n230",
+      "type": "追问"
+    },
+    {
+      "from": "n230",
+      "to": "n211",
+      "type": "追问"
+    },
+    {
+      "from": "n231",
+      "to": "n232",
+      "type": "追问"
+    },
+    {
+      "from": "n232",
+      "to": "n233",
+      "type": "追问"
+    },
+    {
+      "from": "n233",
+      "to": "n234",
+      "type": "追问"
+    },
+    {
+      "from": "n234",
+      "to": "n235",
+      "type": "追问"
+    },
+    {
+      "from": "n235",
+      "to": "n236",
+      "type": "追问"
+    },
+    {
+      "from": "n237",
+      "to": "n238",
+      "type": "追问"
+    },
+    {
+      "from": "n238",
+      "to": "n239",
+      "type": "追问"
+    },
+    {
+      "from": "n239",
+      "to": "n240",
+      "type": "追问"
+    },
+    {
+      "from": "n240",
+      "to": "n241",
+      "type": "追问"
+    },
+    {
+      "from": "n241",
+      "to": "n242",
+      "type": "追问"
+    },
+    {
+      "from": "n242",
+      "to": "n243",
+      "type": "追问"
+    },
+    {
+      "from": "n243",
+      "to": "n244",
+      "type": "追问"
+    },
+    {
+      "from": "n245",
+      "to": "n246",
+      "type": "追问"
+    },
+    {
+      "from": "n246",
+      "to": "n247",
+      "type": "追问"
+    },
+    {
+      "from": "n247",
+      "to": "n248",
+      "type": "追问"
+    },
+    {
+      "from": "n248",
+      "to": "n249",
+      "type": "追问"
+    },
+    {
+      "from": "n249",
+      "to": "n250",
+      "type": "追问"
+    },
+    {
+      "from": "n251",
+      "to": "n252",
+      "type": "追问"
+    },
+    {
+      "from": "n252",
+      "to": "n253",
+      "type": "追问"
+    },
+    {
+      "from": "n253",
+      "to": "n254",
+      "type": "追问"
+    },
+    {
+      "from": "n254",
+      "to": "n255",
+      "type": "追问"
+    },
+    {
+      "from": "n255",
+      "to": "n256",
+      "type": "追问"
+    },
+    {
+      "from": "n203",
+      "to": "n179",
+      "type": "追问"
+    },
+    {
+      "from": "n179",
+      "to": "n257",
+      "type": "追问"
+    },
+    {
+      "from": "n257",
+      "to": "n258",
+      "type": "追问"
+    },
+    {
+      "from": "n258",
+      "to": "n184",
+      "type": "追问"
+    },
+    {
+      "from": "n184",
+      "to": "n234",
+      "type": "追问"
+    },
+    {
+      "from": "n259",
+      "to": "n260",
+      "type": "追问"
+    },
+    {
+      "from": "n260",
+      "to": "n261",
+      "type": "追问"
+    },
+    {
+      "from": "n261",
+      "to": "n262",
+      "type": "追问"
+    },
+    {
+      "from": "n262",
+      "to": "n263",
+      "type": "追问"
+    },
+    {
+      "from": "n263",
+      "to": "n264",
+      "type": "追问"
+    },
+    {
+      "from": "n264",
+      "to": "n265",
+      "type": "追问"
+    },
+    {
+      "from": "n265",
+      "to": "n266",
+      "type": "追问"
+    },
+    {
+      "from": "n266",
+      "to": "n211",
+      "type": "追问"
+    },
+    {
+      "from": "n267",
+      "to": "n268",
+      "type": "追问"
+    },
+    {
+      "from": "n268",
+      "to": "n269",
+      "type": "追问"
+    },
+    {
+      "from": "n269",
+      "to": "n270",
+      "type": "追问"
+    },
+    {
+      "from": "n270",
+      "to": "n186",
+      "type": "追问"
+    },
+    {
+      "from": "n186",
+      "to": "n119",
+      "type": "追问"
+    },
+    {
+      "from": "n119",
+      "to": "n159",
+      "type": "追问"
+    },
+    {
+      "from": "n271",
+      "to": "n272",
+      "type": "追问"
+    },
+    {
+      "from": "n272",
+      "to": "n273",
+      "type": "追问"
+    },
+    {
+      "from": "n273",
+      "to": "n274",
+      "type": "追问"
+    },
+    {
+      "from": "n274",
+      "to": "n117",
+      "type": "追问"
+    },
+    {
+      "from": "n117",
+      "to": "n275",
+      "type": "追问"
+    },
+    {
+      "from": "n275",
+      "to": "n276",
+      "type": "追问"
+    },
+    {
+      "from": "n277",
+      "to": "n278",
+      "type": "追问"
+    },
+    {
+      "from": "n278",
+      "to": "n279",
+      "type": "追问"
+    },
+    {
+      "from": "n279",
+      "to": "n280",
+      "type": "追问"
+    },
+    {
+      "from": "n280",
+      "to": "n281",
+      "type": "追问"
+    },
+    {
+      "from": "n281",
+      "to": "n282",
+      "type": "追问"
+    },
+    {
+      "from": "n282",
+      "to": "n283",
+      "type": "追问"
+    },
+    {
+      "from": "n284",
+      "to": "n285",
+      "type": "追问"
+    },
+    {
+      "from": "n285",
+      "to": "n286",
+      "type": "追问"
+    },
+    {
+      "from": "n286",
+      "to": "n287",
+      "type": "追问"
+    },
+    {
+      "from": "n287",
+      "to": "n288",
+      "type": "追问"
+    },
+    {
+      "from": "n288",
+      "to": "n186",
+      "type": "追问"
+    },
+    {
+      "from": "n119",
+      "to": "n267",
+      "type": "追问"
+    },
+    {
+      "from": "n289",
+      "to": "n290",
+      "type": "追问"
+    },
+    {
+      "from": "n290",
+      "to": "n291",
+      "type": "追问"
+    },
+    {
+      "from": "n291",
+      "to": "n292",
+      "type": "追问"
+    },
+    {
+      "from": "n292",
+      "to": "n293",
+      "type": "追问"
+    },
+    {
+      "from": "n293",
+      "to": "n294",
+      "type": "追问"
+    },
+    {
+      "from": "n295",
+      "to": "n296",
+      "type": "追问"
+    },
+    {
+      "from": "n296",
+      "to": "n297",
+      "type": "追问"
+    },
+    {
+      "from": "n297",
+      "to": "n298",
+      "type": "追问"
+    },
+    {
+      "from": "n298",
+      "to": "n299",
+      "type": "追问"
+    },
+    {
+      "from": "n299",
+      "to": "n300",
+      "type": "追问"
+    },
+    {
+      "from": "n300",
+      "to": "n301",
+      "type": "追问"
+    },
+    {
+      "from": "n301",
+      "to": "n302",
+      "type": "追问"
+    },
+    {
+      "from": "n302",
+      "to": "n303",
+      "type": "追问"
+    },
+    {
+      "from": "n300",
+      "to": "n304",
+      "type": "追问"
+    },
+    {
+      "from": "n304",
+      "to": "n305",
+      "type": "追问"
+    },
+    {
+      "from": "n305",
+      "to": "n306",
+      "type": "追问"
+    },
+    {
+      "from": "n306",
+      "to": "n301",
+      "type": "追问"
+    },
+    {
+      "from": "n301",
+      "to": "n307",
+      "type": "追问"
+    },
+    {
+      "from": "n307",
+      "to": "n308",
+      "type": "追问"
+    },
+    {
+      "from": "n309",
+      "to": "n310",
+      "type": "追问"
+    },
+    {
+      "from": "n310",
+      "to": "n311",
+      "type": "追问"
+    },
+    {
+      "from": "n311",
+      "to": "n312",
+      "type": "追问"
+    },
+    {
+      "from": "n312",
+      "to": "n313",
+      "type": "追问"
+    },
+    {
+      "from": "n313",
+      "to": "n314",
+      "type": "追问"
+    },
+    {
+      "from": "n295",
+      "to": "n315",
+      "type": "追问"
+    },
+    {
+      "from": "n315",
+      "to": "n316",
+      "type": "追问"
+    },
+    {
+      "from": "n316",
+      "to": "n317",
+      "type": "追问"
+    },
+    {
+      "from": "n317",
+      "to": "n318",
+      "type": "追问"
+    },
+    {
+      "from": "n318",
+      "to": "n319",
+      "type": "追问"
+    },
+    {
+      "from": "n320",
+      "to": "n321",
+      "type": "追问"
+    },
+    {
+      "from": "n321",
+      "to": "n322",
+      "type": "追问"
+    },
+    {
+      "from": "n322",
+      "to": "n323",
+      "type": "追问"
+    },
+    {
+      "from": "n323",
+      "to": "n324",
+      "type": "追问"
+    },
+    {
+      "from": "n324",
+      "to": "n325",
+      "type": "追问"
+    },
+    {
+      "from": "n323",
+      "to": "n326",
+      "type": "追问"
+    },
+    {
+      "from": "n326",
+      "to": "n210",
+      "type": "追问"
+    },
+    {
+      "from": "n210",
+      "to": "n327",
+      "type": "追问"
+    },
+    {
+      "from": "n327",
+      "to": "n328",
+      "type": "追问"
+    },
+    {
+      "from": "n328",
+      "to": "n117",
+      "type": "追问"
+    },
+    {
+      "from": "n320",
+      "to": "n329",
+      "type": "追问"
+    },
+    {
+      "from": "n329",
+      "to": "n330",
+      "type": "追问"
+    },
+    {
+      "from": "n330",
+      "to": "n324",
+      "type": "追问"
+    },
+    {
+      "from": "n324",
+      "to": "n331",
+      "type": "追问"
+    },
+    {
+      "from": "n331",
+      "to": "n332",
+      "type": "追问"
+    },
+    {
+      "from": "n332",
+      "to": "n333",
+      "type": "追问"
+    },
+    {
+      "from": "n334",
+      "to": "n320",
+      "type": "追问"
+    },
+    {
+      "from": "n320",
+      "to": "n335",
+      "type": "追问"
+    },
+    {
+      "from": "n335",
+      "to": "n336",
+      "type": "追问"
+    },
+    {
+      "from": "n336",
+      "to": "n332",
+      "type": "追问"
+    },
+    {
+      "from": "n332",
+      "to": "n337",
+      "type": "追问"
+    },
+    {
+      "from": "n338",
+      "to": "n339",
+      "type": "追问"
+    },
+    {
+      "from": "n339",
+      "to": "n340",
+      "type": "追问"
+    },
+    {
+      "from": "n340",
+      "to": "n341",
+      "type": "追问"
+    },
+    {
+      "from": "n341",
+      "to": "n342",
+      "type": "追问"
+    },
+    {
+      "from": "n342",
+      "to": "n343",
+      "type": "追问"
+    },
+    {
+      "from": "n343",
+      "to": "n344",
+      "type": "追问"
+    },
+    {
+      "from": "n344",
+      "to": "n323",
+      "type": "追问"
+    },
+    {
+      "from": "n345",
+      "to": "n346",
+      "type": "追问"
+    },
+    {
+      "from": "n346",
+      "to": "n347",
+      "type": "追问"
+    },
+    {
+      "from": "n347",
+      "to": "n348",
+      "type": "追问"
+    },
+    {
+      "from": "n348",
+      "to": "n349",
+      "type": "追问"
+    },
+    {
+      "from": "n349",
+      "to": "n350",
+      "type": "追问"
+    },
+    {
+      "from": "n350",
+      "to": "n319",
+      "type": "追问"
+    },
+    {
+      "from": "n351",
+      "to": "n352",
+      "type": "追问"
+    },
+    {
+      "from": "n352",
+      "to": "n353",
+      "type": "追问"
+    },
+    {
+      "from": "n353",
+      "to": "n354",
+      "type": "追问"
+    },
+    {
+      "from": "n354",
+      "to": "n355",
+      "type": "追问"
+    },
+    {
+      "from": "n355",
+      "to": "n356",
+      "type": "追问"
+    },
+    {
+      "from": "n357",
+      "to": "n358",
+      "type": "追问"
+    },
+    {
+      "from": "n358",
+      "to": "n359",
+      "type": "追问"
+    },
+    {
+      "from": "n359",
+      "to": "n360",
+      "type": "追问"
+    },
+    {
+      "from": "n360",
+      "to": "n262",
+      "type": "追问"
+    },
+    {
+      "from": "n262",
+      "to": "n349",
+      "type": "追问"
+    },
+    {
+      "from": "n361",
+      "to": "n362",
+      "type": "追问"
+    },
+    {
+      "from": "n362",
+      "to": "n363",
+      "type": "追问"
+    },
+    {
+      "from": "n363",
+      "to": "n314",
+      "type": "追问"
+    },
+    {
+      "from": "n314",
+      "to": "n364",
+      "type": "追问"
+    },
+    {
+      "from": "n364",
+      "to": "n365",
+      "type": "追问"
+    },
+    {
+      "from": "n366",
+      "to": "n367",
+      "type": "追问"
+    },
+    {
+      "from": "n367",
+      "to": "n368",
+      "type": "追问"
+    },
+    {
+      "from": "n368",
+      "to": "n369",
+      "type": "追问"
+    },
+    {
+      "from": "n369",
+      "to": "n370",
+      "type": "追问"
+    },
+    {
+      "from": "n370",
+      "to": "n371",
+      "type": "追问"
+    },
+    {
+      "from": "n371",
+      "to": "n372",
+      "type": "追问"
+    },
+    {
+      "from": "n373",
+      "to": "n374",
+      "type": "追问"
+    },
+    {
+      "from": "n374",
+      "to": "n375",
+      "type": "追问"
+    },
+    {
+      "from": "n375",
+      "to": "n376",
+      "type": "追问"
+    },
+    {
+      "from": "n376",
+      "to": "n377",
+      "type": "追问"
+    },
+    {
+      "from": "n377",
+      "to": "n378",
+      "type": "追问"
+    },
+    {
+      "from": "n378",
+      "to": "n379",
+      "type": "追问"
+    },
+    {
+      "from": "n380",
+      "to": "n381",
+      "type": "追问"
+    },
+    {
+      "from": "n381",
+      "to": "n382",
+      "type": "追问"
+    },
+    {
+      "from": "n382",
+      "to": "n383",
+      "type": "追问"
+    },
+    {
+      "from": "n383",
+      "to": "n315",
+      "type": "追问"
+    },
+    {
+      "from": "n315",
+      "to": "n384",
+      "type": "追问"
+    },
+    {
+      "from": "n384",
+      "to": "n385",
+      "type": "追问"
+    },
+    {
+      "from": "n386",
+      "to": "n387",
+      "type": "追问"
+    },
+    {
+      "from": "n387",
+      "to": "n388",
+      "type": "追问"
+    },
+    {
+      "from": "n388",
+      "to": "n385",
+      "type": "追问"
+    },
+    {
+      "from": "n385",
+      "to": "n389",
+      "type": "追问"
+    },
+    {
+      "from": "n389",
+      "to": "n390",
+      "type": "追问"
+    },
+    {
+      "from": "n390",
+      "to": "n349",
+      "type": "追问"
+    },
+    {
+      "from": "n391",
+      "to": "n392",
+      "type": "追问"
+    },
+    {
+      "from": "n392",
+      "to": "n393",
+      "type": "追问"
+    },
+    {
+      "from": "n393",
+      "to": "n394",
+      "type": "追问"
+    },
+    {
+      "from": "n394",
+      "to": "n395",
+      "type": "追问"
+    },
+    {
+      "from": "n395",
+      "to": "n117",
+      "type": "追问"
+    },
+    {
+      "from": "n117",
+      "to": "n396",
+      "type": "追问"
+    },
+    {
+      "from": "n103",
+      "to": "n397",
+      "type": "追问"
+    },
+    {
+      "from": "n397",
+      "to": "n398",
+      "type": "追问"
+    },
+    {
+      "from": "n398",
+      "to": "n399",
+      "type": "追问"
+    },
+    {
+      "from": "n399",
+      "to": "n400",
+      "type": "追问"
+    },
+    {
+      "from": "n400",
+      "to": "n401",
+      "type": "追问"
+    },
+    {
+      "from": "n402",
+      "to": "n403",
+      "type": "追问"
+    },
+    {
+      "from": "n403",
+      "to": "n390",
+      "type": "追问"
+    },
+    {
+      "from": "n390",
+      "to": "n263",
+      "type": "追问"
+    },
+    {
+      "from": "n263",
+      "to": "n404",
+      "type": "追问"
+    },
+    {
+      "from": "n404",
+      "to": "n405",
+      "type": "追问"
+    },
+    {
+      "from": "n405",
+      "to": "n406",
+      "type": "追问"
+    },
+    {
+      "from": "n407",
+      "to": "n408",
+      "type": "追问"
+    },
+    {
+      "from": "n408",
+      "to": "n409",
+      "type": "追问"
+    },
+    {
+      "from": "n409",
+      "to": "n410",
+      "type": "追问"
+    },
+    {
+      "from": "n410",
+      "to": "n411",
+      "type": "追问"
+    },
+    {
+      "from": "n411",
+      "to": "n412",
+      "type": "追问"
+    },
+    {
+      "from": "n413",
+      "to": "n414",
+      "type": "追问"
+    },
+    {
+      "from": "n414",
+      "to": "n415",
+      "type": "追问"
+    },
+    {
+      "from": "n415",
+      "to": "n416",
+      "type": "追问"
+    },
+    {
+      "from": "n416",
+      "to": "n417",
+      "type": "追问"
+    },
+    {
+      "from": "n417",
+      "to": "n418",
+      "type": "追问"
+    },
+    {
+      "from": "n418",
+      "to": "n419",
+      "type": "追问"
+    },
+    {
+      "from": "n420",
+      "to": "n203",
+      "type": "追问"
+    },
+    {
+      "from": "n203",
+      "to": "n421",
+      "type": "追问"
+    },
+    {
+      "from": "n421",
+      "to": "n422",
+      "type": "追问"
+    },
+    {
+      "from": "n422",
+      "to": "n423",
+      "type": "追问"
+    },
+    {
+      "from": "n423",
+      "to": "n424",
+      "type": "追问"
+    },
+    {
+      "from": "n424",
+      "to": "n261",
+      "type": "追问"
+    },
+    {
+      "from": "n261",
+      "to": "n425",
+      "type": "追问"
+    },
+    {
+      "from": "n426",
+      "to": "n427",
+      "type": "追问"
+    },
+    {
+      "from": "n427",
+      "to": "n428",
+      "type": "追问"
+    },
+    {
+      "from": "n428",
+      "to": "n429",
+      "type": "追问"
+    },
+    {
+      "from": "n429",
+      "to": "n430",
+      "type": "追问"
+    },
+    {
+      "from": "n430",
+      "to": "n431",
+      "type": "追问"
+    },
+    {
+      "from": "n431",
+      "to": "n432",
+      "type": "追问"
+    },
+    {
+      "from": "n433",
+      "to": "n434",
+      "type": "追问"
+    },
+    {
+      "from": "n434",
+      "to": "n303",
+      "type": "追问"
+    },
+    {
+      "from": "n303",
+      "to": "n435",
+      "type": "追问"
+    },
+    {
+      "from": "n435",
+      "to": "n436",
+      "type": "追问"
+    },
+    {
+      "from": "n436",
+      "to": "n437",
+      "type": "追问"
+    },
+    {
+      "from": "n437",
+      "to": "n438",
+      "type": "追问"
+    },
+    {
+      "from": "n439",
+      "to": "n440",
+      "type": "追问"
+    },
+    {
+      "from": "n440",
+      "to": "n441",
+      "type": "追问"
+    },
+    {
+      "from": "n441",
+      "to": "n442",
+      "type": "追问"
+    },
+    {
+      "from": "n442",
+      "to": "n443",
+      "type": "追问"
+    },
+    {
+      "from": "n443",
+      "to": "n444",
+      "type": "追问"
+    },
+    {
+      "from": "n445",
+      "to": "n446",
+      "type": "追问"
+    },
+    {
+      "from": "n446",
+      "to": "n447",
+      "type": "追问"
+    },
+    {
+      "from": "n447",
+      "to": "n448",
+      "type": "追问"
+    },
+    {
+      "from": "n448",
+      "to": "n449",
+      "type": "追问"
+    },
+    {
+      "from": "n449",
+      "to": "n450",
+      "type": "追问"
+    },
+    {
+      "from": "n451",
+      "to": "n452",
+      "type": "追问"
+    },
+    {
+      "from": "n452",
+      "to": "n453",
+      "type": "追问"
+    },
+    {
+      "from": "n453",
+      "to": "n454",
+      "type": "追问"
+    },
+    {
+      "from": "n454",
+      "to": "n162",
+      "type": "追问"
+    },
+    {
+      "from": "n162",
+      "to": "n455",
+      "type": "追问"
+    },
+    {
+      "from": "n455",
+      "to": "n456",
+      "type": "追问"
+    },
+    {
+      "from": "n456",
+      "to": "n457",
+      "type": "追问"
+    },
+    {
+      "from": "n457",
+      "to": "n458",
+      "type": "追问"
+    },
+    {
+      "from": "n458",
+      "to": "n459",
+      "type": "追问"
+    },
+    {
+      "from": "n459",
+      "to": "n460",
+      "type": "追问"
+    },
+    {
+      "from": "n460",
+      "to": "n461",
+      "type": "追问"
+    },
+    {
+      "from": "n461",
+      "to": "n462",
+      "type": "追问"
+    },
+    {
+      "from": "n463",
+      "to": "n464",
+      "type": "追问"
+    },
+    {
+      "from": "n464",
+      "to": "n465",
+      "type": "追问"
+    },
+    {
+      "from": "n465",
+      "to": "n466",
+      "type": "追问"
+    },
+    {
+      "from": "n466",
+      "to": "n467",
+      "type": "追问"
+    },
+    {
+      "from": "n467",
+      "to": "n468",
+      "type": "追问"
+    },
+    {
+      "from": "n468",
+      "to": "n469",
+      "type": "追问"
+    },
+    {
+      "from": "n469",
+      "to": "n470",
+      "type": "追问"
+    },
+    {
+      "from": "n295",
+      "to": "n298",
+      "type": "使用"
+    },
+    {
+      "from": "n295",
+      "to": "n315",
+      "type": "对比"
+    },
+    {
+      "from": "n320",
+      "to": "n323",
+      "type": "使用"
+    },
+    {
+      "from": "n320",
+      "to": "n321",
+      "type": "对比"
+    },
+    {
+      "from": "n338",
+      "to": "n323",
+      "type": "连接机制"
+    },
+    {
+      "from": "n335",
+      "to": "n324",
+      "type": "管理"
+    },
+    {
+      "from": "n335",
+      "to": "n332",
+      "type": "支持"
+    },
+    {
+      "from": "n32",
+      "to": "n31",
+      "type": "安全层"
+    },
+    {
+      "from": "n104",
+      "to": "n31",
+      "type": "使用"
+    },
+    {
+      "from": "n1",
+      "to": "n2",
+      "type": "依赖"
+    },
+    {
+      "from": "n213",
+      "to": "n214",
+      "type": "常见实现"
+    },
+    {
+      "from": "n179",
+      "to": "n258",
+      "type": "共享"
+    },
+    {
+      "from": "n122",
+      "to": "n123",
+      "type": "用于"
+    },
+    {
+      "from": "n132",
+      "to": "n133",
+      "type": "防护"
+    },
+    {
+      "from": "n61",
+      "to": "n62",
+      "type": "管理"
+    },
+    {
+      "from": "n305",
+      "to": "n298",
+      "type": "依赖"
+    },
+    {
+      "from": "n315",
+      "to": "n384",
+      "type": "适配方法"
+    },
+    {
+      "from": "n251",
+      "to": "n237",
+      "type": "用途"
+    },
+    {
+      "from": "n175",
+      "to": "n221",
+      "type": "性质"
+    },
+    {
+      "from": "n345",
+      "to": "n320",
+      "type": "协作组成"
+    },
+    {
+      "from": "n38",
+      "to": "n39",
+      "type": "配置"
+    },
+    {
+      "from": "n41",
+      "to": "n42",
+      "type": "验证"
+    },
+    {
+      "from": "n45",
+      "to": "n46",
+      "type": "机制"
+    },
+    {
+      "from": "n77",
+      "to": "n78",
+      "type": "响应式基础"
+    },
+    {
+      "from": "n77",
+      "to": "n82",
+      "type": "组件输入"
+    },
+    {
+      "from": "n77",
+      "to": "n83",
+      "type": "组件事件"
+    },
+    {
+      "from": "n61",
+      "to": "n66",
+      "type": "使用"
+    },
+    {
+      "from": "n67",
+      "to": "n69",
+      "type": "支持"
+    },
+    {
+      "from": "n70",
+      "to": "n71",
+      "type": "对比"
+    },
+    {
+      "from": "n56",
+      "to": "n57",
+      "type": "对比"
+    },
+    {
+      "from": "n18",
+      "to": "n19",
+      "type": "对比"
+    },
+    {
+      "from": "n10",
+      "to": "n11",
+      "type": "语法关系"
+    },
+    {
+      "from": "n12",
+      "to": "n15",
+      "type": "绑定"
+    },
+    {
+      "from": "n451",
+      "to": "n457",
+      "type": "对比"
+    },
+    {
+      "from": "n458",
+      "to": "n459",
+      "type": "遍历"
+    },
+    {
+      "from": "n458",
+      "to": "n460",
+      "type": "遍历"
+    },
+    {
+      "from": "n452",
+      "to": "n138",
+      "type": "处理"
+    },
+    {
+      "from": "n137",
+      "to": "n136",
+      "type": "使用"
+    },
+    {
+      "from": "n141",
+      "to": "n144",
+      "type": "涉及"
+    },
+    {
+      "from": "n150",
+      "to": "n147",
+      "type": "保证"
+    },
+    {
+      "from": "n151",
+      "to": "n184",
+      "type": "提供"
+    },
+    {
+      "from": "n153",
+      "to": "n155",
+      "type": "使用"
+    },
+    {
+      "from": "n165",
+      "to": "n167",
+      "type": "支持"
+    },
+    {
+      "from": "n169",
+      "to": "n170",
+      "type": "常见实现"
+    },
+    {
+      "from": "n177",
+      "to": "n178",
+      "type": "调度机制"
+    },
+    {
+      "from": "n185",
+      "to": "n187",
+      "type": "支持"
+    },
+    {
+      "from": "n189",
+      "to": "n190",
+      "type": "引用"
+    },
+    {
+      "from": "n192",
+      "to": "n193",
+      "type": "需要同步"
+    },
+    {
+      "from": "n204",
+      "to": "n6",
+      "type": "运行机制"
+    },
+    {
+      "from": "n198",
+      "to": "n197",
+      "type": "实现协议"
+    },
+    {
+      "from": "n215",
+      "to": "n216",
+      "type": "使用规则"
+    },
+    {
+      "from": "n217",
+      "to": "n218",
+      "type": "避免"
+    },
+    {
+      "from": "n220",
+      "to": "n221",
+      "type": "性质"
+    },
+    {
+      "from": "n226",
+      "to": "n227",
+      "type": "支持"
+    },
+    {
+      "from": "n234",
+      "to": "n235",
+      "type": "预防策略"
+    },
+    {
+      "from": "n238",
+      "to": "n242",
+      "type": "缓解"
+    },
+    {
+      "from": "n239",
+      "to": "n243",
+      "type": "缓解"
+    },
+    {
+      "from": "n240",
+      "to": "n244",
+      "type": "缓解"
+    },
+    {
+      "from": "n117",
+      "to": "n119",
+      "type": "安全前提"
+    },
+    {
+      "from": "n267",
+      "to": "n268",
+      "type": "实现方法"
+    },
+    {
+      "from": "n259",
+      "to": "n262",
+      "type": "组成"
+    },
+    {
+      "from": "n295",
+      "to": "n297",
+      "type": "入库处理"
+    },
+    {
+      "from": "n295",
+      "to": "n301",
+      "type": "可选阶段"
+    },
+    {
+      "from": "n295",
+      "to": "n303",
+      "type": "可追溯输出"
+    },
+    {
+      "from": "n306",
+      "to": "n304",
+      "type": "组成"
+    },
+    {
+      "from": "n306",
+      "to": "n305",
+      "type": "组成"
+    },
+    {
+      "from": "n320",
+      "to": "n325",
+      "type": "约束"
+    },
+    {
+      "from": "n323",
+      "to": "n210",
+      "type": "执行前检查"
+    },
+    {
+      "from": "n320",
+      "to": "n354",
+      "type": "权限原则"
+    },
+    {
+      "from": "n338",
+      "to": "n341",
+      "type": "架构角色"
+    },
+    {
+      "from": "n338",
+      "to": "n340",
+      "type": "架构角色"
+    },
+    {
+      "from": "n338",
+      "to": "n343",
+      "type": "能力"
+    },
+    {
+      "from": "n335",
+      "to": "n331",
+      "type": "恢复机制"
+    },
+    {
+      "from": "n357",
+      "to": "n358",
+      "type": "指标"
+    },
+    {
+      "from": "n362",
+      "to": "n365",
+      "type": "评估风险"
+    },
+    {
+      "from": "n366",
+      "to": "n371",
+      "type": "缓解"
+    },
+    {
+      "from": "n386",
+      "to": "n385",
+      "type": "优化方法"
+    },
+    {
+      "from": "n388",
+      "to": "n389",
+      "type": "资源开销"
+    },
+    {
+      "from": "n437",
+      "to": "n438",
+      "type": "配合"
+    },
+    {
+      "from": "n435",
+      "to": "n443",
+      "type": "释放资源"
+    },
+    {
+      "from": "n407",
+      "to": "n409",
+      "type": "隔离机制"
+    },
+    {
+      "from": "n407",
+      "to": "n410",
+      "type": "资源控制"
+    },
+    {
+      "from": "n415",
+      "to": "n414",
+      "type": "管理"
+    },
+    {
+      "from": "n416",
+      "to": "n414",
+      "type": "访问目标"
+    },
+    {
+      "from": "n429",
+      "to": "n430",
+      "type": "质量检查"
+    },
+    {
+      "from": "n391",
+      "to": "n393",
+      "type": "用例设计"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "title": "闭包为什么会保留外部变量？",
+      "module": "JavaScript",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "nodes": [
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5"
+      ],
+      "cue": "词法作用域决定变量查找；闭包保留对外部绑定的访问；结合事件监听与定时器说明释放时机。",
+      "source": "web",
+      "priority": "先准备"
+    },
+    {
+      "id": "q2",
+      "title": "Promise、async/await 和事件循环是什么关系？",
+      "module": "JavaScript",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "nodes": [
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10",
+        "n11"
+      ],
+      "cue": "先区分同步执行与异步调度，再解释任务与微任务；await 后续执行与 Promise 有关。",
+      "source": "web",
+      "priority": "先准备"
+    },
+    {
+      "id": "q3",
+      "title": "this 的指向如何确定？",
+      "module": "JavaScript",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "nodes": [
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16"
+      ],
+      "cue": "按调用方式判断 this；箭头函数没有自己的 this；不要与词法作用域混为一谈。",
+      "source": "web",
+      "priority": "先准备"
+    },
+    {
+      "id": "q4",
+      "title": "浅拷贝和深拷贝怎么选？",
+      "module": "JavaScript",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "nodes": [
+        "n17",
+        "n18",
+        "n19",
+        "n20",
+        "n21",
+        "n22"
+      ],
+      "cue": "说明共享嵌套引用的影响，再比较支持的数据类型和性能；JSON 不能完整保留所有 JS 类型。",
+      "source": "web",
+      "priority": "先准备"
+    },
+    {
+      "id": "q5",
+      "title": "防抖和节流分别适合什么场景？",
+      "module": "JavaScript",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "nodes": [
+        "n23",
+        "n24",
+        "n25",
+        "n26",
+        "n27"
+      ],
+      "cue": "输入搜索用防抖；滚动处理可用节流；同时考虑旧请求覆盖新结果。",
+      "source": "web",
+      "priority": "先准备"
+    },
+    {
+      "id": "q6",
+      "title": "输入 URL 到页面出现，中间发生了什么？",
+      "module": "浏览器与页面",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "nodes": [
+        "n28",
+        "n29",
+        "n30",
+        "n31",
+        "n32",
+        "n33",
+        "n34",
+        "n35",
+        "n36",
+        "n37"
+      ],
+      "cue": "按网络请求和渲染两个阶段组织；每一步都能继续追问缓存、连接和渲染阻塞。",
+      "source": "web",
+      "priority": "先准备"
+    },
+    {
+      "id": "q7",
+      "title": "浏览器缓存怎么生效？",
+      "module": "浏览器与页面",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "nodes": [
+        "n38",
+        "n39",
+        "n40",
+        "n41",
+        "n42",
+        "n43"
+      ],
+      "cue": "先判断新鲜度，再谈条件请求；区分 no-cache 与 no-store。",
+      "source": "web",
+      "priority": "先准备"
+    },
+    {
+      "id": "q8",
+      "title": "跨域为什么发生，怎么处理？",
+      "module": "浏览器与页面",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "nodes": [
+        "n44",
+        "n45",
+        "n46",
+        "n47",
+        "n48"
+      ],
+      "cue": "跨域限制来自浏览器；CORS 由服务端响应头控制；携带凭据时不能使用通配来源。",
+      "source": "web",
+      "priority": "先准备"
+    },
+    {
+      "id": "q9",
+      "title": "页面卡顿如何定位？",
+      "module": "浏览器与页面",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "nodes": [
+        "n49",
+        "n50",
+        "n51",
+        "n52",
+        "n53",
+        "n54"
+      ],
+      "cue": "先测量，再定位主线程工作、布局和数据量；不要只罗列优化手段。",
+      "source": "web",
+      "priority": "先准备"
+    },
+    {
+      "id": "q10",
+      "title": "Flex、Grid 和定位有什么区别？",
+      "module": "浏览器与页面",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "nodes": [
+        "n55",
+        "n56",
+        "n57",
+        "n58",
+        "n59",
+        "n60"
+      ],
+      "cue": "从一维与二维布局、文档流和层叠关系回答，用实际布局说明。",
+      "source": "web",
+      "priority": "再拓展"
+    },
+    {
+      "id": "q11",
+      "title": "React 状态更新为什么不能直接修改对象？",
+      "module": "React / Vue",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "nodes": [
+        "n61",
+        "n62",
+        "n63",
+        "n64",
+        "n65"
+      ],
+      "cue": "说明状态快照、引用变化与渲染；不要把更新时序简单概括为总是异步。",
+      "source": "react",
+      "priority": "先准备"
+    },
+    {
+      "id": "q12",
+      "title": "useEffect 和 useMemo 的用途有什么区别？",
+      "module": "React / Vue",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "nodes": [
+        "n66",
+        "n67",
+        "n68",
+        "n69",
+        "n70",
+        "n71"
+      ],
+      "cue": "Effect 用于与外部系统同步；Memo 用于缓存计算；解释依赖与清理。",
+      "source": "react",
+      "priority": "先准备"
+    },
+    {
+      "id": "q13",
+      "title": "列表 key 为什么不能随便用下标？",
+      "module": "React / Vue",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "nodes": [
+        "n72",
+        "n73",
+        "n74",
+        "n75",
+        "n76"
+      ],
+      "cue": "key 帮助识别同级组件；插入、删除、重排时下标可能让状态对应错误。",
+      "source": "react",
+      "priority": "先准备"
+    },
+    {
+      "id": "q14",
+      "title": "Vue 响应式和组件通信如何理解？",
+      "module": "React / Vue",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "nodes": [
+        "n77",
+        "n78",
+        "n79",
+        "n80",
+        "n81",
+        "n82",
+        "n83",
+        "n84"
+      ],
+      "cue": "从依赖收集与触发更新展开；区分派生状态、副作用与跨组件共享状态。",
+      "source": "web",
+      "priority": "先准备"
+    },
+    {
+      "id": "q15",
+      "title": "首屏慢，你会按什么顺序优化？",
+      "module": "前端工程",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "nodes": [
+        "n85",
+        "n86",
+        "n87",
+        "n88",
+        "n89",
+        "n90",
+        "n91",
+        "n92"
+      ],
+      "cue": "先测 LCP 与资源瀑布；结合网络、脚本执行和渲染定位瓶颈。",
+      "source": "web",
+      "priority": "再拓展"
+    },
+    {
+      "id": "q16",
+      "title": "TypeScript 能避免所有运行时类型问题吗？",
+      "module": "前端工程",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "nodes": [
+        "n93",
+        "n94",
+        "n95",
+        "n96",
+        "n97"
+      ],
+      "cue": "TS 主要做静态检查；外部输入仍需运行时校验；用接口数据举例。",
+      "source": "web",
+      "priority": "先准备"
+    },
+    {
+      "id": "q17",
+      "title": "前端项目如何组织构建和测试？",
+      "module": "前端工程",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "nodes": [
+        "n98",
+        "n99",
+        "n100",
+        "n101",
+        "n102",
+        "n103"
+      ],
+      "cue": "区分模块依赖、打包优化和测试层次；说明自己的项目取舍。",
+      "source": "web",
+      "priority": "再拓展"
+    },
+    {
+      "id": "q18",
+      "title": "HTTP 和 HTTPS 有什么区别？",
+      "module": "网络与接口",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "nodes": [
+        "n32",
+        "n104",
+        "n31",
+        "n105",
+        "n106",
+        "n107"
+      ],
+      "cue": "HTTPS 使用 TLS；说明身份验证与会话加密，避免说所有数据都用非对称加密。",
+      "source": "web",
+      "priority": "先准备"
+    },
+    {
+      "id": "q19",
+      "title": "TCP 为什么需要握手和重传？",
+      "module": "网络与接口",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "nodes": [
+        "n30",
+        "n108",
+        "n109",
+        "n110",
+        "n111",
+        "n112",
+        "n113"
+      ],
+      "cue": "区分可靠传输、连接状态和两类控制；结合丢包场景。",
+      "source": "web",
+      "priority": "先准备"
+    },
+    {
+      "id": "q20",
+      "title": "接口如何设计，重复请求怎么处理？",
+      "module": "网络与接口",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "nodes": [
+        "n114",
+        "n115",
+        "n116",
+        "n117",
+        "n118",
+        "n119"
+      ],
+      "cue": "幂等不等于只执行一次；对支付、下单说明去重和状态判断。",
+      "source": "web",
+      "priority": "先准备"
+    },
+    {
+      "id": "q21",
+      "title": "Cookie、Session、JWT 有什么关系？",
+      "module": "安全与认证",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "nodes": [
+        "n120",
+        "n121",
+        "n122",
+        "n123",
+        "n124",
+        "n125",
+        "n126"
+      ],
+      "cue": "区分存储载体、会话机制和令牌格式；讨论撤销、过期和泄漏风险。",
+      "source": "web",
+      "priority": "先准备"
+    },
+    {
+      "id": "q22",
+      "title": "XSS、CSRF 和 SQL 注入如何防？",
+      "module": "安全与认证",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "nodes": [
+        "n127",
+        "n128",
+        "n129",
+        "n130",
+        "n131",
+        "n132",
+        "n133"
+      ],
+      "cue": "三个攻击机制分别回答；不能把 CORS 当作通用 CSRF 防护。",
+      "source": "web",
+      "priority": "先准备"
+    },
+    {
+      "id": "q23",
+      "title": "equals 和 hashCode 为什么要一起重写？",
+      "module": "Java 基础",
+      "roles": [
+        "java"
+      ],
+      "nodes": [
+        "n134",
+        "n135",
+        "n136",
+        "n137",
+        "n138",
+        "n139"
+      ],
+      "cue": "相等对象须有相同哈希值；从 HashMap 查找流程解释。",
+      "source": "java",
+      "priority": "先准备"
+    },
+    {
+      "id": "q24",
+      "title": "ArrayList 和 LinkedList 怎么选？",
+      "module": "Java 基础",
+      "roles": [
+        "java"
+      ],
+      "nodes": [
+        "n140",
+        "n141",
+        "n142",
+        "n143",
+        "n144",
+        "n145"
+      ],
+      "cue": "结合访问和修改位置；链表插入快以已持有位置为前提。",
+      "source": "java",
+      "priority": "先准备"
+    },
+    {
+      "id": "q25",
+      "title": "synchronized 和 volatile 各解决什么？",
+      "module": "Java 并发",
+      "roles": [
+        "java"
+      ],
+      "nodes": [
+        "n146",
+        "n147",
+        "n148",
+        "n149",
+        "n150",
+        "n151",
+        "n152"
+      ],
+      "cue": "volatile 不保证复合操作原子性；锁同时提供互斥与可见性保证。",
+      "source": "java",
+      "priority": "先准备"
+    },
+    {
+      "id": "q26",
+      "title": "线程池如何配置，任务堆积怎么办？",
+      "module": "Java 并发",
+      "roles": [
+        "java"
+      ],
+      "nodes": [
+        "n153",
+        "n154",
+        "n155",
+        "n156",
+        "n157",
+        "n158",
+        "n159"
+      ],
+      "cue": "先描述负载与监控；线程数依赖任务、机器和下游容量。",
+      "source": "java",
+      "priority": "先准备"
+    },
+    {
+      "id": "q27",
+      "title": "JVM 内存与 GC 怎么排查？",
+      "module": "JVM / Spring",
+      "roles": [
+        "java"
+      ],
+      "nodes": [
+        "n160",
+        "n161",
+        "n162",
+        "n163",
+        "n4",
+        "n5",
+        "n164"
+      ],
+      "cue": "区分内存区域与可达性；使用日志和堆分析定位，不凭症状猜。",
+      "source": "java",
+      "priority": "再拓展"
+    },
+    {
+      "id": "q28",
+      "title": "Spring 依赖注入和 AOP 是怎么回事？",
+      "module": "JVM / Spring",
+      "roles": [
+        "java"
+      ],
+      "nodes": [
+        "n165",
+        "n166",
+        "n167",
+        "n168",
+        "n169",
+        "n170"
+      ],
+      "cue": "容器管理对象依赖；代理承载横切逻辑；联系事务与调用边界。",
+      "source": "java",
+      "priority": "先准备"
+    },
+    {
+      "id": "q29",
+      "title": "事务注解为什么可能失效？",
+      "module": "JVM / Spring",
+      "roles": [
+        "java"
+      ],
+      "nodes": [
+        "n171",
+        "n170",
+        "n172",
+        "n173",
+        "n174",
+        "n175"
+      ],
+      "cue": "检查是否通过代理调用、异常类型及传播配置；注解不等于任何调用都生效。",
+      "source": "db",
+      "priority": "再拓展"
+    },
+    {
+      "id": "q30",
+      "title": "goroutine 和线程有什么区别？",
+      "module": "Go 基础",
+      "roles": [
+        "go"
+      ],
+      "nodes": [
+        "n176",
+        "n177",
+        "n178",
+        "n179",
+        "n180",
+        "n181"
+      ],
+      "cue": "协程由运行时调度；不等于每个 goroutine 对应一个 OS 线程。",
+      "source": "go",
+      "priority": "先准备"
+    },
+    {
+      "id": "q31",
+      "title": "channel、锁和 context 怎么搭配？",
+      "module": "Go 基础",
+      "roles": [
+        "go"
+      ],
+      "nodes": [
+        "n182",
+        "n183",
+        "n184",
+        "n185",
+        "n186",
+        "n187",
+        "n188"
+      ],
+      "cue": "用通信或共享状态选择机制；明确谁关闭 channel 和如何退出协程。",
+      "source": "go",
+      "priority": "先准备"
+    },
+    {
+      "id": "q32",
+      "title": "slice、map 和 interface 有哪些坑？",
+      "module": "Go 基础",
+      "roles": [
+        "go"
+      ],
+      "nodes": [
+        "n189",
+        "n190",
+        "n191",
+        "n192",
+        "n193",
+        "n194",
+        "n195"
+      ],
+      "cue": "关注底层数组共享、map 同步，以及带动态类型的 interface 与 nil。",
+      "source": "go",
+      "priority": "先准备"
+    },
+    {
+      "id": "q33",
+      "title": "生成器、装饰器和可变默认参数怎么解释？",
+      "module": "Python 基础",
+      "roles": [
+        "python",
+        "ai",
+        "test"
+      ],
+      "nodes": [
+        "n196",
+        "n197",
+        "n198",
+        "n199",
+        "n200",
+        "n201"
+      ],
+      "cue": "说明惰性执行与函数包装；默认参数在函数定义时求值。",
+      "source": "python",
+      "priority": "先准备"
+    },
+    {
+      "id": "q34",
+      "title": "asyncio、线程和进程怎么选？",
+      "module": "Python 并发",
+      "roles": [
+        "python",
+        "ai",
+        "test"
+      ],
+      "nodes": [
+        "n202",
+        "n179",
+        "n203",
+        "n204",
+        "n205",
+        "n6",
+        "n206"
+      ],
+      "cue": "先区分 I/O 与 CPU 负载；GIL 与解释器版本、构建方式有关。",
+      "source": "python",
+      "priority": "先准备"
+    },
+    {
+      "id": "q35",
+      "title": "Python API 服务怎么处理并发与参数校验？",
+      "module": "Python 服务",
+      "roles": [
+        "python",
+        "ai",
+        "fullstack"
+      ],
+      "nodes": [
+        "n207",
+        "n208",
+        "n209",
+        "n210",
+        "n211",
+        "n212"
+      ],
+      "cue": "异步端点内阻塞调用仍可能拖慢服务；检查数据库驱动与连接池。",
+      "source": "python",
+      "priority": "先准备"
+    },
+    {
+      "id": "q36",
+      "title": "索引为什么能加速查询，什么时候用不上？",
+      "module": "数据库",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test",
+        "ops"
+      ],
+      "nodes": [
+        "n213",
+        "n214",
+        "n215",
+        "n216",
+        "n217",
+        "n218",
+        "n219"
+      ],
+      "cue": "从访问路径和扫描范围解释；索引选择要看优化器和实际执行计划。",
+      "source": "db",
+      "priority": "先准备"
+    },
+    {
+      "id": "q37",
+      "title": "事务隔离级别与 MVCC 是什么关系？",
+      "module": "数据库",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "nodes": [
+        "n220",
+        "n221",
+        "n222",
+        "n223",
+        "n224",
+        "n225",
+        "n226",
+        "n227"
+      ],
+      "cue": "结合数据库实现；不要把不同数据库的同名隔离级别行为视为完全相同。",
+      "source": "db",
+      "priority": "先准备"
+    },
+    {
+      "id": "q38",
+      "title": "慢 SQL 怎么查？",
+      "module": "数据库",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "nodes": [
+        "n228",
+        "n219",
+        "n213",
+        "n229",
+        "n230",
+        "n211"
+      ],
+      "cue": "先定位耗时位置，再看执行计划与锁；优化前后用同一负载验证。",
+      "source": "db",
+      "priority": "先准备"
+    },
+    {
+      "id": "q39",
+      "title": "死锁是怎么产生的，如何处理？",
+      "module": "数据库",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "nodes": [
+        "n231",
+        "n232",
+        "n233",
+        "n234",
+        "n235",
+        "n236"
+      ],
+      "cue": "分析资源等待环；缩短事务、统一锁顺序并处理可重试错误。",
+      "source": "db",
+      "priority": "先准备"
+    },
+    {
+      "id": "q40",
+      "title": "缓存穿透、击穿、雪崩有什么区别？",
+      "module": "缓存",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "nodes": [
+        "n237",
+        "n238",
+        "n239",
+        "n240",
+        "n241",
+        "n242",
+        "n243",
+        "n244"
+      ],
+      "cue": "按不存在、热点失效和批量失效区分；不同场景采用不同机制。",
+      "source": "redis",
+      "priority": "先准备"
+    },
+    {
+      "id": "q41",
+      "title": "缓存和数据库怎么保持一致？",
+      "module": "缓存",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack"
+      ],
+      "nodes": [
+        "n245",
+        "n246",
+        "n247",
+        "n248",
+        "n249",
+        "n250"
+      ],
+      "cue": "画出并发时序；先明确允许的陈旧窗口，再讨论失败补偿。",
+      "source": "redis",
+      "priority": "先准备"
+    },
+    {
+      "id": "q42",
+      "title": "Redis 分布式锁有什么风险？",
+      "module": "缓存",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack"
+      ],
+      "nodes": [
+        "n251",
+        "n252",
+        "n253",
+        "n254",
+        "n255",
+        "n256"
+      ],
+      "cue": "注意锁过期后的旧持有者；释放须校验身份，下游可用 fencing 拒绝旧操作。",
+      "source": "redis",
+      "priority": "再拓展"
+    },
+    {
+      "id": "q43",
+      "title": "进程、线程与死锁怎么串起来？",
+      "module": "并发与服务",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops",
+        "cpp"
+      ],
+      "nodes": [
+        "n203",
+        "n179",
+        "n257",
+        "n258",
+        "n184",
+        "n234"
+      ],
+      "cue": "资源与调度单位分开回答；用多个锁的获取顺序说明死锁。",
+      "source": "ops",
+      "priority": "先准备"
+    },
+    {
+      "id": "q44",
+      "title": "服务突然变慢，你从哪里查？",
+      "module": "并发与服务",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "nodes": [
+        "n259",
+        "n260",
+        "n261",
+        "n262",
+        "n263",
+        "n264",
+        "n265",
+        "n266",
+        "n211"
+      ],
+      "cue": "从影响范围、时间线与延迟分位数开始；用链路定位下游。",
+      "source": "ops",
+      "priority": "先准备"
+    },
+    {
+      "id": "q45",
+      "title": "高并发接口怎么保护下游？",
+      "module": "系统设计",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ops"
+      ],
+      "nodes": [
+        "n267",
+        "n268",
+        "n269",
+        "n270",
+        "n186",
+        "n119",
+        "n159"
+      ],
+      "cue": "重试可能放大流量；限制重试次数并配合退避、抖动和总超时。",
+      "source": "ops",
+      "priority": "先准备"
+    },
+    {
+      "id": "q46",
+      "title": "消息队列如何处理重复和丢失？",
+      "module": "系统设计",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops"
+      ],
+      "nodes": [
+        "n271",
+        "n272",
+        "n273",
+        "n274",
+        "n117",
+        "n275",
+        "n276"
+      ],
+      "cue": "说明交付保证边界；业务副作用仍需幂等与持久化设计。",
+      "source": "ops",
+      "priority": "先准备"
+    },
+    {
+      "id": "q47",
+      "title": "单机到分布式，哪些问题会出现？",
+      "module": "系统设计",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops"
+      ],
+      "nodes": [
+        "n277",
+        "n278",
+        "n279",
+        "n280",
+        "n281",
+        "n282",
+        "n283"
+      ],
+      "cue": "从失败模型和一致性要求展开；CAP 讨论网络分区时的取舍。",
+      "source": "ops",
+      "priority": "再拓展"
+    },
+    {
+      "id": "q48",
+      "title": "大模型 API 调用怎么做成稳定服务？",
+      "module": "AI 应用基础",
+      "roles": [
+        "ai"
+      ],
+      "nodes": [
+        "n284",
+        "n285",
+        "n286",
+        "n287",
+        "n288",
+        "n186",
+        "n119",
+        "n267"
+      ],
+      "cue": "从输入输出约束、错误处理、延迟和成本说明；API 密钥留在服务端。",
+      "source": "ai",
+      "priority": "先准备"
+    },
+    {
+      "id": "q49",
+      "title": "Prompt 和上下文工程有什么区别？",
+      "module": "AI 应用基础",
+      "roles": [
+        "ai"
+      ],
+      "nodes": [
+        "n289",
+        "n290",
+        "n291",
+        "n292",
+        "n293",
+        "n294"
+      ],
+      "cue": "不仅是写指令，还要选择、组织和裁剪输入；说明信息丢失与成本取舍。",
+      "source": "ai",
+      "priority": "先准备"
+    },
+    {
+      "id": "q50",
+      "title": "RAG 的完整链路是什么？",
+      "module": "RAG",
+      "roles": [
+        "ai"
+      ],
+      "nodes": [
+        "n295",
+        "n296",
+        "n297",
+        "n298",
+        "n299",
+        "n300",
+        "n301",
+        "n302",
+        "n303"
+      ],
+      "cue": "分开离线入库和在线问答；每个阶段都可单独评估。",
+      "source": "rag",
+      "priority": "先准备"
+    },
+    {
+      "id": "q51",
+      "title": "关键词检索、向量检索和重排怎么配合？",
+      "module": "RAG",
+      "roles": [
+        "ai"
+      ],
+      "nodes": [
+        "n300",
+        "n304",
+        "n305",
+        "n306",
+        "n301",
+        "n307",
+        "n308"
+      ],
+      "cue": "召回侧扩大候选，重排侧提高排序质量；同时测准确率、延迟和成本。",
+      "source": "rag",
+      "priority": "先准备"
+    },
+    {
+      "id": "q52",
+      "title": "RAG 答错了，如何定位？",
+      "module": "RAG",
+      "roles": [
+        "ai"
+      ],
+      "nodes": [
+        "n309",
+        "n310",
+        "n311",
+        "n312",
+        "n313",
+        "n314"
+      ],
+      "cue": "先确认正确资料是否被检索，再判断模型是否依据资料回答。",
+      "source": "rag",
+      "priority": "先准备"
+    },
+    {
+      "id": "q53",
+      "title": "什么时候选 RAG，什么时候考虑微调？",
+      "module": "RAG",
+      "roles": [
+        "ai"
+      ],
+      "nodes": [
+        "n295",
+        "n315",
+        "n316",
+        "n317",
+        "n318",
+        "n319"
+      ],
+      "cue": "知识获取与行为适配是不同目标；微调并不保证事实更新与可追溯引用。",
+      "source": "rag",
+      "priority": "先准备"
+    },
+    {
+      "id": "q54",
+      "title": "Agent 和固定工作流有什么区别？",
+      "module": "Agent",
+      "roles": [
+        "ai"
+      ],
+      "nodes": [
+        "n320",
+        "n321",
+        "n322",
+        "n323",
+        "n324",
+        "n325"
+      ],
+      "cue": "模型决定下一步与固定流程的控制方式不同；结合可预测性和成本比较。",
+      "source": "ai",
+      "priority": "先准备"
+    },
+    {
+      "id": "q55",
+      "title": "工具调用一定会执行成功吗？",
+      "module": "Agent",
+      "roles": [
+        "ai"
+      ],
+      "nodes": [
+        "n323",
+        "n326",
+        "n210",
+        "n327",
+        "n328",
+        "n117"
+      ],
+      "cue": "模型生成调用请求，应用负责执行；必须校验参数、权限和返回结果。",
+      "source": "ai",
+      "priority": "先准备"
+    },
+    {
+      "id": "q56",
+      "title": "Agent 的记忆和状态如何管理？",
+      "module": "Agent",
+      "roles": [
+        "ai"
+      ],
+      "nodes": [
+        "n320",
+        "n329",
+        "n330",
+        "n324",
+        "n331",
+        "n332",
+        "n333"
+      ],
+      "cue": "会话状态与长期信息分开；持久化不等于模型自动记住所有内容。",
+      "source": "graph",
+      "priority": "先准备"
+    },
+    {
+      "id": "q57",
+      "title": "LangChain 和 LangGraph 各做什么？",
+      "module": "Agent",
+      "roles": [
+        "ai"
+      ],
+      "nodes": [
+        "n334",
+        "n320",
+        "n335",
+        "n336",
+        "n332",
+        "n337"
+      ],
+      "cue": "前者提供模型、工具与 agent 抽象；后者侧重有状态编排运行时；以当前文档为准。",
+      "source": "graph",
+      "priority": "先准备"
+    },
+    {
+      "id": "q58",
+      "title": "MCP 和 Function Calling 是什么关系？",
+      "module": "Agent",
+      "roles": [
+        "ai"
+      ],
+      "nodes": [
+        "n338",
+        "n339",
+        "n340",
+        "n341",
+        "n342",
+        "n343",
+        "n344",
+        "n323"
+      ],
+      "cue": "MCP 规范应用与外部系统的连接；工具调用是模型与应用之间的调用机制，层次不同。",
+      "source": "mcp",
+      "priority": "先准备"
+    },
+    {
+      "id": "q59",
+      "title": "多 Agent 一定比单 Agent 更好吗？",
+      "module": "Agent",
+      "roles": [
+        "ai"
+      ],
+      "nodes": [
+        "n345",
+        "n346",
+        "n347",
+        "n348",
+        "n349",
+        "n350",
+        "n319"
+      ],
+      "cue": "只有拆分带来收益才引入；测量通信开销、错误传播与端到端成功率。",
+      "source": "ai",
+      "priority": "再拓展"
+    },
+    {
+      "id": "q60",
+      "title": "Agent 怎么防越权和提示词注入？",
+      "module": "AI 工程",
+      "roles": [
+        "ai",
+        "test"
+      ],
+      "nodes": [
+        "n351",
+        "n352",
+        "n353",
+        "n354",
+        "n355",
+        "n356"
+      ],
+      "cue": "模型输出不能替代权限校验；把文档、网页等内容当不可信数据。",
+      "source": "ai",
+      "priority": "先准备"
+    },
+    {
+      "id": "q61",
+      "title": "怎么证明 Agent 项目有效，而不只是 Demo？",
+      "module": "AI 工程",
+      "roles": [
+        "ai",
+        "test"
+      ],
+      "nodes": [
+        "n357",
+        "n358",
+        "n359",
+        "n360",
+        "n262",
+        "n349",
+        "n350"
+      ],
+      "cue": "固定可复现任务集；评估工具执行与最终结果，记录失败类别。",
+      "source": "graph",
+      "priority": "先准备"
+    },
+    {
+      "id": "q62",
+      "title": "训练集、验证集、测试集为什么要分开？",
+      "module": "机器学习",
+      "roles": [
+        "ml"
+      ],
+      "nodes": [
+        "n361",
+        "n362",
+        "n363",
+        "n314",
+        "n364",
+        "n365"
+      ],
+      "cue": "测试集不用于调参；时间和用户维度分组要符合真实使用场景。",
+      "source": "ml",
+      "priority": "先准备"
+    },
+    {
+      "id": "q63",
+      "title": "过拟合怎么发现，怎么处理？",
+      "module": "机器学习",
+      "roles": [
+        "ml"
+      ],
+      "nodes": [
+        "n366",
+        "n367",
+        "n368",
+        "n369",
+        "n370",
+        "n371",
+        "n372"
+      ],
+      "cue": "观察训练与验证趋势；根据数据量和模型容量选择干预。",
+      "source": "ml",
+      "priority": "先准备"
+    },
+    {
+      "id": "q64",
+      "title": "分类模型该选哪些评估指标？",
+      "module": "机器学习",
+      "roles": [
+        "ml"
+      ],
+      "nodes": [
+        "n373",
+        "n374",
+        "n375",
+        "n376",
+        "n377",
+        "n378",
+        "n379"
+      ],
+      "cue": "结合业务误判代价；不要只用准确率衡量不平衡任务。",
+      "source": "ml",
+      "priority": "先准备"
+    },
+    {
+      "id": "q65",
+      "title": "Transformer 和模型微调有哪些核心概念？",
+      "module": "机器学习",
+      "roles": [
+        "ml"
+      ],
+      "nodes": [
+        "n380",
+        "n381",
+        "n382",
+        "n383",
+        "n315",
+        "n384",
+        "n385"
+      ],
+      "cue": "围绕信息交互、适配目标和资源开销解释，不必从数学课程开始。",
+      "source": "ml",
+      "priority": "再拓展"
+    },
+    {
+      "id": "q66",
+      "title": "模型推理为什么慢，如何优化？",
+      "module": "机器学习",
+      "roles": [
+        "ml",
+        "ai"
+      ],
+      "nodes": [
+        "n386",
+        "n387",
+        "n388",
+        "n385",
+        "n389",
+        "n390",
+        "n349"
+      ],
+      "cue": "区分预填充与逐 token 生成；用基准测延迟、吞吐和质量变化。",
+      "source": "ml",
+      "priority": "先准备"
+    },
+    {
+      "id": "q67",
+      "title": "接口测试用例怎么设计？",
+      "module": "测试开发",
+      "roles": [
+        "test"
+      ],
+      "nodes": [
+        "n391",
+        "n392",
+        "n393",
+        "n394",
+        "n395",
+        "n117",
+        "n396"
+      ],
+      "cue": "覆盖正常与失败路径；验证响应以及副作用，不只检查状态码。",
+      "source": "qa",
+      "priority": "先准备"
+    },
+    {
+      "id": "q68",
+      "title": "自动化测试为什么会不稳定？",
+      "module": "测试开发",
+      "roles": [
+        "test",
+        "frontend",
+        "fullstack"
+      ],
+      "nodes": [
+        "n103",
+        "n397",
+        "n398",
+        "n399",
+        "n400",
+        "n401"
+      ],
+      "cue": "定位共享状态、时序和环境；避免靠固定 sleep 掩盖问题。",
+      "source": "qa",
+      "priority": "先准备"
+    },
+    {
+      "id": "q69",
+      "title": "压力测试怎么判断系统瓶颈？",
+      "module": "测试开发",
+      "roles": [
+        "test",
+        "ops"
+      ],
+      "nodes": [
+        "n402",
+        "n403",
+        "n390",
+        "n263",
+        "n404",
+        "n405",
+        "n406"
+      ],
+      "cue": "先明确负载模型；同时看吞吐拐点、尾延迟和错误率。",
+      "source": "qa",
+      "priority": "先准备"
+    },
+    {
+      "id": "q70",
+      "title": "容器和虚拟机有什么区别？",
+      "module": "部署与运维",
+      "roles": [
+        "ops",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai"
+      ],
+      "nodes": [
+        "n407",
+        "n408",
+        "n409",
+        "n410",
+        "n411",
+        "n412"
+      ],
+      "cue": "容器隔离进程并共享宿主内核；说明资源限制和隔离边界。",
+      "source": "ops",
+      "priority": "先准备"
+    },
+    {
+      "id": "q71",
+      "title": "Kubernetes 怎么发布与恢复服务？",
+      "module": "部署与运维",
+      "roles": [
+        "ops"
+      ],
+      "nodes": [
+        "n413",
+        "n414",
+        "n415",
+        "n416",
+        "n417",
+        "n418",
+        "n419"
+      ],
+      "cue": "区分资源职责；结合 readiness、liveness 和回滚说明故障处理。",
+      "source": "ops",
+      "priority": "再拓展"
+    },
+    {
+      "id": "q72",
+      "title": "Linux 服务出问题，常用哪些排查方向？",
+      "module": "部署与运维",
+      "roles": [
+        "ops",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai"
+      ],
+      "nodes": [
+        "n420",
+        "n203",
+        "n421",
+        "n422",
+        "n423",
+        "n424",
+        "n261",
+        "n425"
+      ],
+      "cue": "先从进程、监听、资源和日志确认现象；避免直接重启丢失证据。",
+      "source": "ops",
+      "priority": "先准备"
+    },
+    {
+      "id": "q73",
+      "title": "CI/CD 怎么保证发布质量？",
+      "module": "部署与运维",
+      "roles": [
+        "ops",
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "test"
+      ],
+      "nodes": [
+        "n426",
+        "n427",
+        "n428",
+        "n429",
+        "n430",
+        "n431",
+        "n432"
+      ],
+      "cue": "每次提交自动验证；构建制品可追溯，发布失败有回退路径。",
+      "source": "ops",
+      "priority": "先准备"
+    },
+    {
+      "id": "q74",
+      "title": "指针、引用与智能指针怎么选？",
+      "module": "C++ / 客户端",
+      "roles": [
+        "cpp"
+      ],
+      "nodes": [
+        "n433",
+        "n434",
+        "n303",
+        "n435",
+        "n436",
+        "n437",
+        "n438"
+      ],
+      "cue": "从所有权和生命周期回答；用 weak_ptr 解释循环引用。",
+      "source": "cpp",
+      "priority": "先准备"
+    },
+    {
+      "id": "q75",
+      "title": "拷贝、移动与对象生命周期是什么关系？",
+      "module": "C++ / 客户端",
+      "roles": [
+        "cpp"
+      ],
+      "nodes": [
+        "n439",
+        "n440",
+        "n441",
+        "n442",
+        "n443",
+        "n444"
+      ],
+      "cue": "移动不等于总是没有拷贝；说明资源所有权转移与有效但未指定状态。",
+      "source": "cpp",
+      "priority": "先准备"
+    },
+    {
+      "id": "q76",
+      "title": "虚函数、STL 容器和迭代器有哪些追问？",
+      "module": "C++ / 客户端",
+      "roles": [
+        "cpp"
+      ],
+      "nodes": [
+        "n445",
+        "n446",
+        "n447",
+        "n448",
+        "n449",
+        "n450"
+      ],
+      "cue": "结合基类删除和容器修改场景；注意重分配导致的失效。",
+      "source": "cpp",
+      "priority": "再拓展"
+    },
+    {
+      "id": "q77",
+      "title": "笔试和手写题应该优先准备什么？",
+      "module": "手写与算法",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "cpp"
+      ],
+      "nodes": [
+        "n451",
+        "n452",
+        "n453",
+        "n454",
+        "n162",
+        "n455",
+        "n456",
+        "n457",
+        "n458",
+        "n459",
+        "n460",
+        "n461",
+        "n462"
+      ],
+      "cue": "从题目约束选择结构与方法；说明时间空间开销并检查边界。",
+      "source": "web",
+      "priority": "先准备"
+    },
+    {
+      "id": "q78",
+      "title": "介绍项目时，面试官会沿着什么追问？",
+      "module": "项目追问",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "nodes": [
+        "n463",
+        "n464",
+        "n465",
+        "n466",
+        "n467",
+        "n468",
+        "n469",
+        "n470"
+      ],
+      "cue": "用自己真实做过的链路回答；准备为什么这样选、遇到什么问题和如何验证。",
+      "source": "ops",
+      "priority": "先准备"
+    }
+  ]
+}
