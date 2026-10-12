@@ -1,0 +1,3716 @@
+{
+  "interviewWindow": {
+    "from": "2024-10-12",
+    "through": "2026-10-12",
+    "policy": "公开面经仅纳入明确落在最近两年的日期；帖子日期与面试日期分开标记。"
+  },
+  "sources": {
+    "r-byte-fe": {
+      "name": "字节前端实习 · 一二面记录",
+      "url": "https://www.nowcoder.com/discuss/899078261152509952?sourceSSR=post&weFlow=true",
+      "verified": "2026-10-12",
+      "kind": "公开面经",
+      "company": "字节跳动",
+      "date": "2026-05-06",
+      "dateType": "面试日期",
+      "job": "前端实习",
+      "notice": "作者自述，非公司官方题库；问题经改写，场景与后续追问为编辑扩展。",
+      "endDate": "2026-05-08"
+    },
+    "r-meituan": {
+      "name": "美团 Java 日常实习 · 一二面记录",
+      "url": "https://www.nowcoder.com/feed/main/detail/d27704499b5c41e0bd0019a8d158a052",
+      "verified": "2026-10-12",
+      "kind": "公开面经",
+      "company": "美团",
+      "date": "2025-02-18",
+      "dateType": "帖子日期",
+      "job": "Java 后端日常实习",
+      "notice": "作者自述，非公司官方题库；问题经改写，场景与后续追问为编辑扩展。"
+    },
+    "r-tencent-test": {
+      "name": "腾讯暑期实习 · 测试开发记录",
+      "url": "https://www.nowcoder.com/discuss/767845756915961856?sourceSSR=dynamic",
+      "verified": "2026-10-12",
+      "kind": "公开面经",
+      "company": "腾讯",
+      "date": "2025-06-26",
+      "dateType": "帖子日期",
+      "job": "测试开发暑期实习",
+      "notice": "作者自述，非公司官方题库；问题经改写，场景与后续追问为编辑扩展。"
+    },
+    "r-byte-ai": {
+      "name": "字节 AI 大模型开发平台 · 一面记录",
+      "url": "https://www.nowcoder.com/feed/main/detail/fa50ef5521f84cb788f911cd31e5a98a",
+      "verified": "2026-10-12",
+      "kind": "公开面经",
+      "company": "字节跳动",
+      "date": "2026-09-01",
+      "dateType": "标题面试日期",
+      "job": "后端开发 / AI 平台（原帖未明确实习招聘）",
+      "notice": "作者自述，非公司官方题库；问题经改写，场景与后续追问为编辑扩展。"
+    },
+    "r-byte-cpp": {
+      "name": "字节客户端 · 二面记录",
+      "url": "https://www.nowcoder.com/discuss/797078402275508224?sourceSSR=dynamic",
+      "verified": "2026-10-12",
+      "kind": "公开面经",
+      "company": "字节跳动",
+      "date": "2025-09-15",
+      "dateType": "帖子日期",
+      "job": "客户端开发（原帖未明确招聘批次）",
+      "notice": "作者自述，非公司官方题库；问题经改写，场景与后续追问为编辑扩展。"
+    },
+    "r-yunzhi": {
+      "name": "云智武汉 · C++ 面试记录",
+      "url": "https://www.nowcoder.com/feed/main/detail/0c57f2c85c6a4767861d65e66511ecb9",
+      "verified": "2026-10-12",
+      "kind": "公开面经",
+      "company": "云智（原帖标题）",
+      "date": "2025-05-20",
+      "dateType": "帖子日期",
+      "job": "C++ 开发（原帖未明确招聘批次）",
+      "notice": "作者自述，非公司官方题库；问题经改写，场景与后续追问为编辑扩展。"
+    },
+    "r-sre": {
+      "name": "尹硕科技 · SRE 实习记录",
+      "url": "https://www.nowcoder.com/feed/main/detail/60b857032ad44fecbd564f7844982c19",
+      "verified": "2026-10-12",
+      "kind": "公开面经",
+      "company": "尹硕科技",
+      "date": "2025-07-29",
+      "dateType": "帖子日期",
+      "job": "SRE 运维实习",
+      "notice": "作者自述，非公司官方题库；问题经改写，场景与后续追问为编辑扩展。"
+    },
+    "d-event": {
+      "name": "MDN · JavaScript 执行模型",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Execution_model",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-closure": {
+      "name": "MDN · 闭包",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-promise": {
+      "name": "MDN · Promise.all",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-abort": {
+      "name": "MDN · AbortController",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/AbortController",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-map": {
+      "name": "MDN · Map",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-cache": {
+      "name": "MDN · HTTP 缓存",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-cors": {
+      "name": "MDN · CORS",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-sse": {
+      "name": "MDN · Server-Sent Events",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-state": {
+      "name": "React · 状态快照",
+      "url": "https://react.dev/learn/state-as-a-snapshot",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-batch": {
+      "name": "React · 状态更新队列",
+      "url": "https://react.dev/learn/queueing-a-series-of-state-updates",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-effect": {
+      "name": "React · Effect 同步与清理",
+      "url": "https://react.dev/learn/synchronizing-with-effects",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-vue": {
+      "name": "Vue · 响应式深入",
+      "url": "https://vuejs.org/guide/extras/reactivity-in-depth.html",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-watch": {
+      "name": "Vue · Watchers",
+      "url": "https://vuejs.org/guide/essentials/watchers.html",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-route": {
+      "name": "Vue Router · 路由懒加载",
+      "url": "https://router.vuejs.org/guide/advanced/lazy-loading.html",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-vperf": {
+      "name": "Vue · 性能",
+      "url": "https://vuejs.org/guide/best-practices/performance.html",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-index": {
+      "name": "MySQL 8.4 · 联合索引",
+      "url": "https://dev.mysql.com/doc/refman/8.4/en/multiple-column-indexes.html",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-mvcc": {
+      "name": "MySQL 8.4 · 一致性非锁定读",
+      "url": "https://dev.mysql.com/doc/refman/8.4/en/innodb-consistent-read.html",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-lock": {
+      "name": "MySQL 8.4 · InnoDB 锁",
+      "url": "https://dev.mysql.com/doc/refman/8.4/en/innodb-locking.html",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-explain": {
+      "name": "MySQL 8.4 · EXPLAIN",
+      "url": "https://dev.mysql.com/doc/refman/8.4/en/explain.html",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-redo": {
+      "name": "MySQL 8.4 · Redo Log",
+      "url": "https://dev.mysql.com/doc/refman/8.4/en/innodb-redo-log.html",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-undo": {
+      "name": "MySQL 8.4 · Undo Logs",
+      "url": "https://dev.mysql.com/doc/refman/8.4/en/innodb-undo-logs.html",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-rpersist": {
+      "name": "Redis · 持久化",
+      "url": "https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-rlock": {
+      "name": "Redis · 分布式锁",
+      "url": "https://redis.io/docs/latest/develop/clients/patterns/distributed-locks/",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-zset": {
+      "name": "Redis · Sorted Sets",
+      "url": "https://redis.io/docs/latest/develop/data-types/sorted-sets/",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-pool": {
+      "name": "Java SE 25 · ThreadPoolExecutor",
+      "url": "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-threadlocal": {
+      "name": "Java SE 25 · ThreadLocal",
+      "url": "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/ThreadLocal.html",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-hashmap": {
+      "name": "Java SE 25 · HashMap",
+      "url": "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/HashMap.html",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-spring": {
+      "name": "Spring · @Transactional",
+      "url": "https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-maven": {
+      "name": "Maven · 依赖机制",
+      "url": "https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-go": {
+      "name": "Go · 语言规范",
+      "url": "https://go.dev/ref/spec",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-go122": {
+      "name": "Go 1.22 · 循环变量语义变更",
+      "url": "https://go.dev/doc/go1.22",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-race": {
+      "name": "Go · 数据竞争检测器",
+      "url": "https://go.dev/doc/articles/race_detector",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-gofaq": {
+      "name": "Go · FAQ",
+      "url": "https://go.dev/doc/faq",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-async": {
+      "name": "Python 3.14 · asyncio Tasks",
+      "url": "https://docs.python.org/3.14/library/asyncio-task.html",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-free": {
+      "name": "Python 3.14 · 自由线程构建",
+      "url": "https://docs.python.org/3.14/howto/free-threading-python.html",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-pyfunc": {
+      "name": "Python 3.14 · 函数与参数",
+      "url": "https://docs.python.org/3.14/tutorial/controlflow.html",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-rag": {
+      "name": "LangChain · Retrieval",
+      "url": "https://docs.langchain.com/oss/python/langchain/retrieval",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-agent": {
+      "name": "LangChain · Agents",
+      "url": "https://docs.langchain.com/oss/python/langchain/agents",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-context": {
+      "name": "LangChain · Context Engineering",
+      "url": "https://docs.langchain.com/oss/python/langchain/context-engineering",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-memory": {
+      "name": "LangGraph · Persistence",
+      "url": "https://docs.langchain.com/oss/python/langgraph/persistence",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-interrupt": {
+      "name": "LangGraph · Interrupts",
+      "url": "https://docs.langchain.com/oss/python/langgraph/interrupts",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-eval": {
+      "name": "LangSmith · Evaluation",
+      "url": "https://docs.langchain.com/langsmith/evaluation",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-mcptransport": {
+      "name": "MCP 2026-07-28 · Transports",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/transports",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "2026-07-28"
+    },
+    "d-kv": {
+      "name": "Transformers · KV Cache",
+      "url": "https://huggingface.co/docs/transformers/en/kv_cache",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-lora": {
+      "name": "PEFT · LoRA",
+      "url": "https://huggingface.co/docs/peft/en/developer_guides/lora",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-torch": {
+      "name": "PyTorch · Module",
+      "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.Module.html",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-grad": {
+      "name": "PyTorch · Autograd",
+      "url": "https://docs.pytorch.org/docs/stable/notes/autograd.html",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-playwright": {
+      "name": "Playwright · 测试最佳实践",
+      "url": "https://playwright.dev/docs/best-practices",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-probe": {
+      "name": "Kubernetes · 探针",
+      "url": "https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-pod": {
+      "name": "Kubernetes · Pod 生命周期",
+      "url": "https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-docker": {
+      "name": "Docker · 多阶段构建",
+      "url": "https://docs.docker.com/build/building/multi-stage/",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-ack": {
+      "name": "RabbitMQ · 消费确认与发布确认",
+      "url": "https://www.rabbitmq.com/docs/confirms",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-cppsafe": {
+      "name": "Microsoft C++ · 标准库线程安全",
+      "url": "https://learn.microsoft.com/en-us/cpp/standard-library/thread-safety-in-the-cpp-standard-library?view=msvc-170",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-cppsmart": {
+      "name": "Microsoft C++ · 智能指针",
+      "url": "https://learn.microsoft.com/en-us/cpp/cpp/smart-pointers-modern-cpp?view=msvc-170",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-cppvector": {
+      "name": "Microsoft C++ · vector",
+      "url": "https://learn.microsoft.com/en-us/cpp/standard-library/vector-class?view=msvc-170",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-cppmove": {
+      "name": "Microsoft C++ · 右值引用",
+      "url": "https://learn.microsoft.com/en-us/cpp/cpp/rvalue-reference-declarator-amp-amp?view=msvc-170",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-cppdestruct": {
+      "name": "Microsoft C++ · 析构函数",
+      "url": "https://learn.microsoft.com/en-us/cpp/cpp/destructors-cpp?view=msvc-170",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-for": {
+      "name": "MDN · for 循环与每轮绑定",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-window": {
+      "name": "MySQL 8.4 · 窗口函数",
+      "url": "https://dev.mysql.com/doc/refman/8.4/en/window-function-descriptions.html",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-k6": {
+      "name": "Grafana k6 · 性能指标",
+      "url": "https://grafana.com/docs/k6/latest/using-k6/metrics/",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "当前文档"
+    },
+    "d-lc19": {
+      "name": "LeetCode 19 · 删除倒数节点",
+      "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+      "verified": "2026-10-12",
+      "kind": "官方题目",
+      "version": "当前文档"
+    },
+    "d-lc208": {
+      "name": "LeetCode 208 · Trie",
+      "url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+      "verified": "2026-10-12",
+      "kind": "官方题目",
+      "version": "当前文档"
+    },
+    "d-lc300": {
+      "name": "LeetCode 300 · 最长递增子序列",
+      "url": "https://leetcode.com/problems/longest-increasing-subsequence/",
+      "verified": "2026-10-12",
+      "kind": "官方题目",
+      "version": "当前文档"
+    },
+    "d-lc102": {
+      "name": "LeetCode 102 · 层序遍历",
+      "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+      "verified": "2026-10-12",
+      "kind": "官方题目",
+      "version": "当前文档"
+    },
+    "d-mcpstdio": {
+      "name": "MCP 2026-07-28 · stdio",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/stdio",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "2026-07-28"
+    },
+    "d-mcphttp": {
+      "name": "MCP 2026-07-28 · Streamable HTTP",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/streamable-http",
+      "verified": "2026-10-12",
+      "kind": "官方文档",
+      "version": "2026-07-28"
+    }
+  },
+  "questions": [
+    {
+      "id": "drill-js-order",
+      "module": "JavaScript",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "title": "Promise 与 setTimeout 混用，这段代码按什么顺序输出？",
+      "concepts": [
+        "事件循环",
+        "调用栈",
+        "微任务",
+        "Promise",
+        "任务队列"
+      ],
+      "references": [
+        "d-event"
+      ],
+      "scenario": "浏览器执行脚本，请解释每次输出进入哪一个执行阶段。",
+      "followups": [
+        "微任务里再创建微任务会怎样？",
+        "大量微任务会不会影响页面响应？"
+      ],
+      "points": [
+        "输出 A、D、C、B。同步执行完毕再清空微任务，之后执行定时器任务。",
+        "说明这是浏览器场景，别把 Node 调度细节直接套进来。"
+      ],
+      "pitfall": "不要按代码书写顺序排序异步回调。",
+      "kind": "手写题",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "code": "console.log('A');\nsetTimeout(() => console.log('B'), 0);\nPromise.resolve().then(() => console.log('C'));\nconsole.log('D');",
+      "relations": [
+        [
+          "Promise",
+          "微任务",
+          "回调调度"
+        ]
+      ]
+    },
+    {
+      "id": "drill-closure-counter",
+      "module": "JavaScript",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "title": "两个计数器互不影响，闭包中的状态该放在哪？",
+      "concepts": [
+        "闭包",
+        "词法作用域",
+        "函数实例",
+        "变量绑定"
+      ],
+      "references": [
+        "d-closure"
+      ],
+      "scenario": "实现 createCounter，分别创建 a、b；a 调用两次后 b 仍从初值开始。",
+      "followups": [
+        "把 count 放到全局会怎样？",
+        "事件监听保留闭包后如何释放引用？"
+      ],
+      "points": [
+        "状态定义在工厂函数内，每次调用创建独立绑定。",
+        "返回函数读取并更新该绑定；用两个实例检查隔离。"
+      ],
+      "pitfall": "闭包并不必然造成内存泄漏。",
+      "kind": "手写题",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": [
+        [
+          "闭包",
+          "词法作用域",
+          "依赖"
+        ]
+      ]
+    },
+    {
+      "id": "drill-loop-binding",
+      "module": "JavaScript",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "title": "循环创建的回调为什么都打印同一个数字？",
+      "concepts": [
+        "闭包",
+        "var",
+        "let",
+        "块级作用域",
+        "变量绑定"
+      ],
+      "references": [
+        "d-closure",
+        "d-for"
+      ],
+      "scenario": "用 var 循环创建三个回调，循环结束后再执行。",
+      "followups": [
+        "换成 let 会怎样？",
+        "不用 let 能否通过工厂函数隔离？"
+      ],
+      "points": [
+        "var 循环共享同一个函数级绑定。",
+        "let 循环提供每轮绑定；也可通过函数调用捕获当轮值。"
+      ],
+      "pitfall": "不是 setTimeout 把数字改掉了。",
+      "kind": "手写题",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-promise-fail",
+      "module": "JavaScript",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "title": "Promise.all 中一个请求失败，其他请求会自动取消吗？",
+      "concepts": [
+        "Promise.all",
+        "拒绝状态",
+        "Promise.allSettled",
+        "请求取消"
+      ],
+      "references": [
+        "d-promise"
+      ],
+      "scenario": "同时请求用户、订单、推荐，其中推荐接口失败。",
+      "followups": [
+        "哪些结果允许降级？",
+        "要中止其他网络请求需要什么机制？"
+      ],
+      "points": [
+        "聚合 Promise 会拒绝，但不会自动取消已发出的操作。",
+        "按业务选择全部成功或分别收集结果，取消需要额外控制。"
+      ],
+      "pitfall": "Promise 拒绝与网络请求停止不是一回事。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-stale-search",
+      "module": "JavaScript",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "title": "搜索 ab 的结果先回来，a 的旧结果后回来，怎么避免覆盖？",
+      "concepts": [
+        "防抖",
+        "请求竞态",
+        "AbortController",
+        "请求序号"
+      ],
+      "references": [
+        "d-abort"
+      ],
+      "scenario": "用户快速输入，旧请求比新请求完成得晚。",
+      "followups": [
+        "只加防抖够不够？",
+        "取消失败时还需要什么保护？"
+      ],
+      "points": [
+        "取消旧请求减少浪费；用请求序号检查结果是否仍属于最新搜索。",
+        "展示、错误提示、loading 状态都应与当前请求对应。"
+      ],
+      "pitfall": "防抖不能保证已发出请求的返回顺序。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": [
+        [
+          "AbortController",
+          "请求竞态",
+          "辅助控制"
+        ]
+      ]
+    },
+    {
+      "id": "drill-react-three",
+      "module": "React / Vue",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "title": "同一次点击连续 setCount(count + 1) 三次，为什么只加一？",
+      "concepts": [
+        "React",
+        "state",
+        "状态快照",
+        "批量更新",
+        "函数式更新"
+      ],
+      "references": [
+        "d-batch",
+        "d-state"
+      ],
+      "scenario": "count 初始为 0，在同一事件处理器中连续更新。",
+      "followups": [
+        "改成 setCount(c => c + 1) 呢？",
+        "异步回调读取的是哪次渲染的 count？"
+      ],
+      "points": [
+        "三次使用的 count 都来自同一渲染快照。",
+        "函数式更新接收队列中的前一个结果，可以累计到 3。"
+      ],
+      "pitfall": "不要只回答 setState 是异步的。",
+      "kind": "手写题",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": [
+        [
+          "函数式更新",
+          "批量更新",
+          "可累计更新"
+        ]
+      ]
+    },
+    {
+      "id": "drill-react-effect",
+      "module": "React / Vue",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "title": "Effect 开了定时器，组件卸载或依赖改变后怎么清理？",
+      "concepts": [
+        "useEffect",
+        "清理函数",
+        "依赖数组",
+        "组件卸载",
+        "定时器"
+      ],
+      "references": [
+        "d-effect"
+      ],
+      "scenario": "组件订阅消息并启动 interval；开发时发现订阅重复。",
+      "followups": [
+        "开发环境为什么可能多执行一次？",
+        "移除依赖数组能解决吗？"
+      ],
+      "points": [
+        "在 Effect 返回清理函数，取消订阅并清理定时器。",
+        "开发检查帮助暴露清理缺失；依赖应与读取的响应式值一致。"
+      ],
+      "pitfall": "不要用全局标志绕过清理和依赖问题。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-react-fetch",
+      "module": "React / Vue",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "title": "切换用户很快，Effect 中请求的旧用户数据覆盖了新用户怎么办？",
+      "concepts": [
+        "useEffect",
+        "依赖数组",
+        "清理函数",
+        "请求竞态"
+      ],
+      "references": [
+        "d-effect",
+        "d-abort"
+      ],
+      "scenario": "userId 改变触发新请求，旧请求稍后才返回。",
+      "followups": [
+        "清理时如何阻止旧结果写入？",
+        "缓存库能帮你管理哪些状态？"
+      ],
+      "points": [
+        "清理时令旧执行失效，或结合 AbortController 取消。",
+        "分别考虑数据、错误和 loading 的更新归属。"
+      ],
+      "pitfall": "依赖写正确并不能自动解决请求竞态。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-vue-destructure",
+      "module": "React / Vue",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "title": "解构 reactive 对象的基本类型字段后，为什么不跟着更新？",
+      "concepts": [
+        "Vue",
+        "Proxy",
+        "reactive",
+        "ref",
+        "解构",
+        "响应式依赖"
+      ],
+      "references": [
+        "d-vue"
+      ],
+      "scenario": "const { count } = reactive({ count: 0 }) 后修改原对象。",
+      "followups": [
+        "解构的是对象引用时一样吗？",
+        "如何保留响应式连接？"
+      ],
+      "points": [
+        "基本类型解构得到的是当时的值，不再通过原对象的代理访问。",
+        "使用保持响应式引用的方法，区分值复制与对象引用。"
+      ],
+      "pitfall": "不要笼统说任何解构都会失去全部响应式。",
+      "kind": "手写题",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-vue-watch-cleanup",
+      "module": "React / Vue",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "title": "watch 触发网络请求，如何在下一次变化时停止旧副作用？",
+      "concepts": [
+        "watch",
+        "清理函数",
+        "异步请求",
+        "响应式依赖"
+      ],
+      "references": [
+        "d-watch"
+      ],
+      "scenario": "搜索关键词连续变更，每次 watch 都发请求。",
+      "followups": [
+        "onWatcherCleanup 调用时机有哪些限制？",
+        "深层监听大对象有什么成本？"
+      ],
+      "points": [
+        "注册清理并取消旧请求；检查版本支持和同步注册要求。",
+        "按需要监听具体字段，避免无差别深层遍历。"
+      ],
+      "pitfall": "不要在 await 之后才使用要求同步注册的清理 API。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-cache-no-cache",
+      "module": "浏览器与页面",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "title": "no-cache、no-store、max-age=0 分别允许缓存做什么？",
+      "concepts": [
+        "HTTP 缓存",
+        "Cache-Control",
+        "新鲜度",
+        "协商缓存",
+        "ETag"
+      ],
+      "references": [
+        "d-cache"
+      ],
+      "scenario": "HTML 需要及时更新，带内容哈希的 JS 需要长期复用。",
+      "followups": [
+        "304 由谁决定？",
+        "缓存命中却仍有网络请求是什么情况？"
+      ],
+      "points": [
+        "no-cache 要求复用前验证；no-store 要求不存储。",
+        "max-age=0 使响应立即过期；按资源更新方式分别配置。"
+      ],
+      "pitfall": "no-cache 不等于完全不缓存。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-cors-credentials",
+      "module": "浏览器与页面",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "title": "请求带 Cookie，却把 Allow-Origin 设为 *，为什么浏览器仍拒绝？",
+      "concepts": [
+        "CORS",
+        "凭据请求",
+        "Access-Control-Allow-Origin",
+        "预检请求"
+      ],
+      "references": [
+        "d-cors"
+      ],
+      "scenario": "前端使用 credentials: include 请求另一个域名。",
+      "followups": [
+        "预检失败会发送实际请求吗？",
+        "GET 不预检就一定能读响应吗？"
+      ],
+      "points": [
+        "带凭据时需匹配明确来源并允许凭据。",
+        "同时检查 Cookie 属性、预检和响应头。"
+      ],
+      "pitfall": "请求发到服务器与脚本能读取响应是两件事。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-route-lazy",
+      "module": "前端工程",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "title": "路由懒加载到底延迟了什么？如何确认拆包真的生效？",
+      "concepts": [
+        "动态 import",
+        "路由懒加载",
+        "代码分割",
+        "网络瀑布"
+      ],
+      "references": [
+        "d-route"
+      ],
+      "scenario": "后台有十几个页面，不希望首屏下载所有页面代码。",
+      "followups": [
+        "首次打开某路由慢怎么办？",
+        "动态 import 与组件懒加载 API 一样吗？"
+      ],
+      "points": [
+        "通过动态导入按需加载路由组件模块。",
+        "检查构建产物和网络请求，而不是只看代码里写了 import。"
+      ],
+      "pitfall": "懒加载不是免费提速，会把部分耗时移到首次访问。",
+      "kind": "项目深挖",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-byte-fe",
+      "relations": []
+    },
+    {
+      "id": "drill-component-state",
+      "module": "React / Vue",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "title": "父子组件通信和跨页面状态共享，该如何划分？",
+      "concepts": [
+        "props",
+        "emit",
+        "组件通信",
+        "状态归属",
+        "Pinia"
+      ],
+      "references": [
+        "d-vue"
+      ],
+      "scenario": "列表选中项需要传给详情区；登录信息要跨页面使用。",
+      "followups": [
+        "把所有状态放全局会有什么问题？",
+        "如何避免多个地方维护同一份数据？"
+      ],
+      "points": [
+        "局部状态由合适的组件拥有，向下传数据、向上传事件。",
+        "跨页面共享才考虑共享存储，并明确修改入口。"
+      ],
+      "pitfall": "不要把所有 props 传递都当成必须上全局状态的理由。",
+      "kind": "项目深挖",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-byte-fe",
+      "relations": []
+    },
+    {
+      "id": "drill-virtual-list",
+      "module": "前端工程",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "title": "十万条列表只渲染可视区，滚动高度和位置怎么计算？",
+      "concepts": [
+        "虚拟列表",
+        "可视窗口",
+        "占位高度",
+        "动态行高",
+        "滚动锚点"
+      ],
+      "references": [
+        "d-vperf"
+      ],
+      "scenario": "列表有固定高度版本和图片导致动态高度版本。",
+      "followups": [
+        "行高变化怎么修正偏移？",
+        "聊天列表追加时如何保留用户位置？"
+      ],
+      "points": [
+        "固定行高可由 scrollTop 计算起点，并保留总占位高度。",
+        "动态高度需测量与修正，额外渲染缓冲区降低闪烁。"
+      ],
+      "pitfall": "只减少 DOM 数量还不够，位置计算错误会跳动。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-lru-ttl",
+      "module": "手写与算法",
+      "roles": [
+        "frontend",
+        "fullstack"
+      ],
+      "title": "实现带过期时间的 LRU：读取、更新、淘汰如何组合？",
+      "concepts": [
+        "LRU",
+        "Map",
+        "最近使用顺序",
+        "TTL",
+        "惰性删除"
+      ],
+      "references": [
+        "d-map"
+      ],
+      "scenario": "容量为 3；get 刷新最近使用顺序，过期项不可返回。",
+      "followups": [
+        "更新已有 key 要不要淘汰？",
+        "惰性过期和定时清理有什么取舍？"
+      ],
+      "points": [
+        "Map 维护插入顺序，命中时删除再插入；存储过期时间。",
+        "先处理已有值与过期项，再按容量淘汰最旧项。"
+      ],
+      "pitfall": "注意容量为 0、覆盖已有 key 与过期边界。",
+      "kind": "手写题",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-byte-fe",
+      "relations": []
+    },
+    {
+      "id": "drill-sse-resume",
+      "module": "网络与接口",
+      "roles": [
+        "frontend",
+        "fullstack",
+        "ai"
+      ],
+      "title": "AI 回答流断网后重连，怎样避免重复文本和重复生成？",
+      "concepts": [
+        "SSE",
+        "EventSource",
+        "事件 ID",
+        "断线重连",
+        "幂等性"
+      ],
+      "references": [
+        "d-sse"
+      ],
+      "scenario": "浏览器已收到一半回答，连接断开数秒后恢复。",
+      "followups": [
+        "服务端如何记住已发送的位置？",
+        "只用 fetch 流能否自动继承 EventSource 的重连行为？"
+      ],
+      "points": [
+        "明确消息 ID 和重放策略；原生 EventSource 支持重连并携带最后事件标识。",
+        "生成任务与连接分离，是否可续传取决于服务端实现。"
+      ],
+      "pitfall": "连接恢复不代表模型任务能自动从中间继续。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-index-range",
+      "module": "数据库",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "title": "索引 (a,b,c) 遇到 a 等值、b 范围、c 等值，哪些条件能缩小扫描？",
+      "concepts": [
+        "联合索引",
+        "最左前缀",
+        "范围查询",
+        "索引条件",
+        "执行计划"
+      ],
+      "references": [
+        "d-index",
+        "d-explain"
+      ],
+      "scenario": "对比 WHERE a=1 AND b>10 AND c=3 与 WHERE a=1 AND b=10 AND c=3。",
+      "followups": [
+        "c 仍可能在哪个阶段参与过滤？",
+        "WHERE 条件书写顺序会改变索引列顺序吗？"
+      ],
+      "points": [
+        "区分索引范围定位与剩余条件过滤。",
+        "用 EXPLAIN 验证访问路径，不把后续列参与过滤误说成完全不能用。"
+      ],
+      "pitfall": "不能仅凭 WHERE 文本顺序判断最左前缀。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": [
+        [
+          "联合索引",
+          "最左前缀",
+          "使用规则"
+        ]
+      ]
+    },
+    {
+      "id": "drill-cover-index",
+      "module": "数据库",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "title": "SELECT id 和 SELECT * 使用同一索引，回表次数为什么可能不同？",
+      "concepts": [
+        "二级索引",
+        "主键",
+        "覆盖索引",
+        "回表",
+        "执行计划"
+      ],
+      "references": [
+        "d-index",
+        "d-explain"
+      ],
+      "scenario": "InnoDB 表主键 id，另有索引 (user_id,created_at)。",
+      "followups": [
+        "索引里包含主键有什么作用？",
+        "为了覆盖查询把所有字段加进去合理吗？"
+      ],
+      "points": [
+        "检查所需字段是否已在索引中。",
+        "覆盖查询可减少额外取行，但索引变宽增加存储与写入成本。"
+      ],
+      "pitfall": "覆盖索引是查询与索引的匹配关系，不是独立索引类型。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": [
+        [
+          "覆盖索引",
+          "回表",
+          "可减少"
+        ]
+      ]
+    },
+    {
+      "id": "drill-mysql-slow-evidence",
+      "module": "数据库",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "title": "一条 SQL 从 800ms 降到 30ms，怎样证明是索引优化带来的？",
+      "concepts": [
+        "慢查询",
+        "EXPLAIN ANALYZE",
+        "扫描行数",
+        "缓存",
+        "性能基线"
+      ],
+      "references": [
+        "d-explain"
+      ],
+      "scenario": "面试官要求给出优化前后 SQL、执行计划和相同负载结果。",
+      "followups": [
+        "如何排除缓存预热影响？",
+        "耗时下降但扫描行数没变说明什么？"
+      ],
+      "points": [
+        "固定数据规模、参数分布与负载，比较执行计划和实际耗时。",
+        "结合扫描行数及资源指标解释，避免只给一次截图。"
+      ],
+      "pitfall": "EXPLAIN ANALYZE 会实际执行查询，使用前确认语句和环境。",
+      "kind": "项目深挖",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-tencent-test",
+      "relations": []
+    },
+    {
+      "id": "drill-rr-snapshot",
+      "module": "数据库",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "title": "同一事务里两次普通 SELECT，RC 和 RR 各使用什么快照？",
+      "concepts": [
+        "隔离级别",
+        "Read Committed",
+        "Repeatable Read",
+        "Read View",
+        "快照读"
+      ],
+      "references": [
+        "d-mvcc"
+      ],
+      "scenario": "事务 A 读取后，事务 B 更新并提交，A 再读。",
+      "followups": [
+        "SELECT FOR UPDATE 也遵循同一快照吗？",
+        "自己更新的行有什么特殊情况？"
+      ],
+      "points": [
+        "InnoDB RC 的一致性读通常每次建立新快照；RR 复用首次一致性读建立的快照。",
+        "锁定读与普通一致性读分开讨论。"
+      ],
+      "pitfall": "不要笼统声称 RR 下任何语句都看到同一版本。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-meituan",
+      "relations": [
+        [
+          "Repeatable Read",
+          "快照读",
+          "一致性读语义"
+        ]
+      ]
+    },
+    {
+      "id": "drill-gap-lock",
+      "module": "数据库",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "title": "SELECT FOR UPDATE 查询不存在的记录，会不会锁住一段范围？",
+      "concepts": [
+        "锁定读",
+        "间隙锁",
+        "Next-Key Lock",
+        "索引范围",
+        "隔离级别"
+      ],
+      "references": [
+        "d-lock"
+      ],
+      "scenario": "InnoDB RR 下，对有索引的范围做锁定读，同时另一事务插入。",
+      "followups": [
+        "唯一索引精确命中与范围扫描有何不同？",
+        "改成 RC 后锁行为会变吗？"
+      ],
+      "points": [
+        "根据索引、访问范围和隔离级别判断锁。",
+        "画出记录和间隙，解释哪些插入需要等待。"
+      ],
+      "pitfall": "不要说行锁永远只锁已经存在的一行。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-redo-undo",
+      "module": "数据库",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "title": "事务提交与回滚分别依赖哪些日志？Redo 和 Undo 为什么不能互换？",
+      "concepts": [
+        "数据库事务",
+        "Redo Log",
+        "Undo Log",
+        "崩溃恢复",
+        "MVCC"
+      ],
+      "references": [
+        "d-redo",
+        "d-undo"
+      ],
+      "scenario": "更新余额后，分别讨论主动回滚与进程崩溃。",
+      "followups": [
+        "提交成功后数据页必须立刻写盘吗？",
+        "Undo 与快照读取有什么联系？"
+      ],
+      "points": [
+        "Redo 面向修改的恢复；Undo 保存回滚和版本读取所需信息。",
+        "区分事务可见性、日志持久化与数据页落盘。"
+      ],
+      "pitfall": "不要把 redo 当成 SQL 语句的简单文本备份。",
+      "kind": "基础追问",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-tencent-test",
+      "relations": []
+    },
+    {
+      "id": "drill-redis-durability",
+      "module": "缓存",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ops"
+      ],
+      "title": "只开每秒 fsync 的 AOF，故障时能保证一条数据都不丢吗？",
+      "concepts": [
+        "AOF",
+        "fsync",
+        "持久化策略",
+        "RDB",
+        "数据丢失窗口"
+      ],
+      "references": [
+        "d-rpersist"
+      ],
+      "scenario": "业务要求解释崩溃恢复与写入性能的取舍。",
+      "followups": [
+        "RDB 备份适合什么用途？",
+        "AOF 重写是不是简单删除日志？"
+      ],
+      "points": [
+        "每秒同步仍有故障时的丢失窗口，不能承诺零丢失。",
+        "结合 RDB 快照和 AOF 策略说明恢复与性能取舍。"
+      ],
+      "pitfall": "Redis 持久化与跨节点复制是不同机制。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-meituan",
+      "relations": [
+        [
+          "AOF",
+          "fsync",
+          "落盘策略"
+        ]
+      ]
+    },
+    {
+      "id": "drill-redis-stale-lock",
+      "module": "缓存",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack"
+      ],
+      "title": "锁过期后旧请求仍在扣库存，新的锁为什么挡不住它？",
+      "concepts": [
+        "分布式锁",
+        "租约",
+        "暂停",
+        "锁续期",
+        "fencing token"
+      ],
+      "references": [
+        "d-rlock"
+      ],
+      "scenario": "持有锁的进程暂停，租约过期，第二个进程拿到锁。",
+      "followups": [
+        "释放锁怎样避免删掉新持有者的锁？",
+        "续期能彻底消除暂停风险吗？"
+      ],
+      "points": [
+        "用唯一标识并原子校验释放；考虑旧持有者继续执行的问题。",
+        "需要下游状态校验或 fencing 机制，不能只依赖锁存在。"
+      ],
+      "pitfall": "拿到锁不等于未来所有写入都必然安全。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-zset-ranking",
+      "module": "缓存",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack"
+      ],
+      "title": "排行榜同分时按提交时间排序，ZSET 一个 score 够不够？",
+      "concepts": [
+        "ZSET",
+        "score",
+        "同分排序",
+        "字典序",
+        "复合排序"
+      ],
+      "references": [
+        "d-zset"
+      ],
+      "scenario": "竞赛榜按分数降序、耗时升序，存在完全相同分数。",
+      "followups": [
+        "复合 score 有什么精度和范围风险？",
+        "排行榜分页期间分数变化如何处理？"
+      ],
+      "points": [
+        "明确同分默认排序规则；根据取值范围设计编码或使用额外排序。",
+        "测试边界与精度，不能任意拼浮点数。"
+      ],
+      "pitfall": "业务需要的次序不一定等于默认成员字典序。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-pool-order",
+      "module": "Java 并发",
+      "roles": [
+        "java"
+      ],
+      "title": "线程池核心数 2、最大数 4、队列容量 3，第六个阻塞任务到来时发生什么？",
+      "concepts": [
+        "线程池",
+        "核心线程数",
+        "工作队列",
+        "最大线程数",
+        "拒绝策略"
+      ],
+      "references": [
+        "d-pool"
+      ],
+      "scenario": "任务都未完成，按次序连续提交；不预启动核心线程。",
+      "followups": [
+        "第八个任务会怎样？",
+        "换成无界队列后最大线程数还起什么作用？"
+      ],
+      "points": [
+        "前两项建核心线程，之后三项入队，第六项在队列满时触发额外线程。",
+        "达到最大线程数且队列满后执行拒绝策略。"
+      ],
+      "pitfall": "不是先扩到最大线程数再入队。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-meituan",
+      "relations": [
+        [
+          "线程池",
+          "工作队列",
+          "使用"
+        ]
+      ]
+    },
+    {
+      "id": "drill-pool-reject",
+      "module": "Java 并发",
+      "roles": [
+        "java"
+      ],
+      "title": "CallerRunsPolicy 能缓解压力，但可能把什么线程拖住？",
+      "concepts": [
+        "线程池",
+        "拒绝策略",
+        "CallerRunsPolicy",
+        "背压",
+        "事件循环"
+      ],
+      "references": [
+        "d-pool"
+      ],
+      "scenario": "提交者可能是 HTTP 请求线程，也可能是事件循环线程。",
+      "followups": [
+        "任务过慢会影响哪些上游？",
+        "拒绝、丢弃和阻塞各适用什么业务？"
+      ],
+      "points": [
+        "调用者执行任务能降低提交速度，但也阻塞提交线程。",
+        "根据超时、可丢弃性和线程模型选择策略。"
+      ],
+      "pitfall": "不能把 CallerRunsPolicy 当作无副作用的万能背压。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-threadlocal-clean",
+      "module": "Java 并发",
+      "roles": [
+        "java"
+      ],
+      "title": "线程池里的 ThreadLocal 为什么需要在 finally 中 remove？",
+      "concepts": [
+        "ThreadLocal",
+        "线程复用",
+        "用户上下文",
+        "remove",
+        "资源释放"
+      ],
+      "references": [
+        "d-threadlocal"
+      ],
+      "scenario": "请求 A 设置用户信息，复用该线程的请求 B 可能读取旧信息。",
+      "followups": [
+        "异常路径漏清理会怎样？",
+        "异步跨线程读取同一值会自动成立吗？"
+      ],
+      "points": [
+        "ThreadLocal 值属于线程；线程复用会保留未清理的上下文。",
+        "用 finally 清理，并显式设计跨线程传递。"
+      ],
+      "pitfall": "不要认为请求结束等于线程结束。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-hashmap-write",
+      "module": "Java 基础",
+      "roles": [
+        "java"
+      ],
+      "title": "HashMap 多线程写入为何不能靠先 get 再 put 保证正确？",
+      "concepts": [
+        "HashMap",
+        "线程安全",
+        "复合操作",
+        "ConcurrentHashMap",
+        "原子更新"
+      ],
+      "references": [
+        "d-hashmap"
+      ],
+      "scenario": "多个线程同时做计数：读旧值，加一，再写回。",
+      "followups": [
+        "换 ConcurrentHashMap 就自动保证复合逻辑原子吗？",
+        "如何选择原子更新方法？"
+      ],
+      "points": [
+        "HashMap 本身不提供并发安全；读改写整体也需要同步或原子更新。",
+        "检查所选并发容器方法的语义。"
+      ],
+      "pitfall": "不要用旧 JDK 的扩容死循环解释所有版本的问题。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-transaction-self",
+      "module": "JVM / Spring",
+      "roles": [
+        "java"
+      ],
+      "title": "同一个 Bean 内直接调用 @Transactional 方法，事务为什么可能没生效？",
+      "concepts": [
+        "Spring 事务",
+        "动态代理",
+        "自调用",
+        "事务边界"
+      ],
+      "references": [
+        "d-spring"
+      ],
+      "scenario": "public 方法 A 调用 this.B()，B 标了事务注解。",
+      "followups": [
+        "这是所有事务实现模式都一样吗？",
+        "怎么通过测试确认事务真正存在？"
+      ],
+      "points": [
+        "默认代理模式下，自调用不经过外部代理。",
+        "重构调用边界或使用适合的事务模式，验证实际回滚。"
+      ],
+      "pitfall": "先说明代理模式前提，不要绝对化所有配置。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-transaction-catch",
+      "module": "JVM / Spring",
+      "roles": [
+        "java"
+      ],
+      "title": "捕获异常后返回成功，数据库一定会回滚吗？",
+      "concepts": [
+        "Spring 事务",
+        "回滚规则",
+        "异常传播",
+        "rollback-only"
+      ],
+      "references": [
+        "d-spring"
+      ],
+      "scenario": "事务方法内部 catch 业务异常并正常返回。",
+      "followups": [
+        "受检异常默认规则是什么？",
+        "内层标记 rollback-only 后外层提交会怎样？"
+      ],
+      "points": [
+        "按回滚规则和异常是否传播判断；吞掉异常可能不触发预期回滚。",
+        "必要时明确回滚策略并验证内外层事务边界。"
+      ],
+      "pitfall": "不能只看代码里有没有 @Transactional。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-maven-conflict",
+      "module": "JVM / Spring",
+      "roles": [
+        "java"
+      ],
+      "title": "两个依赖传入不同版本同一 jar，Maven 默认选哪个？",
+      "concepts": [
+        "Maven",
+        "传递依赖",
+        "依赖仲裁",
+        "dependencyManagement",
+        "依赖树"
+      ],
+      "references": [
+        "d-maven"
+      ],
+      "scenario": "A、B 依赖不同版本库 C，运行时出现方法不存在。",
+      "followups": [
+        "dependencyManagement 会直接添加依赖吗？",
+        "如何定位最终引入的版本？"
+      ],
+      "points": [
+        "结合路径距离等仲裁规则和依赖树判断。",
+        "dependencyManagement 管理版本，不能等同于自动引入依赖。"
+      ],
+      "pitfall": "编译通过不代表运行时依赖版本正确。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-meituan",
+      "relations": []
+    },
+    {
+      "id": "drill-mq-after-commit",
+      "module": "系统设计",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack"
+      ],
+      "title": "消费端处理成功但 ACK 丢了，再投递时如何不重复扣款？",
+      "concepts": [
+        "消息队列",
+        "消费确认",
+        "重复投递",
+        "幂等性",
+        "业务状态"
+      ],
+      "references": [
+        "d-ack"
+      ],
+      "scenario": "消费者已提交业务写入，连接在确认前断开。",
+      "followups": [
+        "先 ACK 再写数据库会怎样？",
+        "消息 ID 去重记录应保存多久？"
+      ],
+      "points": [
+        "确认丢失可能导致重新投递；业务写入需幂等。",
+        "确认放在处理完成之后，同时处理持久化与重复状态。"
+      ],
+      "pitfall": "中间件确认不自动保证外部数据库副作用只发生一次。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-go-nil",
+      "module": "Go 基础",
+      "roles": [
+        "go"
+      ],
+      "title": "interface 包着一个 nil 指针，为什么它本身可能不等于 nil？",
+      "concepts": [
+        "interface",
+        "动态类型",
+        "动态值",
+        "nil",
+        "错误接口"
+      ],
+      "references": [
+        "d-gofaq"
+      ],
+      "scenario": "函数返回 error，实际返回的是类型化的空指针。",
+      "followups": [
+        "直接返回 nil 与返回 *MyError(nil) 有何区别？",
+        "怎么写测试发现这类错误？"
+      ],
+      "points": [
+        "接口比较需要考虑动态类型和值；带类型的 nil 指针不等于空接口。",
+        "明确正常路径返回无类型 nil。"
+      ],
+      "pitfall": "不能只判断底层指针值为空。",
+      "kind": "手写题",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": [
+        [
+          "interface",
+          "动态类型",
+          "包含"
+        ]
+      ]
+    },
+    {
+      "id": "drill-go-channel",
+      "module": "Go 基础",
+      "roles": [
+        "go"
+      ],
+      "title": "nil channel、关闭的 channel，收发和 close 分别会怎样？",
+      "concepts": [
+        "channel",
+        "nil",
+        "close",
+        "阻塞",
+        "panic",
+        "零值"
+      ],
+      "references": [
+        "d-go"
+      ],
+      "scenario": "对比未初始化通道、正常通道与关闭后的通道。",
+      "followups": [
+        "select 中 nil 通道分支有什么用途？",
+        "关闭后缓冲区残留值先怎样读取？"
+      ],
+      "points": [
+        "nil 通道收发阻塞；关闭 nil 或重复关闭会 panic。",
+        "关闭后的接收可取剩余缓冲，耗尽后返回零值与 false，发送会 panic。"
+      ],
+      "pitfall": "关闭通道不等于立刻丢弃缓冲区数据。",
+      "kind": "基础追问",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": [
+        [
+          "channel",
+          "close",
+          "生命周期操作"
+        ]
+      ]
+    },
+    {
+      "id": "drill-go-append",
+      "module": "Go 基础",
+      "roles": [
+        "go"
+      ],
+      "title": "两个 slice 共享底层数组，append 后一定还会互相影响吗？",
+      "concepts": [
+        "slice",
+        "底层数组",
+        "长度",
+        "容量",
+        "append",
+        "重新分配"
+      ],
+      "references": [
+        "d-go"
+      ],
+      "scenario": "从同一个数组切出两个片段，再向其中一个追加元素。",
+      "followups": [
+        "容量足够和不够的行为有何差别？",
+        "怎样隔离底层数组？"
+      ],
+      "points": [
+        "是否重新分配取决于容量；共享数组时修改可能影响另一个切片。",
+        "通过复制或容量控制明确边界。"
+      ],
+      "pitfall": "不要把切片复制当成元素深拷贝。",
+      "kind": "手写题",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-go-loop-version",
+      "module": "Go 基础",
+      "roles": [
+        "go"
+      ],
+      "title": "循环变量捕获题，为什么 Go 1.22 前后的答案可能不同？",
+      "concepts": [
+        "Go 1.22",
+        "循环变量",
+        "闭包",
+        "goroutine",
+        "语言版本"
+      ],
+      "references": [
+        "d-go122"
+      ],
+      "scenario": "循环中启动 goroutine 读取循环变量，使用 := 声明。",
+      "followups": [
+        "版本由工具链还是 go.mod 的语言版本决定？",
+        "复用循环外预声明变量时呢？"
+      ],
+      "points": [
+        "Go 1.22 引入每轮循环变量语义；先检查包的语言版本和声明方式。",
+        "不要直接背旧版本所有协程打印最后一个值。"
+      ],
+      "pitfall": "新语义不意味着共享其他可变状态就没有竞争。",
+      "kind": "手写题",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-go-recover",
+      "module": "Go 基础",
+      "roles": [
+        "go"
+      ],
+      "title": "父 goroutine 的 recover 能捕获子 goroutine 的 panic 吗？",
+      "concepts": [
+        "goroutine",
+        "panic",
+        "recover",
+        "defer",
+        "退出策略"
+      ],
+      "references": [
+        "d-go"
+      ],
+      "scenario": "主流程用 defer recover，另起 goroutine 执行任务。",
+      "followups": [
+        "recover 应放在哪个调用链？",
+        "捕获后应重试、上报还是退出？"
+      ],
+      "points": [
+        "recover 必须在相应 panic 的 goroutine 的延迟执行中生效。",
+        "每个任务明确错误边界和恢复后状态。"
+      ],
+      "pitfall": "创建协程不形成自动传递 panic 的父子关系。",
+      "kind": "基础追问",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-go-race",
+      "module": "Go 基础",
+      "roles": [
+        "go"
+      ],
+      "title": "加了锁为什么 race detector 仍报错？",
+      "concepts": [
+        "数据竞争",
+        "互斥锁",
+        "共享变量",
+        "happens-before",
+        "Race Detector"
+      ],
+      "references": [
+        "d-race"
+      ],
+      "scenario": "写路径加锁，读路径没锁，测试报告数据竞争。",
+      "followups": [
+        "只执行一次没有报错能证明安全吗？",
+        "race detector 能发现死锁吗？"
+      ],
+      "points": [
+        "所有冲突访问需按同一同步协议处理。",
+        "检测器发现实际执行过的竞争；测试覆盖影响可发现范围。"
+      ],
+      "pitfall": "检测无报告不能证明所有路径都安全。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-python-default",
+      "module": "Python 基础",
+      "roles": [
+        "python",
+        "ai",
+        "test"
+      ],
+      "title": "默认参数写成 []，两次调用为什么共享同一个列表？",
+      "concepts": [
+        "可变默认参数",
+        "函数定义",
+        "对象引用",
+        "None 哨兵"
+      ],
+      "references": [
+        "d-pyfunc"
+      ],
+      "scenario": "函数每次向默认列表追加元素，期望返回独立结果。",
+      "followups": [
+        "传入显式列表时如何处理？",
+        "为什么用 None 后在函数内创建？"
+      ],
+      "points": [
+        "默认参数在定义时求值，后续调用复用该对象。",
+        "用哨兵值区分缺省，并在调用时创建新对象。"
+      ],
+      "pitfall": "不是 Python 把所有局部列表自动共享。",
+      "kind": "手写题",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-python-cancel",
+      "module": "Python 并发",
+      "roles": [
+        "python",
+        "ai",
+        "test"
+      ],
+      "title": "asyncio 超时取消后，为什么还要正确处理 CancelledError？",
+      "concepts": [
+        "asyncio",
+        "任务取消",
+        "CancelledError",
+        "finally",
+        "超时"
+      ],
+      "references": [
+        "d-async"
+      ],
+      "scenario": "任务持有连接，调用方超时后取消该任务。",
+      "followups": [
+        "取消是否立即强制杀掉线程？",
+        "吞掉取消异常可能影响哪些结构化并发机制？"
+      ],
+      "points": [
+        "取消在协程可响应的执行点注入；用 finally 释放资源。",
+        "需要捕获时通常应在清理后继续传播取消。"
+      ],
+      "pitfall": "不要把协程取消理解成强制终止任意同步工作。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-python-block",
+      "module": "Python 并发",
+      "roles": [
+        "python",
+        "ai"
+      ],
+      "title": "async def 里调用同步 requests，为什么整个服务也会卡？",
+      "concepts": [
+        "事件循环",
+        "阻塞 I/O",
+        "asyncio.to_thread",
+        "异步驱动"
+      ],
+      "references": [
+        "d-async"
+      ],
+      "scenario": "并发的聊天接口中直接执行同步网络调用。",
+      "followups": [
+        "to_thread 适合 CPU 密集任务吗？",
+        "连接池和并发上限在哪里控制？"
+      ],
+      "points": [
+        "async 声明不会自动把同步调用变成非阻塞。",
+        "使用异步库，或把适合的阻塞 I/O 移到线程并限制并发。"
+      ],
+      "pitfall": "不要为每个请求无限创建线程或任务。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-python-gil-version",
+      "module": "Python 并发",
+      "roles": [
+        "python",
+        "ai",
+        "test"
+      ],
+      "title": "现在还能说 Python 的多线程永远不能并行执行 Python 代码吗？",
+      "concepts": [
+        "CPython",
+        "GIL",
+        "自由线程构建",
+        "扩展兼容性",
+        "并行"
+      ],
+      "references": [
+        "d-free"
+      ],
+      "scenario": "项目准备使用 Python 3.14，面试官要求说明构建方式。",
+      "followups": [
+        "自由线程构建是否所有扩展都支持？",
+        "是否仍然需要保护业务共享状态？"
+      ],
+      "points": [
+        "区分常规 GIL 构建和可选自由线程构建。",
+        "扩展兼容性与运行时状态要核验，业务同步仍需设计。"
+      ],
+      "pitfall": "不依据版本和构建方式就断言永远不能并行。",
+      "kind": "基础追问",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-python-gather",
+      "module": "Python 并发",
+      "roles": [
+        "python",
+        "ai",
+        "test"
+      ],
+      "title": "gather 中一个任务报错，其他任务是否都自动停止？",
+      "concepts": [
+        "asyncio.gather",
+        "异常传播",
+        "TaskGroup",
+        "任务取消"
+      ],
+      "references": [
+        "d-async"
+      ],
+      "scenario": "并发调用三个服务，其中一个失败。",
+      "followups": [
+        "TaskGroup 的失败处理有什么不同？",
+        "return_exceptions=True 会返回什么？"
+      ],
+      "points": [
+        "gather 默认传播异常，但不等同于自动取消所有其他任务。",
+        "根据失败策略选择收集结果或结构化任务组。"
+      ],
+      "pitfall": "聚合结果的语义需要看所用 API，不是所有异步库都相同。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-rag-chunk",
+      "module": "RAG",
+      "roles": [
+        "ai"
+      ],
+      "title": "文档按固定长度切分导致标题与正文分离，怎么改切分策略？",
+      "concepts": [
+        "文档解析",
+        "Chunking",
+        "标题层级",
+        "元数据",
+        "检索"
+      ],
+      "references": [
+        "d-rag"
+      ],
+      "scenario": "知识库中规则的前提、例外和结论被切到不同块。",
+      "followups": [
+        "如何比较整篇输入与分块输入？",
+        "重叠比例怎样通过实验决定？"
+      ],
+      "points": [
+        "以文档结构和回答所需上下文设计切分。",
+        "对比检索命中、回答质量、延迟与成本，而非仅看块数量。"
+      ],
+      "pitfall": "更大 chunk 不一定更好。",
+      "kind": "项目深挖",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-byte-ai",
+      "relations": [
+        [
+          "Chunking",
+          "检索",
+          "影响候选内容"
+        ]
+      ]
+    },
+    {
+      "id": "drill-rag-long-context",
+      "module": "RAG",
+      "roles": [
+        "ai"
+      ],
+      "title": "已经有长上下文模型，为什么还可能需要检索和切分？",
+      "concepts": [
+        "上下文窗口",
+        "RAG",
+        "相关性",
+        "Token 预算",
+        "延迟"
+      ],
+      "references": [
+        "d-context",
+        "d-rag"
+      ],
+      "scenario": "一篇文档能放进上下文，但库里有几千篇。",
+      "followups": [
+        "哪些场景整篇输入反而合适？",
+        "怎样做公平的方案对比？"
+      ],
+      "points": [
+        "能放下不等于有必要全放；比较相关信息、成本和端到端表现。",
+        "用同一查询集控制模型与参数进行评估。"
+      ],
+      "pitfall": "不要把上下文窗口大小直接等同于有效理解能力。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-byte-ai",
+      "relations": []
+    },
+    {
+      "id": "drill-rag-hybrid",
+      "module": "RAG",
+      "roles": [
+        "ai"
+      ],
+      "title": "用户搜索错误码或产品型号，纯向量检索为什么可能漏掉？",
+      "concepts": [
+        "向量检索",
+        "Embedding",
+        "关键词检索",
+        "BM25",
+        "混合检索"
+      ],
+      "references": [
+        "d-rag"
+      ],
+      "scenario": "查询包含短编号，语义相似文本很多但编号不同。",
+      "followups": [
+        "怎样融合两个检索结果？",
+        "重排放在召回前还是后？"
+      ],
+      "points": [
+        "保留精确词项检索能力，结合语义召回。",
+        "用具体查询类型评估，再决定融合与重排策略。"
+      ],
+      "pitfall": "向量相似度高不等于业务实体匹配正确。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": [
+        [
+          "混合检索",
+          "向量检索",
+          "组成"
+        ]
+      ]
+    },
+    {
+      "id": "drill-rag-recall",
+      "module": "AI 工程",
+      "roles": [
+        "ai"
+      ],
+      "title": "检索 Recall@K 很高，为什么最终回答仍然错误？",
+      "concepts": [
+        "检索命中",
+        "Recall@K",
+        "上下文构建",
+        "忠实度",
+        "回答正确性"
+      ],
+      "references": [
+        "d-eval"
+      ],
+      "scenario": "评测中找到正确资料，但模型遗漏限制条件。",
+      "followups": [
+        "如何分开评价检索和生成？",
+        "参考答案不唯一时怎么判分？"
+      ],
+      "points": [
+        "分别检查候选、实际送入上下文和最终答案。",
+        "使用有依据的任务判分标准，记录阶段性失败。"
+      ],
+      "pitfall": "一个总体分数无法定位全部失败原因。",
+      "kind": "项目深挖",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-byte-ai",
+      "relations": []
+    },
+    {
+      "id": "drill-agent-regression",
+      "module": "AI 工程",
+      "roles": [
+        "ai"
+      ],
+      "title": "修好一批 bad case 后，怎么确认没有让其他任务退化？",
+      "concepts": [
+        "回归集",
+        "基线",
+        "任务成功率",
+        "错误分类",
+        "离线评测"
+      ],
+      "references": [
+        "d-eval"
+      ],
+      "scenario": "调整提示词后，工具选择变好，但普通问答可能受影响。",
+      "followups": [
+        "如何冻结测试集防止只针对题目优化？",
+        "怎样比较改动前后的同一任务？"
+      ],
+      "points": [
+        "保留分层任务集和旧基线，按类别比较。",
+        "新增失败样本同时保持独立评估，观察整体与分项变化。"
+      ],
+      "pitfall": "不能只展示修好的几个截图。",
+      "kind": "项目深挖",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-byte-ai",
+      "relations": []
+    },
+    {
+      "id": "drill-agent-trajectory",
+      "module": "AI 工程",
+      "roles": [
+        "ai"
+      ],
+      "title": "Agent 最终答对了，却调用了错误工具，评测算成功吗？",
+      "concepts": [
+        "工具正确率",
+        "运行轨迹",
+        "副作用",
+        "任务成功率",
+        "评测标准"
+      ],
+      "references": [
+        "d-eval"
+      ],
+      "scenario": "任务包含查询、修改、发送等不同性质的工具步骤。",
+      "followups": [
+        "如何评估不唯一的合理路径？",
+        "哪些错误即使答案正确也应判失败？"
+      ],
+      "points": [
+        "按任务目标与副作用定义判分，不机械匹配唯一轨迹。",
+        "有权限或状态约束的任务需检查执行过程。"
+      ],
+      "pitfall": "最终文本正确不能抵消错误业务写入。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-byte-ai",
+      "relations": []
+    },
+    {
+      "id": "drill-agent-loop-stop",
+      "module": "Agent",
+      "roles": [
+        "ai"
+      ],
+      "title": "Agent 连续调用同一个无效工具，循环什么时候必须停止？",
+      "concepts": [
+        "Agent Loop",
+        "终止条件",
+        "步数预算",
+        "时间预算",
+        "重复检测"
+      ],
+      "references": [
+        "d-agent"
+      ],
+      "scenario": "工具返回空结果，模型每轮都用相同参数再试。",
+      "followups": [
+        "如何区分正常重试与无进展循环？",
+        "停止后给用户返回什么状态？"
+      ],
+      "points": [
+        "设定可执行预算与明确停止规则，检测重复或无进展。",
+        "返回部分结果和失败原因，不伪装成已完成。"
+      ],
+      "pitfall": "不能只靠模型自己决定何时停。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-tool-schema",
+      "module": "Agent",
+      "roles": [
+        "ai"
+      ],
+      "title": "模型生成的工具参数符合 JSON，还能直接执行吗？",
+      "concepts": [
+        "工具调用",
+        "JSON Schema",
+        "参数校验",
+        "授权",
+        "业务约束"
+      ],
+      "references": [
+        "d-agent"
+      ],
+      "scenario": "模型请求修改订单，给了合法 JSON 和他人订单 ID。",
+      "followups": [
+        "Schema 校验能替代权限校验吗？",
+        "验证失败怎么反馈给模型？"
+      ],
+      "points": [
+        "语法与类型校验后仍需身份、权限和业务校验。",
+        "工具执行由应用控制，错误返回可供修正但不能放宽权限。"
+      ],
+      "pitfall": "结构化输出不等于可信业务输入。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-agent-tool-retry",
+      "module": "Agent",
+      "roles": [
+        "ai"
+      ],
+      "title": "扣款工具执行成功但返回超时，Agent 重试会发生什么？",
+      "concepts": [
+        "工具调用",
+        "超时",
+        "幂等键",
+        "业务状态",
+        "重试"
+      ],
+      "references": [
+        "d-agent",
+        "d-ack"
+      ],
+      "scenario": "应用无法立即判断第一次调用是否完成。",
+      "followups": [
+        "怎样查询已有执行结果？",
+        "工具调用 ID 与业务幂等键相同吗？"
+      ],
+      "points": [
+        "使用稳定业务幂等键与可查询状态；区分未知、失败和成功。",
+        "重试前考虑副作用，不能把传输超时直接视为未执行。"
+      ],
+      "pitfall": "每次重试生成新幂等键会失去去重作用。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-memory-checkpointer",
+      "module": "Agent",
+      "roles": [
+        "ai"
+      ],
+      "title": "checkpointer 和 store 分别保存什么？进程重启后会怎样？",
+      "concepts": [
+        "检查点",
+        "thread_id",
+        "短期记忆",
+        "长期记忆",
+        "持久化"
+      ],
+      "references": [
+        "d-memory"
+      ],
+      "scenario": "多用户对话要恢复当前线程，同时保留跨会话偏好。",
+      "followups": [
+        "InMemorySaver 可以承担生产持久化吗？",
+        "如何隔离不同用户的数据？"
+      ],
+      "points": [
+        "检查点保存线程状态，store 承载跨线程应用数据。",
+        "内存实现无法跨进程重启保存，需选择持久化后端。"
+      ],
+      "pitfall": "持久化不代表应把所有历史全放进模型上下文。",
+      "kind": "基础追问",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": [
+        [
+          "检查点",
+          "短期记忆",
+          "线程状态"
+        ]
+      ]
+    },
+    {
+      "id": "drill-memory-compress",
+      "module": "Agent",
+      "roles": [
+        "ai"
+      ],
+      "title": "聊天历史压缩成摘要后，需要原始证据时怎么办？",
+      "concepts": [
+        "上下文压缩",
+        "原始消息",
+        "摘要",
+        "检索",
+        "引用"
+      ],
+      "references": [
+        "d-context",
+        "d-memory"
+      ],
+      "scenario": "长会话压缩后，用户追问早先上传合同的一条原文。",
+      "followups": [
+        "摘要与原文是否都要保留？",
+        "怎样控制摘要累积误差？"
+      ],
+      "points": [
+        "原始资料与模型上下文分别管理；摘要用于压缩，原文可按需检索。",
+        "保留出处和可追溯标识，评估信息损失。"
+      ],
+      "pitfall": "摘要不是无损压缩。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-interrupt-replay",
+      "module": "Agent",
+      "roles": [
+        "ai"
+      ],
+      "title": "LangGraph 人工确认后恢复，确认点之前的代码会不会重新执行？",
+      "concepts": [
+        "interrupt",
+        "检查点",
+        "恢复执行",
+        "节点重放",
+        "幂等性"
+      ],
+      "references": [
+        "d-interrupt"
+      ],
+      "scenario": "节点先调用外部 API，再触发人工确认。",
+      "followups": [
+        "副作用应放在哪个边界？",
+        "确认等待期间 thread_id 有何作用？"
+      ],
+      "points": [
+        "恢复时节点可能从头重新运行；确认前的副作用应具备幂等性或拆分。",
+        "结合持久化线程状态设计恢复。"
+      ],
+      "pitfall": "不能把恢复理解成任意 Python 指令处原地继续。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-interrupt-multi",
+      "module": "Agent",
+      "roles": [
+        "ai"
+      ],
+      "title": "同一节点里有多个 interrupt，为什么不能随意改它们的顺序？",
+      "concepts": [
+        "interrupt",
+        "恢复值",
+        "执行顺序",
+        "条件分支"
+      ],
+      "references": [
+        "d-interrupt"
+      ],
+      "scenario": "版本更新改变了已有等待任务的确认流程。",
+      "followups": [
+        "跳过一个确认点会影响恢复值吗？",
+        "怎么迁移旧状态？"
+      ],
+      "points": [
+        "恢复值匹配依赖执行顺序；流程修改需考虑正在等待的状态。",
+        "保持确认顺序稳定，或显式迁移已有任务。"
+      ],
+      "pitfall": "确认点是运行时协议的一部分，不只是弹窗。",
+      "kind": "场景分析",
+      "priority": "再拓展",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-mcp-transports",
+      "module": "Agent",
+      "roles": [
+        "ai"
+      ],
+      "title": "MCP 的 stdio 与 Streamable HTTP 怎么选？旧 HTTP+SSE 怎么办？",
+      "concepts": [
+        "MCP",
+        "stdio",
+        "Streamable HTTP",
+        "协议版本",
+        "请求元数据"
+      ],
+      "references": [
+        "d-mcptransport",
+        "d-mcpstdio",
+        "d-mcphttp"
+      ],
+      "scenario": "本地工具服务与远程共享工具服务有不同部署需求。",
+      "followups": [
+        "日志能直接写到 stdio 的 stdout 吗？",
+        "2026-07-28 与旧版的 GET 流和会话行为有哪些差别？"
+      ],
+      "points": [
+        "stdio 用子进程标准流，stdout 只输出协议消息；远程服务按版本选择 HTTP 绑定。",
+        "2026-07-28 的 HTTP 绑定采用单端点 POST，移除了旧版 GET 流和协议级会话；兼容代码须按版本分支。"
+      ],
+      "pitfall": "不要把浏览器 SSE、旧 MCP HTTP+SSE 和新传输混为一谈。",
+      "kind": "基础追问",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": [
+        [
+          "MCP",
+          "Streamable HTTP",
+          "传输方式"
+        ]
+      ]
+    },
+    {
+      "id": "drill-agent-build-buy",
+      "module": "项目追问",
+      "roles": [
+        "ai"
+      ],
+      "title": "为什么手写 Agent Loop，而不是直接用图框架？如何证明选型合适？",
+      "concepts": [
+        "Agent Loop",
+        "LangGraph",
+        "状态编排",
+        "调试",
+        "恢复执行",
+        "技术选型"
+      ],
+      "references": [
+        "d-agent",
+        "graph"
+      ],
+      "scenario": "项目既有确定步骤，也有模型自主选择工具的部分。",
+      "followups": [
+        "在哪些复杂度下应改用框架？",
+        "调研比较用了什么指标？"
+      ],
+      "points": [
+        "比较状态管理、恢复、调试和维护成本。",
+        "从实际任务与失败需求解释取舍，提供可复现验证。"
+      ],
+      "pitfall": "熟悉某个库不是充分的选型理由。",
+      "kind": "项目深挖",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-byte-ai",
+      "relations": []
+    },
+    {
+      "id": "drill-kv-memory",
+      "module": "机器学习",
+      "roles": [
+        "ml",
+        "ai"
+      ],
+      "title": "KV Cache 为什么会随上下文和并发增大？关掉它会怎样？",
+      "concepts": [
+        "KV Cache",
+        "自回归生成",
+        "上下文长度",
+        "批处理",
+        "显存"
+      ],
+      "references": [
+        "d-kv"
+      ],
+      "scenario": "长上下文、多会话同时生成时显存突然不足。",
+      "followups": [
+        "缓存卸载和量化分别换来了什么？",
+        "预填充与生成阶段延迟有什么区别？"
+      ],
+      "points": [
+        "缓存避免重复计算历史键值，但占用随序列与批量增长。",
+        "比较缓存策略的显存、延迟和吞吐。"
+      ],
+      "pitfall": "KV Cache 不是模型权重，也不是把回答文本缓存起来。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-lora-budget",
+      "module": "机器学习",
+      "roles": [
+        "ml"
+      ],
+      "title": "LoRA 的 rank 和 target_modules 改动，会影响哪些训练资源？",
+      "concepts": [
+        "LoRA",
+        "rank",
+        "target_modules",
+        "可训练参数",
+        "显存",
+        "验证集"
+      ],
+      "references": [
+        "d-lora"
+      ],
+      "scenario": "只有一张 GPU，需要适配业务输出风格。",
+      "followups": [
+        "rank 越大一定越好吗？",
+        "如何区分容量不足和数据质量问题？"
+      ],
+      "points": [
+        "适配参数数量与 rank、目标层相关；固定数据做验证比较。",
+        "资源预算与效果共同决定，不凭单个超参下结论。"
+      ],
+      "pitfall": "参数高效微调不意味着不占激活和优化器内存。",
+      "kind": "项目深挖",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-torch-eval",
+      "module": "机器学习",
+      "roles": [
+        "ml"
+      ],
+      "title": "model.eval() 和 no_grad() 能互相替代吗？",
+      "concepts": [
+        "model.eval",
+        "Dropout",
+        "BatchNorm",
+        "no_grad",
+        "梯度记录"
+      ],
+      "references": [
+        "d-torch",
+        "d-grad"
+      ],
+      "scenario": "验证阶段既要确定层的行为，又不需要训练梯度。",
+      "followups": [
+        "忘记 eval 会影响哪些层？",
+        "eval 是否自动停止所有梯度计算？"
+      ],
+      "points": [
+        "eval 改变相关模块训练行为；no_grad 控制梯度记录。",
+        "常规验证往往需要同时管理这两个不同维度。"
+      ],
+      "pitfall": "eval 不等于关闭 autograd。",
+      "kind": "基础追问",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-grad-accumulate",
+      "module": "机器学习",
+      "roles": [
+        "ml"
+      ],
+      "title": "为什么连续 backward 后梯度会累积？什么时候需要 zero_grad？",
+      "concepts": [
+        "autograd",
+        "backward",
+        "梯度累积",
+        "zero_grad",
+        "有效批量"
+      ],
+      "references": [
+        "d-grad"
+      ],
+      "scenario": "显存不足，用多次小批量累积后更新一次参数。",
+      "followups": [
+        "损失如何缩放？",
+        "什么时候执行 optimizer.step？"
+      ],
+      "points": [
+        "默认梯度会累积；显式区分一次更新里的多个微批次。",
+        "按有效批量缩放并在正确边界清理梯度。"
+      ],
+      "pitfall": "不清梯度不一定是 bug，但必须有明确累积策略。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-docker-build",
+      "module": "部署与运维",
+      "roles": [
+        "ops",
+        "fullstack",
+        "ai",
+        "java",
+        "go",
+        "python"
+      ],
+      "title": "本机能运行，Docker 里启动失败，你会先比对什么？",
+      "concepts": [
+        "容器",
+        "镜像",
+        "运行环境",
+        "依赖",
+        "工作目录",
+        "启动命令"
+      ],
+      "references": [
+        "d-docker"
+      ],
+      "scenario": "构建成功，但容器启动后立刻退出。",
+      "followups": [
+        "多阶段构建复制了哪些产物？",
+        "基础镜像与运行库不匹配会怎样？"
+      ],
+      "points": [
+        "核对运行时依赖、路径、配置和启动日志。",
+        "区分构建环境与运行环境，确保最终镜像包含必要文件。"
+      ],
+      "pitfall": "镜像构建成功不能证明运行时完整。",
+      "kind": "项目深挖",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-sre",
+      "relations": []
+    },
+    {
+      "id": "drill-docker-multistage",
+      "module": "部署与运维",
+      "roles": [
+        "ops",
+        "go",
+        "java",
+        "fullstack"
+      ],
+      "title": "多阶段构建为什么能减小镜像？哪些文件不能漏复制？",
+      "concepts": [
+        "Dockerfile",
+        "多阶段构建",
+        "构建产物",
+        "运行库",
+        "镜像体积"
+      ],
+      "references": [
+        "d-docker"
+      ],
+      "scenario": "第一阶段编译，第二阶段用精简基础镜像运行。",
+      "followups": [
+        "静态链接和动态链接的区别会怎样影响镜像？",
+        "如何验证最终阶段能运行？"
+      ],
+      "points": [
+        "最终阶段只保留运行所需内容，排除构建工具和缓存。",
+        "验证依赖库、证书、权限和入口命令。"
+      ],
+      "pitfall": "镜像小不代表能省略必要运行依赖。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-probe-types",
+      "module": "部署与运维",
+      "roles": [
+        "ops",
+        "java",
+        "go",
+        "python",
+        "ai"
+      ],
+      "title": "readiness、liveness、startup 探针分别失败会怎样？",
+      "concepts": [
+        "健康检查",
+        "readiness",
+        "liveness",
+        "startup",
+        "流量",
+        "重启"
+      ],
+      "references": [
+        "d-probe"
+      ],
+      "scenario": "服务启动需两分钟，下游数据库有短暂故障。",
+      "followups": [
+        "把下游故障作为 liveness 条件有什么风险？",
+        "startup 探针如何保护慢启动？"
+      ],
+      "points": [
+        "readiness 决定是否接流量，liveness 可触发重启；startup 管理启动阶段。",
+        "按失败性质设计，避免错误重启放大故障。"
+      ],
+      "pitfall": "三种探针不能简单共用一个永远相同的判断。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": [
+        [
+          "readiness",
+          "流量",
+          "就绪控制"
+        ]
+      ]
+    },
+    {
+      "id": "drill-pod-oom",
+      "module": "部署与运维",
+      "roles": [
+        "ops"
+      ],
+      "title": "Pod 一直重启，OOMKilled 和应用异常退出如何区分？",
+      "concepts": [
+        "Pod",
+        "容器状态",
+        "退出码",
+        "OOMKilled",
+        "资源限制",
+        "日志"
+      ],
+      "references": [
+        "d-pod"
+      ],
+      "scenario": "部署后出现 CrashLoopBackOff，平均内存看起来正常。",
+      "followups": [
+        "怎么查看上一次容器的日志？",
+        "内存峰值与 limits 有什么关系？"
+      ],
+      "points": [
+        "检查容器终止原因、事件与先前日志，区分状态和根因。",
+        "结合限制与峰值分析，别只看平均值。"
+      ],
+      "pitfall": "CrashLoopBackOff 是重启退避状态，不是唯一故障原因。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-test-isolation",
+      "module": "测试开发",
+      "roles": [
+        "test",
+        "frontend",
+        "fullstack"
+      ],
+      "title": "测试单独跑成功，整套并行跑失败，最先查什么？",
+      "concepts": [
+        "测试隔离",
+        "共享状态",
+        "测试数据",
+        "并行执行",
+        "Mock"
+      ],
+      "references": [
+        "d-playwright"
+      ],
+      "scenario": "多个测试共用用户、订单和 localStorage。",
+      "followups": [
+        "每条测试需要怎样独立准备数据？",
+        "共享服务如何保证确定性？"
+      ],
+      "points": [
+        "检查账号、数据与浏览器状态的交叉影响。",
+        "每条测试有明确前置与清理，避免依赖执行顺序。"
+      ],
+      "pitfall": "固定 sleep 无法修复共享状态污染。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-test-wait",
+      "module": "测试开发",
+      "roles": [
+        "test",
+        "frontend",
+        "fullstack"
+      ],
+      "title": "按钮出现了但还不能提交，自动化应该等待什么？",
+      "concepts": [
+        "自动等待",
+        "可交互状态",
+        "业务就绪",
+        "断言",
+        "Flaky Test"
+      ],
+      "references": [
+        "d-playwright"
+      ],
+      "scenario": "按钮先渲染，随后接口返回才完成初始化。",
+      "followups": [
+        "元素可见和业务可用是否相同？",
+        "为什么固定等待三秒仍会失败？"
+      ],
+      "points": [
+        "使用稳定定位与可验证的业务状态。",
+        "自动等待处理交互条件，业务完成还需相应断言。"
+      ],
+      "pitfall": "不是所有异步状态都能靠元素可见判断。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-test-locator",
+      "module": "测试开发",
+      "roles": [
+        "test",
+        "frontend",
+        "fullstack"
+      ],
+      "title": "页面样式重构后大量测试挂了，选择器怎样更稳定？",
+      "concepts": [
+        "选择器",
+        "可访问角色",
+        "测试 ID",
+        "用户可见行为"
+      ],
+      "references": [
+        "d-playwright"
+      ],
+      "scenario": "测试大量使用层级 CSS 和动态生成类名。",
+      "followups": [
+        "角色定位怎样帮助发现可访问性问题？",
+        "测试 ID 应不应该成为业务逻辑？"
+      ],
+      "points": [
+        "优先面向用户行为的角色、标签或稳定测试契约。",
+        "避免与内部 DOM 层级过度耦合。"
+      ],
+      "pitfall": "选择器短不等于稳定，重试次数多也不是解决方案。",
+      "kind": "基础追问",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-test-sql-plan",
+      "module": "测试开发",
+      "roles": [
+        "test"
+      ],
+      "title": "如何给索引优化写验证用例，而不是只测查询结果？",
+      "concepts": [
+        "执行计划",
+        "查询结果",
+        "数据分布",
+        "性能基线",
+        "回归测试"
+      ],
+      "references": [
+        "d-explain"
+      ],
+      "scenario": "优化涉及新增索引，结果不变但要验证性能与写入影响。",
+      "followups": [
+        "小数据集的结论能外推吗？",
+        "哪些参数组合会退化？"
+      ],
+      "points": [
+        "同时验证结果等价、代表性数据和执行表现。",
+        "覆盖不同选择性与边界，并比较优化前后。"
+      ],
+      "pitfall": "空库跑得快不能证明索引设计有效。",
+      "kind": "项目深挖",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-tencent-test",
+      "relations": []
+    },
+    {
+      "id": "drill-test-pressure",
+      "module": "测试开发",
+      "roles": [
+        "test",
+        "ops"
+      ],
+      "title": "压测只报平均耗时，为什么不足以判断接口稳定性？",
+      "concepts": [
+        "P99",
+        "错误率",
+        "吞吐",
+        "负载模型",
+        "资源饱和"
+      ],
+      "references": [
+        "d-k6"
+      ],
+      "scenario": "少量超时被大量快速请求掩盖，平均值仍很好看。",
+      "followups": [
+        "并发数和 QPS 有什么区别？",
+        "稳态和突发负载都要测吗？"
+      ],
+      "points": [
+        "明确负载模型，观察延迟分布、吞吐和失败比例。",
+        "结合资源与数据库表现定位，而非只给平均数。"
+      ],
+      "pitfall": "这个压测场景是编辑扩展；原帖只报告性能测试与稳定性指标话题。",
+      "kind": "项目深挖",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-tencent-test",
+      "relations": []
+    },
+    {
+      "id": "drill-shared-ptr-thread",
+      "module": "C++ / 客户端",
+      "roles": [
+        "cpp"
+      ],
+      "title": "shared_ptr 引用计数安全，为什么指向的对象仍可能有数据竞争？",
+      "concepts": [
+        "shared_ptr",
+        "控制块",
+        "引用计数",
+        "共享对象",
+        "线程安全"
+      ],
+      "references": [
+        "d-cppsafe"
+      ],
+      "scenario": "两个不同 shared_ptr 实例共享同一对象，两个线程同时写字段。",
+      "followups": [
+        "同一个 shared_ptr 实例并发修改怎样处理？",
+        "对象字段的同步由谁负责？"
+      ],
+      "points": [
+        "控制块管理和对象访问是不同问题。",
+        "不同指针实例可共享所有权，但指向对象的读写仍需同步。"
+      ],
+      "pitfall": "不要把引用计数安全等同于对象整体线程安全。",
+      "kind": "基础追问",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-yunzhi",
+      "relations": [
+        [
+          "shared_ptr",
+          "引用计数",
+          "管理所有权"
+        ]
+      ]
+    },
+    {
+      "id": "drill-shared-cycle",
+      "module": "C++ / 客户端",
+      "roles": [
+        "cpp"
+      ],
+      "title": "两个对象互相持有 shared_ptr，为什么退出作用域也不析构？",
+      "concepts": [
+        "shared_ptr",
+        "循环引用",
+        "引用计数",
+        "weak_ptr",
+        "对象生命周期"
+      ],
+      "references": [
+        "d-cppsmart"
+      ],
+      "scenario": "父子对象互相强持有，外部引用已全部释放。",
+      "followups": [
+        "weak_ptr.lock 失败时怎么处理？",
+        "所有权应该由谁定义？"
+      ],
+      "points": [
+        "强引用形成环时计数无法归零；将非拥有关系改为弱引用。",
+        "明确所有权结构，而非随意把所有指针改成 weak_ptr。"
+      ],
+      "pitfall": "weak_ptr 不保证对象始终活着。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-unique-move",
+      "module": "C++ / 客户端",
+      "roles": [
+        "cpp"
+      ],
+      "title": "unique_ptr 如何转移所有权？std::move 本身真的移动了资源吗？",
+      "concepts": [
+        "unique_ptr",
+        "std::move",
+        "右值引用",
+        "移动构造",
+        "所有权"
+      ],
+      "references": [
+        "d-cppsmart",
+        "d-cppmove"
+      ],
+      "scenario": "把 unique_ptr 交给另一个变量或函数。",
+      "followups": [
+        "命名的右值引用表达式是什么值类别？",
+        "移动后源对象还能怎样使用？"
+      ],
+      "points": [
+        "std::move 提供可用于移动的表达式，真正转移由相应构造或赋值完成。",
+        "遵守对象移动后的有效状态约束。"
+      ],
+      "pitfall": "写了 std::move 不保证一定调用移动操作。",
+      "kind": "基础追问",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-yunzhi",
+      "relations": []
+    },
+    {
+      "id": "drill-vector-invalidate",
+      "module": "C++ / 客户端",
+      "roles": [
+        "cpp"
+      ],
+      "title": "vector push_back 后，旧指针什么时候失效？reserve 能解决什么？",
+      "concepts": [
+        "vector",
+        "容量",
+        "重新分配",
+        "迭代器失效",
+        "reserve"
+      ],
+      "references": [
+        "d-cppvector"
+      ],
+      "scenario": "保存 data() 返回的指针，随后连续追加元素。",
+      "followups": [
+        "不重新分配时 erase 又怎样影响迭代器？",
+        "reserve 会改变 size 吗？"
+      ],
+      "points": [
+        "重新分配会使原有元素引用与迭代器失效。",
+        "reserve 预留容量，不等于创建同样数量的元素。"
+      ],
+      "pitfall": "扩容倍率由实现决定，不保证所有 vector 都固定两倍。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-yunzhi",
+      "relations": [
+        [
+          "重新分配",
+          "迭代器失效",
+          "导致"
+        ]
+      ]
+    },
+    {
+      "id": "drill-virtual-destruct",
+      "module": "C++ / 客户端",
+      "roles": [
+        "cpp"
+      ],
+      "title": "通过基类指针 delete 派生对象，为什么常需要虚析构？",
+      "concepts": [
+        "多态",
+        "基类指针",
+        "虚析构",
+        "派生析构",
+        "资源释放"
+      ],
+      "references": [
+        "d-cppdestruct"
+      ],
+      "scenario": "派生类管理文件资源，外部只持有基类指针。",
+      "followups": [
+        "所有类都应该加虚析构吗？",
+        "析构函数抛异常有哪些风险？"
+      ],
+      "points": [
+        "需要通过基类多态销毁时，正确的虚析构保证派生部分被销毁。",
+        "依据使用方式设计接口与资源释放。"
+      ],
+      "pitfall": "不是加任意一个虚函数就自动得到虚析构。",
+      "kind": "基础追问",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-shared-write",
+      "module": "C++ / 客户端",
+      "roles": [
+        "cpp"
+      ],
+      "title": "手写简化 shared_ptr 时，拷贝、赋值、析构怎么维护计数？",
+      "concepts": [
+        "shared_ptr",
+        "控制块",
+        "拷贝构造",
+        "赋值",
+        "析构",
+        "引用计数"
+      ],
+      "references": [
+        "d-cppsmart",
+        "d-cppsafe"
+      ],
+      "scenario": "只实现单线程最小版本，并明确不支持数组、弱引用和自定义删除器。",
+      "followups": [
+        "自赋值和空指针怎么处理？",
+        "要支持多线程，还缺哪些机制？"
+      ],
+      "points": [
+        "共享控制块，拷贝增加计数，释放减少并在归零时删除资源。",
+        "赋值要先处理旧所有权并考虑自赋值。"
+      ],
+      "pitfall": "面试简化实现不能冒充生产标准库。",
+      "kind": "手写题",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-byte-cpp",
+      "relations": []
+    },
+    {
+      "id": "drill-cpp-copy",
+      "module": "C++ / 客户端",
+      "roles": [
+        "cpp"
+      ],
+      "title": "类持有原始指针，用默认拷贝会出现什么问题？",
+      "concepts": [
+        "浅拷贝",
+        "深拷贝",
+        "所有权",
+        "拷贝构造",
+        "析构",
+        "RAII"
+      ],
+      "references": [
+        "d-cppsmart"
+      ],
+      "scenario": "两个对象拷贝同一资源指针，析构时都尝试释放。",
+      "followups": [
+        "什么时候可以禁用拷贝？",
+        "使用标准容器或智能指针如何减少手工管理？"
+      ],
+      "points": [
+        "区分拥有资源与观察资源；复制拥有指针可能重复释放。",
+        "选择深拷贝、禁止拷贝或清晰的共享所有权。"
+      ],
+      "pitfall": "不能把所有指针成员一律做深拷贝。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-byte-cpp",
+      "relations": []
+    },
+    {
+      "id": "drill-sql-latest",
+      "module": "数据库",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "title": "每个用户只取最新一条订单，同一时间两条订单如何确定结果？",
+      "concepts": [
+        "SQL",
+        "分组",
+        "窗口函数",
+        "ROW_NUMBER",
+        "排序",
+        "确定性"
+      ],
+      "references": [
+        "d-window",
+        "d-explain"
+      ],
+      "scenario": "表 orders(id,user_id,created_at)，需要完整订单行。",
+      "followups": [
+        "只用 GROUP BY user_id 加 MAX(created_at) 够吗？",
+        "怎样利用索引减少排序成本？"
+      ],
+      "points": [
+        "先定义同时间的决胜字段，再按用户分区排序选首行。",
+        "比较窗口函数与关联查询的计划。"
+      ],
+      "pitfall": "不能把分组最大时间直接当作整行数据。",
+      "kind": "手写题",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-sql-page",
+      "module": "数据库",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "test"
+      ],
+      "title": "LIMIT 100000,20 为什么慢？游标分页怎样避免越翻越慢？",
+      "concepts": [
+        "分页",
+        "OFFSET",
+        "索引",
+        "游标分页",
+        "稳定排序"
+      ],
+      "references": [
+        "d-explain",
+        "d-index"
+      ],
+      "scenario": "订单按 created_at,id 排序，用户翻到很后面的页。",
+      "followups": [
+        "排序字段重复怎么办？",
+        "游标分页能任意跳页吗？"
+      ],
+      "points": [
+        "大偏移需要跳过更多候选；按稳定复合排序和上页游标定位。",
+        "检查索引与产品是否需要随机跳页。"
+      ],
+      "pitfall": "游标分页与偏移分页的交互能力不同。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-sql-oversell",
+      "module": "系统设计",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "fullstack"
+      ],
+      "title": "库存只剩一件，两次请求同时下单，数据库怎么保证不超卖？",
+      "concepts": [
+        "库存",
+        "条件更新",
+        "事务",
+        "受影响行数",
+        "幂等性"
+      ],
+      "references": [
+        "d-lock"
+      ],
+      "scenario": "两个用户并发购买，接口可能超时重试。",
+      "followups": [
+        "条件扣库存与先查再减有什么区别？",
+        "订单写入失败库存怎么处理？"
+      ],
+      "points": [
+        "用原子条件更新或合适锁策略，检查受影响行数。",
+        "将订单与库存的一致性、失败回滚和重试幂等一并设计。"
+      ],
+      "pitfall": "应用先读库存再无条件写回存在竞争。",
+      "kind": "场景分析",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-algo-remove-n",
+      "module": "手写与算法",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "cpp",
+        "test"
+      ],
+      "title": "单链表删除倒数第 N 个节点，如何统一处理删除头节点？",
+      "concepts": [
+        "链表",
+        "双指针",
+        "虚拟头节点",
+        "边界检查"
+      ],
+      "references": [
+        "d-lc19"
+      ],
+      "scenario": "只能遍历一次；明确 N 无效时的约定。",
+      "followups": [
+        "快慢指针的距离应保持多少？",
+        "空链表、只有一项怎么测？"
+      ],
+      "points": [
+        "用虚拟头节点统一前驱操作，快指针先形成距离。",
+        "同步移动后调整前驱链接，验证边界。"
+      ],
+      "pitfall": "在未验证长度前直接访问 next 容易越界。",
+      "kind": "手写题",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-byte-cpp",
+      "relations": []
+    },
+    {
+      "id": "drill-algo-trie",
+      "module": "手写与算法",
+      "roles": [
+        "ai",
+        "go",
+        "python",
+        "java",
+        "cpp"
+      ],
+      "title": "实现 Trie 的完整词查询与前缀查询，结束标记放在哪？",
+      "concepts": [
+        "Trie",
+        "前缀树",
+        "子节点",
+        "结束标记",
+        "字符串"
+      ],
+      "references": [
+        "d-lc208"
+      ],
+      "scenario": "支持插入、完整词查询和前缀存在查询，字符集先约定为小写字母。",
+      "followups": [
+        "空串怎么约定？",
+        "重复插入和删除计数怎样扩展？"
+      ],
+      "points": [
+        "沿字符访问子节点；完整词需检查结束标记，前缀只需路径存在。",
+        "根据字符集选择数组或字典。"
+      ],
+      "pitfall": "有前缀路径不代表该词完整存在。",
+      "kind": "手写题",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-byte-ai",
+      "relations": []
+    },
+    {
+      "id": "drill-algo-merge",
+      "module": "手写与算法",
+      "roles": [
+        "ai",
+        "go",
+        "python",
+        "java",
+        "cpp",
+        "test"
+      ],
+      "title": "两个升序数组合成降序数组，怎样做到线性时间？",
+      "concepts": [
+        "有序数组",
+        "双指针",
+        "尾部比较",
+        "线性时间"
+      ],
+      "references": [
+        "d-go"
+      ],
+      "scenario": "允许新建结果数组，长度不同并且包含重复值。",
+      "followups": [
+        "不额外排序为什么也有序？",
+        "一边耗尽后怎么处理？"
+      ],
+      "points": [
+        "从两数组尾部比较较大者放入结果，分别移动指针。",
+        "每个元素只处理一次，说明空间取决于输出要求。"
+      ],
+      "pitfall": "先拼接再排序不能满足线性时间要求。",
+      "kind": "手写题",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-byte-ai",
+      "relations": []
+    },
+    {
+      "id": "drill-algo-lis",
+      "module": "手写与算法",
+      "roles": [
+        "test",
+        "java",
+        "go",
+        "python",
+        "cpp"
+      ],
+      "title": "最长递增子序列不是连续子数组，如何写出状态转移？",
+      "concepts": [
+        "动态规划",
+        "子序列",
+        "状态定义",
+        "转移",
+        "严格递增"
+      ],
+      "references": [
+        "d-lc300"
+      ],
+      "scenario": "先实现 O(n²) 版本，再讨论能否优化。",
+      "followups": [
+        "含重复元素时用 < 还是 <=？",
+        "如何恢复具体序列？"
+      ],
+      "points": [
+        "定义以当前位置结尾的最佳长度，遍历更早且值更小的位置。",
+        "检查空输入和严格递增约束。"
+      ],
+      "pitfall": "不能用只观察相邻元素的滑动窗口替代子序列。",
+      "kind": "手写题",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-tencent-test",
+      "relations": []
+    },
+    {
+      "id": "drill-algo-bfs",
+      "module": "手写与算法",
+      "roles": [
+        "java",
+        "go",
+        "python",
+        "cpp",
+        "test"
+      ],
+      "title": "二叉树层序遍历，怎样保证每层单独输出？",
+      "concepts": [
+        "二叉树",
+        "BFS",
+        "队列",
+        "层大小",
+        "边界检查"
+      ],
+      "references": [
+        "d-lc102"
+      ],
+      "scenario": "返回每层的数组，而不是一个扁平结果。",
+      "followups": [
+        "为什么要在层开始固定队列长度？",
+        "树很宽时空间复杂度怎么算？"
+      ],
+      "points": [
+        "固定当前层大小后处理这一批节点，子节点进入下一层队列。",
+        "检查空树并用最大层宽分析空间。"
+      ],
+      "pitfall": "循环里不断用变化的队列长度会混入下一层。",
+      "kind": "手写题",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-meituan",
+      "relations": []
+    },
+    {
+      "id": "drill-project-proof",
+      "module": "项目追问",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "title": "你说项目快了 50%，基线、负载和你负责的改动是什么？",
+      "concepts": [
+        "个人贡献",
+        "性能基线",
+        "负载模型",
+        "指标验证",
+        "回归测试"
+      ],
+      "references": [
+        "d-k6",
+        "d-eval"
+      ],
+      "scenario": "简历写了性能提升，但只有一次测试结果。",
+      "followups": [
+        "团队成果里哪些是你实现的？",
+        "怎样排除环境变化和其他提交？"
+      ],
+      "points": [
+        "给出前后版本、同一环境和负载，说明度量口径。",
+        "将个人改动与结果对应，准备失败或无效尝试。"
+      ],
+      "pitfall": "没有测过就不要编造性能数字。",
+      "kind": "项目深挖",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "relations": []
+    },
+    {
+      "id": "drill-project-tradeoff",
+      "module": "项目追问",
+      "roles": [
+        "frontend",
+        "java",
+        "go",
+        "python",
+        "fullstack",
+        "ai",
+        "ml",
+        "test",
+        "ops",
+        "cpp"
+      ],
+      "title": "项目里的技术难点究竟难在哪里？为什么普通 CRUD 不足以说明？",
+      "concepts": [
+        "技术选型",
+        "约束条件",
+        "方案比较",
+        "失败案例",
+        "指标验证"
+      ],
+      "references": [
+        "d-eval"
+      ],
+      "scenario": "面试官认为你描述的是日常功能，要求说明技术挑战。",
+      "followups": [
+        "你尝试过哪些替代方案？",
+        "移除这个优化后会发生什么？"
+      ],
+      "points": [
+        "给出约束、冲突、尝试与验证，而不是罗列组件。",
+        "用实现细节与可复现结果说明难度。"
+      ],
+      "pitfall": "功能复杂不自动等于技术难点。",
+      "kind": "项目深挖",
+      "priority": "先准备",
+      "verified": "2026-10-12",
+      "report": "r-byte-fe",
+      "relations": []
+    }
+  ]
+}

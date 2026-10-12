@@ -101,8 +101,8 @@ rows=[
 previous=json.loads(Path('data.json').read_text()) if Path('data.json').exists() else {}
 old_nodes={n['name']:n['id'] for n in previous.get('nodes',[])}
 old_questions={q['title']:q['id'] for q in previous.get('questions',[])}
-next_node=max([int(v[1:]) for v in old_nodes.values()]+[0])+1
-next_question=max([int(v[1:]) for v in old_questions.values()]+[0])+1
+next_node=max([int(v[1:]) for v in old_nodes.values() if v.startswith('n') and v[1:].isdigit()]+[0])+1
+next_question=max([int(v[1:]) for v in old_questions.values() if v.startswith('q') and v[1:].isdigit()]+[0])+1
 nodes={}; edges={}; questions=[]
 for i,(module,rs,src,title,chain,cue) in enumerate(rows):
     names=chain.split('|'); ids=[]
@@ -125,5 +125,7 @@ for a,b,t in relations:
     if a in nodes and b in nodes:
         x,y=nodes[a]['id'],nodes[b]['id']; edges[(x,y,t)]={'from':x,'to':y,'type':t}
 d={'version':1,'updated':'2026-10-12','roles':[dict(zip(['id','name','description','number'],r)) for r in roles],'sources':{k:{'name':v[0],'url':v[1],'verified':v[2]} for k,v in S.items()},'nodes':list(nodes.values()),'edges':list(edges.values()),'questions':questions}
+from enrich import enrich
+d=enrich(d)
 Path('data.json').write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n')
-print(f"{len(nodes)} concepts, {len(questions)} questions, {len(edges)} edges")
+print(f"{len(d['nodes'])} concepts, {len(d['questions'])} questions, {len(d['edges'])} edges")
